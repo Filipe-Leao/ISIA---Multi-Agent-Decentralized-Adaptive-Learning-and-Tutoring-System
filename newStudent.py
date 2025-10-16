@@ -3,6 +3,7 @@ from spade.agent import Agent
 from spade.message import Message
 import spade
 import asyncio
+from colorama import Fore, Style, init
 
 # ========================
 # AGENTE DO ESTUDANTE
@@ -10,24 +11,24 @@ import asyncio
 class StudentAgent(Agent):
     class StudyBehaviour(behaviour.CyclicBehaviour):
         async def on_start(self):
-            print(f"[{self}] Iniciando rotina de estudo...")
+            print(f"Iniciando rotina de estudo...")
             self.study_progress = 0
             self.resources = []
             await asyncio.sleep(3)  # Espera para garantir que os outros agentes estão ativos
 
         async def run(self):
             if self.study_progress < 100:
-                print(f"[{self}] Progresso atual: {self.study_progress}%")
+                print(Fore.BLUE + f"[student: {self.agent.name}] Progresso atual: {self.study_progress}%")
 
                 await self.request_resource("video_sobre_ML")
 
                 if self.study_progress < 50:
-                    await self.ask_for_help("Preciso de ajuda com regressão linear")
+                    await self.ask_for_help(f"Preciso de ajuda com regressão linear")
 
                 self.study_progress += 20
                 await asyncio.sleep(5)
             else:
-                print(f"[{self}] Estudo completo! 🚀")
+                print(Fore.BLUE + f"[student: {self.agent.name}] Estudo completo!")
                 self.kill()
             
 
@@ -36,7 +37,7 @@ class StudentAgent(Agent):
                 to="resource_manager@localhost",
                 body=f"pedido_recurso:{resource_name}"
             )
-            print(f"[{self}] A pedir recurso: {resource_name}")
+            print(Fore.BLUE + f"[student: {self.agent.name}] A pedir recurso: {resource_name}")
             await self.send(msg)
 
         async def ask_for_help(self, question):
@@ -44,11 +45,11 @@ class StudentAgent(Agent):
                 to="tutor1@localhost",
                 body=f"pedido_ajuda:{question}"
             )
-            print(f"[{self}] A pedir ajuda ao tutor: {question}")
+            print(Fore.BLUE + f"[student: {self.agent.name}] A pedir ajuda ao tutor: {question}")
             await self.send(msg)
 
     async def setup(self):
-        print(f"👩‍🎓 {self.name} iniciado.")
+        print(f"{self.name} iniciado.")
         self.study = self.StudyBehaviour()
         self.add_behaviour(self.study)
 
@@ -61,14 +62,14 @@ class ResourceManagerAgent(Agent):
         async def run(self):
             msg = await self.receive(timeout=10)
             if msg:
-                print(f"[ResourceManager] Pedido recebido de {msg.sender}: {msg.body}")
+                print(Fore.RED + f"[ResourceManager: {self.agent.name}] Pedido recebido de {msg.sender}: {msg.body}")
                 response = Message(to=str(msg.sender))
                 response.body = "recurso_enviado: vídeo sobre regressão linear"
                 await self.send(response)
-                print("[ResourceManager] Recurso enviado.")
+                print(Fore.RED + f"[ResourceManager: {self.agent.name}] Recurso enviado.")
 
     async def setup(self):
-        print("📦 Resource Manager ativo.")
+        print("Resource Manager ativo.")
         self.add_behaviour(self.ResourceBehaviour())
 
 
@@ -80,14 +81,14 @@ class TutorAgent(Agent):
         async def run(self):
             msg = await self.receive(timeout=10)
             if msg:
-                print(f"[Tutor] Pedido de ajuda de {msg.sender}: {msg.body}")
+                print(Fore.GREEN + f"[Tutor: {self.agent.name}] Pedido de ajuda de {msg.sender}: {msg.body}")
                 response = Message(to=str(msg.sender))
                 response.body = "ajuda: explicação sobre regressão linear enviada!"
                 await self.send(response)
-                print("[Tutor] Ajuda enviada.")
+                print(Fore.GREEN + f"[tutor: {self.agent.name}] Ajuda enviada.")
 
     async def setup(self):
-        print("👨‍🏫 Tutor ativo.")
+        print(f"tutor {self.name} ativo.")
         self.add_behaviour(self.HelpBehaviour())
 
 
@@ -95,7 +96,9 @@ class TutorAgent(Agent):
 # EXECUÇÃO
 # ========================
 async def main():
-    student = StudentAgent("student@localhost", "1234")
+    init(autoreset=True)
+
+    student = StudentAgent("Joao@localhost", "1234")
     tutor = TutorAgent("tutor1@localhost", "1234")
     manager = ResourceManagerAgent("resource_manager@localhost", "1234")
 
