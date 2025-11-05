@@ -1,24 +1,39 @@
-from spade import behaviour
 from spade.agent import Agent
 from spade.message import Message
-import spade
-import asyncio
-from colorama import Fore, Style, init
+from spade import behaviour
+from colorama import Fore
 
-
-# ========================
-# AGENTE RESOURCE MANAGER
-# ========================
 class ResourceManagerAgent(Agent):
     class ResourceBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
             msg = await self.receive(timeout=10)
-            if msg:
-                print(Fore.RED + f"[ResourceManager: {self.agent.name}] Pedido recebido de {msg.sender}: {msg.body}")
-                response = Message(to=str(msg.sender))
-                response.body = "recurso_enviado: vídeo sobre regressão linear"
-                await self.send(response)
-                print(Fore.RED + f"[ResourceManager: {self.agent.name}] Recurso enviado.")
+            if not msg:
+                return
+
+            parts = dict(p.split(":") for p in msg.body.split(";"))
+            topic = parts.get("topic", "desconhecido")
+            progress = float(parts.get("progress", 0))
+            
+            # PT ↔ EN mapping for learning styles
+            style_map = {
+                "visual": "visual",
+                "auditivo": "auditory",
+                "auditory": "auditory",
+                "cinestésico": "kinesthetic",
+                "kinesthetic": "kinesthetic"
+            }
+            style = style_map.get(parts.get("style", ""), "visual")
+
+            if progress < 0.5:
+                resource = f"Vídeo {style} introdutório sobre {topic}"
+            else:
+                resource = f"Exercício {style} avançado sobre {topic}"
+
+            resp = Message(to=str(msg.sender))
+            resp.body = f"resource:{resource}"
+            await self.send(resp)
+
+            print(Fore.YELLOW + f"[Resource] recurso enviado → {msg.sender}: {resource}")
 
     async def setup(self):
         print("Resource Manager ativo.")
