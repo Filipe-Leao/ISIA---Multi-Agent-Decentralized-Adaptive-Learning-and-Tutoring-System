@@ -24,11 +24,8 @@ class StudentAgent(Agent):
         print(Fore.CYAN + f"[Student-{self.name}] Iniciado")
         self.study = self.StudyBehaviour()
         self.add_behaviour(self.study)
-<<<<<<< HEAD
-=======
         self.add_behaviour(self.Subcreption())
 
->>>>>>> c0226c2 (Autocreation of agents. Added subscriptions)
         self.add_behaviour(self.ReceiveBehaviour())
         self.proposals = []
 
@@ -178,9 +175,6 @@ class StudentAgent(Agent):
             elif perf in ["inform", "peer-inform"]:
                 study = self.agent.study
                 chosen = "peer" if study.peer_used else study.chosen_tutor
-<<<<<<< HEAD
-                end = time.time()
-=======
 
                 self.agent.presence.set_presence(
                              presence_type=PresenceType.AVAILABLE,  # set availability
@@ -194,7 +188,6 @@ class StudentAgent(Agent):
                 # ✅ usar defaults seguros
                 
                 end = time.time()   
->>>>>>> c0226c2 (Autocreation of agents. Added subscriptions)
                 rt = round(end - study.start_time, 2)
 
                 print(Fore.GREEN + f"[{self.agent.name}] ✅ Explicação recebida")
