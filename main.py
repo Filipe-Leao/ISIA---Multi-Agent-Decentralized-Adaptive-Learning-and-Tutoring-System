@@ -9,8 +9,8 @@ async def main():
     agents = {
         "student1": StudentAgent("student1@localhost", "1234"),
         "student2": StudentAgent("student2@localhost", "1234"),
-        "tutor1": TutorAgent("tutor1@localhost", "1234", capacity=1),
-        "tutor2": TutorAgent("tutor2@localhost", "1234", capacity=2),
+        "tutor1": TutorAgent("tutor1@localhost", "1234", capacity = 1),
+        "tutor2": TutorAgent("tutor2@localhost", "1234", capacity = 1),
         "peer1": PeerAgent("peer1@localhost", "1234"),
         "peer2": PeerAgent("peer2@localhost", "1234"),
         "resource": ResourceManagerAgent("resource@localhost", "1234"),
@@ -36,3 +36,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
