@@ -1,6 +1,7 @@
 from spade.agent import Agent
 from spade.message import Message
-from spade import behaviour
+from spade.presence import *
+from spade.behaviour import *
 from colorama import Fore
 import asyncio, random, time
 from metrics import MetricsLogger
@@ -23,10 +24,53 @@ class StudentAgent(Agent):
         print(Fore.CYAN + f"[Student-{self.name}] Iniciado")
         self.study = self.StudyBehaviour()
         self.add_behaviour(self.study)
+<<<<<<< HEAD
+=======
+        self.add_behaviour(self.Subcreption())
+
+>>>>>>> c0226c2 (Autocreation of agents. Added subscriptions)
         self.add_behaviour(self.ReceiveBehaviour())
         self.proposals = []
 
-    class StudyBehaviour(behaviour.CyclicBehaviour):
+    class Subcreption(OneShotBehaviour):
+        async def run(self):
+            # ⚙️ Configurar callbacks corretamente
+            self.agent.presence.on_subscribe = self.on_subscribe
+            self.agent.presence.on_subscribed = self.on_subscribed
+            self.agent.presence.on_available = self.on_available
+
+            # ⚙️ Definir presença inicial
+            self.agent.presence.set_presence(
+                presence_type=PresenceType.AVAILABLE,
+                show=PresenceShow.CHAT,
+                status="Ready to chat"
+            )
+
+            # ⚙️ Esperar servidor estabilizar
+            await asyncio.sleep(1)
+
+            # ⚙️ Subscrições (substitui setup_subscriptions localmente)
+            for target in self.agent.to_subscribe:
+                self.agent.presence.subscribe(target)
+                print(f"[{self.agent.name}] 🔔 Subscribed to {target}")
+
+        def on_available(self, peer_jid, presence_info, last_presence):
+            print(f"[{self.agent.name}] Agent {peer_jid.split('@')[0]} is {presence_info.show.value}")
+
+        def on_subscribed(self, peer_jid):
+            print(f"[{self.agent.name}] Agent {peer_jid.split('@')[0]} accepted the subscription")
+            contacts = self.agent.presence.get_contacts()
+            print(f"[{self.agent.name}] Contacts List: {contacts}")
+
+        def on_subscribe(self, peer_jid):
+            print(f"[{self.agent.name}] Agent {peer_jid.split('@')[0]} asked for subscription. Approving...")
+            self.agent.presence.approve_subscription(peer_jid)
+            self.agent.presence.subscribe(peer_jid)
+            print(f"------------ Contacts: {self.agent.name} ------------")
+            print(self.agent.presence.get_contacts())
+            print("------------------------------------------------------")
+
+    class StudyBehaviour(CyclicBehaviour):
         async def on_start(self):
             self.agent.proposals = []
             self.peer_used = False
@@ -34,9 +78,13 @@ class StudentAgent(Agent):
             self.start_time = time.time()
             await asyncio.sleep(2)
             await self.ask_for_help()
+            print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
+
 
         async def ask_for_help(self):
             tutors = ["tutor1@localhost", "tutor2@localhost"]
+
+            print(f"[{self.agent.name}] {self.agent.presence.get_contacts()}")
 
             for tutor in tutors:
                 msg = Message(to=tutor)
@@ -88,11 +136,22 @@ class StudentAgent(Agent):
 
             print(Fore.BLUE + f"[{self.agent.name}] ⏳ A aguardar explicação...")
 
+            self.agent.presence.set_presence(
+                             presence_type=PresenceType.AVAILABLE,  # set availability
+                             show=PresenceShow.DND,  # show status
+                             status="Waiting for tutor",  # status message
+                             priority=2  # connection priority
+                            )
+            print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
+
         async def run(self):
             await asyncio.sleep(1)
 
-    class ReceiveBehaviour(behaviour.CyclicBehaviour):
+    class ReceiveBehaviour(CyclicBehaviour):
         async def run(self):
+
+            
+
             msg = await self.receive(timeout=1)
             if not msg:
                 return
@@ -119,12 +178,30 @@ class StudentAgent(Agent):
             elif perf in ["inform", "peer-inform"]:
                 study = self.agent.study
                 chosen = "peer" if study.peer_used else study.chosen_tutor
+<<<<<<< HEAD
                 end = time.time()
+=======
+
+                self.agent.presence.set_presence(
+                             presence_type=PresenceType.AVAILABLE,  # set availability
+                             show=PresenceShow.DND,  # show status
+                             status=f"Studing with {chosen}",  # status message
+                             priority=2  # connection priority
+                            )
+                
+                print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
+
+                # ✅ usar defaults seguros
+                
+                end = time.time()   
+>>>>>>> c0226c2 (Autocreation of agents. Added subscriptions)
                 rt = round(end - study.start_time, 2)
 
                 print(Fore.GREEN + f"[{self.agent.name}] ✅ Explicação recebida")
                 old = self.agent.progress
                 self.agent.progress = min(1.0, old + random.uniform(0.08, 0.25))
+                print(Fore.GREEN + f"[{self.agent.name}] 🎓 Tempo de execução {rt}")
+
                 print(Fore.GREEN + f"[{self.agent.name}] 🎓 progresso {old:.2f} → {self.agent.progress:.2f}")
 
                 self.agent.logger.log(
