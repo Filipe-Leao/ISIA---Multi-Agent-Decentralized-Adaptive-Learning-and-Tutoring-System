@@ -3,11 +3,11 @@ from spade.message import Message
 from spade.behaviour import *
 from spade.presence import *
 import asyncio
-from colorama import Fore
+from colorama import Fore, Style
 
 class PeerAgent(Agent):
     async def setup(self):
-        print(Fore.MAGENTA + f"[Peer-{self.name}] Pronto para ajudar colegas 👥")
+        print(Fore.MAGENTA + f"[Peer-{self.name}] Pronto para ajudar colegas 👥" + Style.RESET_ALL)
         self.add_behaviour(self.HelpPeers())
         self.add_behaviour(self.Subcreption())
 
@@ -37,9 +37,9 @@ class PeerAgent(Agent):
             
     class HelpPeers(CyclicBehaviour):
         async def run(self):
-            msg = await self.receive(timeout=3)
+            msg = await self.receive(timeout=5)
             if msg and msg.get_metadata("performative") == "peer-help":
-                print(Fore.MAGENTA + f"[Peer-{self.agent.name}] ✅ Ajudando {msg.sender}")
+                print(Fore.MAGENTA + f"[Peer-{self.agent.name}] ✅ Ajudando {msg.sender}" + Style.RESET_ALL)
 
                 await asyncio.sleep(1)
 

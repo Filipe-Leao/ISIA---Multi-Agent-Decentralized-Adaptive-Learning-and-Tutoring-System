@@ -4,7 +4,7 @@ from spade.behaviour import *
 from spade.presence import *
 from spade import behaviour
 import asyncio
-from colorama import Fore
+from colorama import Fore, Style
 
 
 class TutorAgent(Agent):
@@ -16,12 +16,12 @@ class TutorAgent(Agent):
         self.queue = []  # (student, priority)
 
     async def setup(self):
-        print(Fore.CYAN + f"[Tutor-{self.name}] Iniciado | Capacidade: {self.capacity} | Expertise: {self.expertise}")
+        print(Fore.CYAN + f"[Tutor-{self.name}] Iniciado | Capacidade: {self.capacity} | Available: {self.available_slots} | Expertise: {self.expertise}" + Style.RESET_ALL)
         self.add_behaviour(self.HelpResponder())
-        self.add_behaviour(self.Subcreption())
+        self.add_behaviour(self.Subscription())
 
 
-    class Subcreption(OneShotBehaviour):
+    class Subscription(OneShotBehaviour):
         def on_available(self, peer_jid, presence_info, last_presence):
             print(f"[{self.agent.name}] Agent {peer_jid.split('@')[0]} is {presence_info.show.value}")
 
@@ -49,7 +49,7 @@ class TutorAgent(Agent):
 
     class HelpResponder(behaviour.CyclicBehaviour):
         async def run(self):
-            msg = await self.receive(timeout=3)
+            msg = await self.receive(timeout=5)
             if not msg:
                 return
 
@@ -72,13 +72,13 @@ class TutorAgent(Agent):
                 if self.agent.available_slots > 0 and str(msg.sender) == chosen_student:
                     proposal = Message(to=str(msg.sender))
                     proposal.set_metadata("performative", "propose")
-                    proposal.body = f"available_in:1;expertise:{self.agent.expertise}"
+                    proposal.body = f"available_in:1;expertise:{self.agent.expertise};slots:{self.agent.available_slots}"
                     await self.send(proposal)
 
             # ---------- Acceptance ----------
             elif perf == "accept-proposal":
                 self.agent.available_slots -= 1
-                print(Fore.GREEN + f"[Tutor-{self.agent.name}] ✅ Aceitou {msg.sender}")
+                print(Fore.GREEN + f"[Tutor-{self.agent.name}] ✅ Aceitou {msg.sender}" + Style.RESET_ALL)
 
                 await asyncio.sleep(2)  # simulate teaching time
 
@@ -91,4 +91,4 @@ class TutorAgent(Agent):
 
             # ---------- Rejection ----------
             elif perf == "reject-proposal":
-                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejeitado")
+                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejeitado" + Style.RESET_ALL)

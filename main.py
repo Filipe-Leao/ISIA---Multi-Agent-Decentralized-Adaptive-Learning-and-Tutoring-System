@@ -9,39 +9,50 @@ async def main():
     # Criar agentes
     number_students = 5
     number_tutors = 3
-    number_peers = 2
+    number_peers = 1
 
     agents = {
         "resource": ResourceManagerAgent("resource@localhost", "1234"),
     }
 
-    for i in range(1,number_students + 1):
+    for i in range(1, number_students + 1):
         agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234")})
 
-    for i in range(1,number_students + 1):
-        agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@localhost", "1234", capacity=random.uniform(1,3))})
-    
-    for i in range(1,number_students + 1):
+    for i in range(1, number_tutors + 1):
+        cap = round(random.uniform(1, 3))
+        agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@localhost", "1234", capacity=cap)})
+
+    for i in range(1, number_peers + 1):
         agents.update({f"peer{i}": PeerAgent(f"peer{i}@localhost", "1234")})
     
     print(agents)
 
-    # Start agents
+    # Start agents (todos)
     for name, agent in agents.items():
-        agent.to_subscribe = []
-        if name.startswith("student"):
-            for n, a in agents.items():
-                if n.startswith("student"): continue
-                agent.to_subscribe.append(a.jid)
-        
-        else:
-            agent.to_subscribe.append(agents["resource"].jid)
-                    
-
-        print(f"{name} trying to subscribe to {agent.to_subscribe}")
         await agent.start(auto_register=True)
 
-    await asyncio.timeout(5)
+    # Dar algum tempo para todos os agentes inicializarem completamente
+    await asyncio.sleep(1)
+
+    # Fazer subscrições centralmente: estudantes subscrevem a todos os não-estudantes
+    for name, agent in agents.items():
+        if name.startswith("student"):
+            for n, a in agents.items():
+                if n.startswith("student"):
+                    continue
+                agent.presence.subscribe(a.jid)
+                print(f"[{agent.name}] 🔔 Subscribed to {a.jid}")
+        else:
+            if name.startswith("resource"):
+                continue
+            if "resource" in agents and agent.jid != agents["resource"].jid:
+                agent.presence.subscribe(agents["resource"].jid)
+                print(f"[{agent.name}] 🔔 Subscribed to {agents['resource'].jid}")
+
+    print("\n Começando simulação")
+
+    # duração da simulação
+    await asyncio.sleep(20)
 
     print("\n⏳ Simulação terminada. A encerrar agentes...\n")
 
