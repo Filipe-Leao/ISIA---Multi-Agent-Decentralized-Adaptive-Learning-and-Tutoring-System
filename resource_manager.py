@@ -17,7 +17,6 @@ class ResourceManagerAgent(Agent):
             # PT ↔ EN mapping for learning styles
             style_map = {
                 "visual": "visual",
-                "auditivo": "auditory",
                 "auditory": "auditory",
                 "cinestésico": "kinesthetic",
                 "kinesthetic": "kinesthetic"

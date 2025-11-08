@@ -1,6 +1,6 @@
 timestamp,student,tutor,topic,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
-2025-11-08 12:29:19.981088,student3,peer,aprendizagem automática,9.0,0,peer,0,True
-2025-11-08 12:29:20.536827,student1,tutor2@localhost,aprendizagem automática,10.01,3,tutor2@localhost,2,False
-2025-11-08 12:29:20.982296,student4,peer,estatística bayesiana,9.78,0,peer,0,True
-2025-11-08 12:29:21.983198,student5,peer,aprendizagem automática,10.56,0,peer,0,True
-2025-11-08 12:29:22.537444,student2,tutor2@localhost,aprendizagem automática,11.78,3,tutor2@localhost,2,False
+2025-11-08 13:02:47.068599,student1,tutor2@localhost,estatística bayesiana,10.01,2,tutor2@localhost,1,False
+2025-11-08 13:02:49.071411,student2,tutor2@localhost,estatística bayesiana,11.79,3,tutor2@localhost,2,False
+2025-11-08 13:02:52.073059,student1,tutor2@localhost,estatística bayesiana,15.01,2,tutor2@localhost,1,False
+2025-11-08 13:02:54.076583,student2,tutor2@localhost,estatística bayesiana,16.79,5,tutor2@localhost,4,False
+2025-11-08 13:02:57.075763,student1,tutor2@localhost,estatística bayesiana,20.02,2,tutor2@localhost,1,False

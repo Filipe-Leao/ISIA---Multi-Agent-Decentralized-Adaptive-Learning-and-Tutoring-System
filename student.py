@@ -8,6 +8,14 @@ from metrics import MetricsLogger
 
 
 class StudentAgent(Agent):
+    """
+    Student agent that studies a specific topic and requests help from tutors or peers when needed.
+
+    Attributes:
+        jid (str): The Jabber ID of the agent.
+        password (str): The password for the agent.
+        learning_style (str): Prefered learning style (visual, auditory, cinestésico, kinesthetic).
+    """
     def __init__(self, jid, password, learning_style="visual"):
         super().__init__(jid, password)
         self.learning_style = learning_style
@@ -29,6 +37,7 @@ class StudentAgent(Agent):
         self.proposals = []
 
     class Subscription(OneShotBehaviour):
+        """ Manages presence subscriptions with other agents. """
         async def run(self):
             # ⚙️ Configurar callbacks corretamente
             self.agent.presence.on_subscribe = self.on_subscribe
@@ -66,8 +75,11 @@ class StudentAgent(Agent):
             self.chosen_tutor = None
             self.start_time = time.time()
             await asyncio.sleep(5)
-            await self.ask_for_help()
             print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
+            while self.agent.progress < 1.0:
+                print(Fore.BLUE + f"[{self.agent.name}] 🎯 A estudar {self.agent.topic} (progresso: {self.agent.progress:.2f})" + Style.RESET_ALL)
+                await self.ask_for_help()
+                await asyncio.sleep(2)
 
 
         async def ask_for_help(self):

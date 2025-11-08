@@ -7,8 +7,8 @@ from resource_manager import ResourceManagerAgent
 
 async def main():
     # Criar agentes
-    number_students = 5
-    number_tutors = 3
+    number_students = 2
+    number_tutors = 2
     number_peers = 1
 
     agents = {
@@ -16,7 +16,7 @@ async def main():
     }
 
     for i in range(1, number_students + 1):
-        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234")})
+        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(["visual", "auditory", "cinestésico", "kinesthetic"]))})
 
     for i in range(1, number_tutors + 1):
         cap = round(random.uniform(1, 3))
