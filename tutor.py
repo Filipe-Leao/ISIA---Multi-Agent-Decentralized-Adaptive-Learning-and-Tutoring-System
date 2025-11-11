@@ -8,8 +8,9 @@ from colorama import Fore, Style
 
 
 class TutorAgent(Agent):
-    def __init__(self, jid, password, expertise=0.5, capacity=1):
+    def __init__(self, jid, password, discipline, expertise=0.5, capacity=1):
         super().__init__(jid, password)
+        self.discipline = discipline
         self.capacity = capacity
         self.available_slots = capacity
         self.expertise = expertise    # <-- NEW
@@ -91,4 +92,4 @@ class TutorAgent(Agent):
 
             # ---------- Rejection ----------
             elif perf == "reject-proposal":
-                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejeitado" + Style.RESET_ALL)
+                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejeitado por {msg.sender}" + Style.RESET_ALL)

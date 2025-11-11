@@ -2,10 +2,12 @@ from spade.agent import Agent
 from spade.message import Message
 from spade import behaviour
 from colorama import Fore, Style
+import random
 
 class ResourceManagerAgent(Agent):
     class ResourceBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
+            random.seed()
             msg = await self.receive(timeout=10)
             if not msg:
                 return
@@ -14,7 +16,6 @@ class ResourceManagerAgent(Agent):
             topic = parts.get("topic", "desconhecido")
             progress = float(parts.get("progress", 0))
             
-            # PT ↔ EN mapping for learning styles
             style_map = {
                 "visual": "visual",
                 "auditory": "auditory",
@@ -30,6 +31,7 @@ class ResourceManagerAgent(Agent):
 
             resp = Message(to=str(msg.sender))
             resp.body = f"resource:{resource}"
+            resp.metadata["performative"] = "resource-recommendation"
             await self.send(resp)
 
             print(Fore.YELLOW + f"[Resource] recurso enviado → {msg.sender}: {resource}")

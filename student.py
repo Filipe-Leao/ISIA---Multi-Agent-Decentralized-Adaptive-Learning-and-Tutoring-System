@@ -111,8 +111,6 @@ class StudentAgent(Agent):
                 reverse=True
             )
 
-            	
-
             if self.peer_used:
                 print(Fore.BLUE + f"[{self.agent.name}] {self.agent.proposals}" + Style.RESET_ALL) 
 
@@ -219,7 +217,7 @@ class StudentAgent(Agent):
                 print(Fore.YELLOW + f"[{self.agent.name}] 🔎 A pedir recurso complementar ao Resource Manager...")
 
             # --- recurso recebido ---
-            elif perf == "resource-recommendation":
+            if perf == "resource-recommendation":
                 resource = msg.body.split("resource:")[1]
                 print(Fore.LIGHTYELLOW_EX + f"[{self.agent.name}] 📘 Recurso complementar recebido: {resource}" + Style.RESET_ALL)
 

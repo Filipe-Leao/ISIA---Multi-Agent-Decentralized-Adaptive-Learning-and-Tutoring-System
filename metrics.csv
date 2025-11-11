@@ -1,7 +1,7 @@
 timestamp,student,tutor,topic,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
-2025-11-11 18:40:11.263056,student1,tutor2@localhost,aprendizagem automática,10.01,2,tutor2@localhost,1,False
-2025-11-11 18:40:11.688463,student2,tutor1@localhost,aprendizagem automática,10.0,2,tutor1@localhost,1,False
-2025-11-11 18:40:16.268262,student1,tutor2@localhost,aprendizagem automática,15.01,2,tutor2@localhost,1,False
-2025-11-11 18:40:18.270464,student2,tutor2@localhost,aprendizagem automática,16.59,5,tutor2@localhost,4,False
-2025-11-11 18:40:21.272529,student1,tutor1@localhost,aprendizagem automática,20.02,2,tutor1@localhost,1,False
-2025-11-11 18:40:21.694189,student2,tutor2@localhost,aprendizagem automática,20.01,6,tutor2@localhost,5,False
+2025-11-11 18:55:33.399934,student1,tutor2@localhost,aprendizagem automática,10.0,2,tutor2@localhost,1,False
+2025-11-11 18:55:33.626206,student2,tutor1@localhost,aprendizagem automática,10.0,2,tutor1@localhost,1,False
+2025-11-11 18:55:38.403600,student1,tutor2@localhost,aprendizagem automática,15.01,2,tutor2@localhost,1,False
+2025-11-11 18:55:38.628211,student2,tutor1@localhost,aprendizagem automática,15.01,4,tutor1@localhost,3,False
+2025-11-11 18:55:43.406649,student1,tutor2@localhost,aprendizagem automática,20.01,2,tutor2@localhost,1,False
+2025-11-11 18:55:43.631321,student2,tutor1@localhost,aprendizagem automática,20.01,6,tutor1@localhost,5,False
