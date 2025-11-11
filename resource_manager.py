@@ -1,7 +1,7 @@
 from spade.agent import Agent
 from spade.message import Message
 from spade import behaviour
-from colorama import Fore
+from colorama import Fore, Style
 
 class ResourceManagerAgent(Agent):
     class ResourceBehaviour(behaviour.CyclicBehaviour):
