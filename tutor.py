@@ -73,7 +73,7 @@ class TutorAgent(Agent):
                 if self.agent.available_slots > 0 and str(msg.sender) == chosen_student:
                     proposal = Message(to=str(msg.sender))
                     proposal.set_metadata("performative", "propose")
-                    proposal.body = f"available_in:1;expertise:{self.agent.expertise};slots:{self.agent.available_slots}"
+                    proposal.body = f"available_in:1;discipline:{self.agent.discipline};expertise:{self.agent.expertise};slots:{self.agent.available_slots}"
                     await self.send(proposal)
 
             # ---------- Acceptance ----------

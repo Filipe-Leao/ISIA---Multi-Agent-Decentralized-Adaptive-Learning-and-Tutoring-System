@@ -7,21 +7,32 @@ from resource_manager import ResourceManagerAgent
 
 async def main():
     # Criar agentes
-    number_students = 2
-    number_tutors = 2   
+    number_students = 3
+    number_tutors = 3
     number_peers = 1
+
+    disciplines = [
+                    "estatística bayesiana", 
+                    "aprendizagem automática", 
+                    "programação", 
+                    "estatística", 
+                    "português", 
+                    "álgebra"
+                ]
+    learning_styles = ["visual", "auditory", "cinestésico", "kinesthetic"]
     
     agents = {
         "resource": ResourceManagerAgent("resource@localhost", "1234"),
     }
 
     for i in range(1, number_students + 1):
-        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(["visual", "auditory", "cinestésico", "kinesthetic"]))})
+        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(learning_styles))})
 
     print(f"\nCriados estudantes")
     for i in range(1, number_tutors + 1):
+        random.seed()
         cap = round(random.uniform(1, 3))
-        agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@localhost", "1234", capacity=cap)})
+        agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@localhost", "1234", discipline=random.choice(disciplines), expertise=random.uniform(0.5, 1), capacity=cap)})
     print(f"\nCriados tutores")
 
     for i in range(1, number_peers + 1):
@@ -29,7 +40,6 @@ async def main():
     
     print(f"\nCriados {number_students} estudantes, {number_tutors} tutores e {number_peers} peers.\n")
     
-
     # Start agents
     for name, agent in agents.items():
         await agent.start(auto_register=True)
@@ -54,12 +64,14 @@ async def main():
     print("\n✅ Todos agentes iniciados. Simulação a correr...\n")
 
     # Tempo da simulação
-    await asyncio.sleep(20)
+    await asyncio.sleep(30)
 
     print("\n⏳ Simulação terminada. A encerrar agentes...\n")
 
     # Stop agents
     for name, agent in agents.items():
+        if name.startswith("student"):
+            print(f"Progresso Final: {agent.initial_progress} -> {agent.progress}")
         print(f"🔻 A parar {name}...")
         await agent.stop()
 

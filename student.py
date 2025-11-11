@@ -13,10 +13,15 @@ class StudentAgent(Agent):
         self.learning_style = learning_style
         self.knowledge = {
             "estatística bayesiana": random.uniform(0, 0.4),
-            "aprendizagem automática": random.uniform(0, 0.4)
+            "aprendizagem automática": random.uniform(0, 0.4),
+            "programação": random.uniform(0, 0.4),
+            "estatística": random.uniform(0, 0.4),
+            "português": random.uniform(0, 0.4),
+            "álgebra": random.uniform(0, 0.4),
         }
-        self.topic = random.choice(list(self.knowledge.keys()))
-        self.progress = self.knowledge[self.topic]
+        self.tutor_message = NotImplementedError
+        self.progress = sum(self.knowledge.values()) / len(self.knowledge)
+        self.initial_progress = self.progress
         self.logger = MetricsLogger()
         print(Fore.CYAN + f"[{self.name}] estilo={self.learning_style} progresso médio={round(self.progress, 2)}" + Style.RESET_ALL)
 
@@ -27,7 +32,6 @@ class StudentAgent(Agent):
         self.add_behaviour(self.study)
         self.add_behaviour(self.ReceiveBehaviour())
         self.proposals = []
-
 
     class Subscription(behaviour.OneShotBehaviour):
         """ Manages presence subscriptions with other agents. """
@@ -64,13 +68,23 @@ class StudentAgent(Agent):
             self.agent.proposals = []
             self.peer_used = False
             self.chosen_tutor = None
+            self.chosen_tutor_expertise = None
             self.start_time = time.time()
             print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
             await asyncio.sleep(5)
+            self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
+            self.agent.progress = self.agent.knowledge[self.agent.topic]
             while self.agent.progress < 1.0:
                 print(Fore.BLUE + f"[{self.agent.name}] 🎯 A estudar {self.agent.topic} (progresso: {self.agent.progress:.2f})" + Style.RESET_ALL)
                 await self.ask_for_help()
+                await self.update_progress()
                 await asyncio.sleep(2) 
+
+        async def update_progress(self):
+            old = self.agent.progress
+            self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
+            print(Fore.MAGENTA + f"[{self.agent.name}] 📊 Progresso geral atualizado: {old:.2f} -> {self.agent.progress:.2f}" + Style.RESET_ALL)
+            await asyncio.sleep(1)
 
         async def ask_for_help(self):
             tutors = []
@@ -99,6 +113,8 @@ class StudentAgent(Agent):
             if not self.agent.proposals:
                 print(Fore.RED + f"[{self.agent.name}] ❌ Nenhum tutor respondeu — pedir peer" + Style.RESET_ALL)
                 self.peer_used = True
+                self.chosen_tutor = "peer" 
+
                 for peer in peers:
                     peer = Message(to=peer)
                     peer.set_metadata("performative", "peer-help")
@@ -116,9 +132,21 @@ class StudentAgent(Agent):
 
             # ✅ Escolher o tutor com vagas
             for p in self.agent.proposals:
-                if p["slots"] > 0:
+                if p["slots"] > 0 and p["discipline"] == self.agent.topic:
                     self.chosen_tutor = p["tutor"]
+                    print(Fore.RED + f"[{self.agent.name}] Proposal chosen: {p}" + Style.RESET_ALL)
+                    self.agent.tutor_message = p
+                    print(self.agent.tutor_message)
                     break
+                elif p["slots"] > 0 and p["expertise"] >= (self.chosen_tutor_expertise if self.chosen_tutor_expertise else 0):
+                    self.chosen_tutor = p["tutor"]
+                    print(Fore.RED + f"[{self.agent.name}] Proposal chosen (different discipline): {p}" + Style.RESET_ALL)
+                    self.agent.tutor_message = p
+                    print(self.agent.tutor_message)
+                    self.chosen_tutor = p["tutor"]
+                    self.chosen_tutor_expertise = p["expertise"]
+            
+            
 
             if not self.chosen_tutor:
                 print(Fore.YELLOW + f"[{self.agent.name}] Nenhum tutor com vagas — tentar novamente em 3s" + Style.RESET_ALL)
@@ -146,7 +174,6 @@ class StudentAgent(Agent):
                 priority=2  # connection priority
             )
 
-
             print(Fore.BLUE + f"[{self.agent.name}] ⏳ A aguardar explicação..." + Style.RESET_ALL)
 
         async def run(self):
@@ -154,6 +181,7 @@ class StudentAgent(Agent):
 
     class ReceiveBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
+            self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
             msg = await self.receive(timeout=1)
             if not msg:
                 return
@@ -163,20 +191,23 @@ class StudentAgent(Agent):
             # --- proposta de tutor ---
             if perf == "propose":
                 parts = dict(p.split(":") for p in msg.body.split(";"))
+                discipline = parts.get("discipline", "")
                 expertise = float(parts.get("expertise", 0))
                 slots = int(parts.get("slots", 0))
 
                 self.agent.proposals.append({
                     "tutor": str(msg.sender),
+                    "discipline": discipline,
                     "expertise": expertise,
                     "slots": slots
                 })
-                print(Fore.YELLOW + f"[{self.agent.name}] 📩 Proposta de {msg.sender} (exp={expertise}, slots={slots})" + Style.RESET_ALL)
+                print(Fore.YELLOW + f"[{self.agent.name}] 📩 Proposta de {msg.sender}: (discipline= {discipline}, exp={expertise}, slots={slots})" + Style.RESET_ALL)
 
             # --- tutor rejeitou ---
             elif perf == "reject-proposal":
                 print(Fore.RED + f"[{self.agent.name}] ❌ {msg.sender} ocupado — tentar outro" + Style.RESET_ALL)
                 await self.agent.study.ask_for_help()
+                return
 
             # --- explicação recebida ---
             elif perf in ["inform", "peer-inform"]:
@@ -193,9 +224,15 @@ class StudentAgent(Agent):
                 ) 
 
                 print(Fore.GREEN + f"[{self.agent.name}] ✅ Explicação recebida" + Style.RESET_ALL)
-                old = self.agent.progress
-                self.agent.progress = min(1.0, old + random.uniform(0.08, 0.25))
-                print(Fore.GREEN + f"[{self.agent.name}] 🎓 progresso {old:.2f} → {self.agent.progress:.2f}" + Style.RESET_ALL)
+                old = self.agent.knowledge[self.agent.topic]
+
+                if chosen == "peer":
+                    self.agent.knowledge[self.agent.topic] = min(1.0, old + random.uniform(0.03, 0.10))
+                elif self.agent.tutor_message and self.agent.tutor_message["discipline"] == self.agent.topic:
+                    self.agent.knowledge[self.agent.topic] = min(1.0, old + (random.uniform(0.08, 0.25) * self.agent.tutor_message["expertise"]))
+                else:
+                    self.agent.knowledge[self.agent.topic] = min(1.0, old + (random.uniform(0.05, 0.15) * self.agent.tutor_message["expertise"]))
+                print(Fore.GREEN + f"[{self.agent.name}] 🎓 progresso {old:.2f} → {self.agent.knowledge[self.agent.topic]:.2f}" + Style.RESET_ALL)
 
                 # Registar no logger
                 self.agent.logger.log(
@@ -217,11 +254,14 @@ class StudentAgent(Agent):
                 print(Fore.YELLOW + f"[{self.agent.name}] 🔎 A pedir recurso complementar ao Resource Manager...")
 
             # --- recurso recebido ---
-            if perf == "resource-recommendation":
+            elif perf == "resource-recommendation":
                 resource = msg.body.split("resource:")[1]
                 print(Fore.LIGHTYELLOW_EX + f"[{self.agent.name}] 📘 Recurso complementar recebido: {resource}" + Style.RESET_ALL)
 
                 # 🔼 Aumentar ligeiramente o progresso
-                old = self.agent.progress
-                self.agent.progress = min(1.0, old + random.uniform(0.03, 0.08))
-                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 📈 progresso após recurso {old:.2f} → {self.agent.progress:.2f}" + Style.RESET_ALL)
+                old = self.agent.knowledge[self.agent.topic]
+                self.agent.knowledge[self.agent.topic] = min(1.0, old + random.uniform(0.01, 0.05))
+                await asyncio.sleep(2)
+                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 📈 progresso após recurso {old:.2f} → {self.agent.knowledge[self.agent.topic]:.2f}" + Style.RESET_ALL)
+                self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
+                self.agent.progress = self.agent.knowledge[self.agent.topic]
