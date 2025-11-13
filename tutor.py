@@ -61,8 +61,13 @@ class TutorAgent(Agent):
                 parts = dict(p.split(":") for p in msg.body.split(";"))
                 student_progress = float(parts.get("progress", 0))
 
+                priority = 0
+
                 # priority = expertise * (1 - student_progress)
-                priority = self.agent.expertise * (1 - student_progress)
+                if str(parts["topic"]) == str(self.agent.discipline): 
+                    priority = 1
+                    print(Fore.RED + f"[{self.agent.name}] Priority to student {msg.sender} increased for matching discipline." + Style.RESET_ALL)
+                priority += self.agent.expertise * (1 - student_progress)
 
                 self.agent.queue.append((str(msg.sender), priority))
                 self.agent.queue.sort(key=lambda x: x[1], reverse=True)
@@ -75,6 +80,12 @@ class TutorAgent(Agent):
                     proposal.set_metadata("performative", "propose")
                     proposal.body = f"available_in:1;discipline:{self.agent.discipline};expertise:{self.agent.expertise};slots:{self.agent.available_slots}"
                     await self.send(proposal)
+
+                else:
+                    refusal = Message(to=str(msg.sender))
+                    refusal.set_metadata("performative", "refuse")
+                    refusal.body = "reject-proposal"
+                    await self.send(refusal)
 
             # ---------- Acceptance ----------
             elif perf == "accept-proposal":

@@ -98,9 +98,6 @@ class StudentAgent(Agent):
                 elif contact.startswith("peer"):
                     peers.append(contact)
 
-            print(f"[{self.agent.name}] Tutors List: {tutors}")
-            print(f"[{self.agent.name}] Peers List: {peers}")
-
             for tutor in tutors:
                 msg = Message(to=tutor)
                 msg.set_metadata("performative", "cfp")
@@ -108,7 +105,7 @@ class StudentAgent(Agent):
                 print(Fore.BLUE + f"[{self.agent.name}] CFP → {tutor}: {self.agent.topic}" + Style.RESET_ALL)
                 await self.send(msg)
 
-            await asyncio.sleep(3)
+            await asyncio.sleep(2)
 
             if not self.agent.proposals:
                 print(Fore.RED + f"[{self.agent.name}] ❌ Nenhum tutor respondeu — pedir peer" + Style.RESET_ALL)
@@ -204,9 +201,8 @@ class StudentAgent(Agent):
                 print(Fore.YELLOW + f"[{self.agent.name}] 📩 Proposta de {msg.sender}: (discipline= {discipline}, exp={expertise}, slots={slots})" + Style.RESET_ALL)
 
             # --- tutor rejeitou ---
-            elif perf == "reject-proposal":
+            elif perf == "refuse":
                 print(Fore.RED + f"[{self.agent.name}] ❌ {msg.sender} ocupado — tentar outro" + Style.RESET_ALL)
-                await self.agent.study.ask_for_help()
                 return
 
             # --- explicação recebida ---

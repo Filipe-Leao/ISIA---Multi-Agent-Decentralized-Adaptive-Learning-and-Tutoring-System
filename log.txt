@@ -1,0 +1,690 @@
+[36m[student1] estilo=visual progresso médio=0.16[0m
+[36m[student2] estilo=visual progresso médio=0.22[0m
+[36m[student3] estilo=visual progresso médio=0.11[0m
+[36m[student4] estilo=cinestésico progresso médio=0.16[0m
+[36m[student5] estilo=cinestésico progresso médio=0.14[0m
+
+Criados estudantes
+
+Criados tutores
+
+Criados 5 estudantes, 3 tutores e 1 peers.
+
+Resource Manager ativo.
+[36m[Student-student1] Iniciado
+[student1] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student2] Iniciado
+[student2] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student3] Iniciado
+[student3] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student4] Iniciado
+[student4] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student5] Iniciado
+[student5] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Tutor-tutor1] Iniciado | Capacidade: 2 | Available: 2 | Expertise: 0.9862017375285732[0m
+[36m[Tutor-tutor2] Iniciado | Capacidade: 2 | Available: 2 | Expertise: 0.5326008419972075[0m
+[36m[Tutor-tutor3] Iniciado | Capacidade: 3 | Available: 3 | Expertise: 0.7481607376682953[0m
+[35m[Peer-peer1] Pronto para ajudar colegas 👥[0m
+[student1] 🔔 Subscribed to resource@localhost
+[student1] 🔔 Subscribed to tutor1@localhost
+[student1] 🔔 Subscribed to tutor2@localhost
+[student1] 🔔 Subscribed to tutor3@localhost
+[student1] 🔔 Subscribed to peer1@localhost
+[student2] 🔔 Subscribed to resource@localhost
+[student2] 🔔 Subscribed to tutor1@localhost
+[student2] 🔔 Subscribed to tutor2@localhost
+[student2] 🔔 Subscribed to tutor3@localhost
+[student2] 🔔 Subscribed to peer1@localhost
+[student3] 🔔 Subscribed to resource@localhost
+[student3] 🔔 Subscribed to tutor1@localhost
+[student3] 🔔 Subscribed to tutor2@localhost
+[student3] 🔔 Subscribed to tutor3@localhost
+[student3] 🔔 Subscribed to peer1@localhost
+[student4] 🔔 Subscribed to resource@localhost
+[student4] 🔔 Subscribed to tutor1@localhost
+[student4] 🔔 Subscribed to tutor2@localhost
+[student4] 🔔 Subscribed to tutor3@localhost
+[student4] 🔔 Subscribed to peer1@localhost
+[student5] 🔔 Subscribed to resource@localhost
+[student5] 🔔 Subscribed to tutor1@localhost
+[student5] 🔔 Subscribed to tutor2@localhost
+[student5] 🔔 Subscribed to tutor3@localhost
+[student5] 🔔 Subscribed to peer1@localhost
+[tutor1] 🔔 Subscribed to resource@localhost
+[tutor2] 🔔 Subscribed to resource@localhost
+[tutor3] 🔔 Subscribed to resource@localhost
+[peer1] 🔔 Subscribed to resource@localhost
+
+✅ Todos agentes iniciados. Simulação a correr...
+
+[34m[student1] 🎯 A estudar português (progresso: 0.38)[0m
+[34m[student1] CFP → tutor1@localhost: português[0m
+[34m[student1] CFP → tutor2@localhost: português[0m
+[34m[student1] CFP → tutor3@localhost: português[0m
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[34m[student2] 🎯 A estudar português (progresso: 0.01)[0m
+[34m[student2] CFP → tutor1@localhost: português[0m
+[34m[student2] CFP → tutor2@localhost: português[0m
+[34m[student2] CFP → tutor3@localhost: português[0m
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[34m[student3] 🎯 A estudar aprendizagem automática (progresso: 0.05)[0m
+[34m[student3] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student3] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student3] CFP → tutor3@localhost: aprendizagem automática[0m
+[31m[tutor2] Priority to student student3@localhost increased for matching discipline.[0m
+[31m[student3] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[student3] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student4] 🎯 A estudar estatística (progresso: 0.33)[0m
+[34m[student4] CFP → tutor1@localhost: estatística[0m
+[34m[student4] CFP → tutor2@localhost: estatística[0m
+[34m[student4] CFP → tutor3@localhost: estatística[0m
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar aprendizagem automática (progresso: 0.04)[0m
+[34m[student5] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student5] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student5] CFP → tutor3@localhost: aprendizagem automática[0m
+[31m[tutor2] Priority to student student5@localhost increased for matching discipline.[0m
+[31m[student5] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[31m[student5] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[32m[Tutor-tutor1] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.11 -> 0.11[0m
+[32m[Tutor-tutor2] ✅ Aceitou student3@localhost[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+[31m[student5] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.14 -> 0.14[0m
+[32m[student4] ✅ Explicação recebida[0m
+[32m[student4] 🎓 progresso 0.33 → 0.38[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo kinesthetic introdutório sobre estatística
+[93m[student4] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística[0m
+[32m[Tutor-tutor1] ✅ Aceitou student2@localhost[0m
+[32m[student1] ✅ Explicação recebida[0m
+[32m[student1] 🎓 progresso 0.38 → 0.49[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student1@localhost: Vídeo visual introdutório sobre português
+[93m[student1] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre português[0m
+[32m[Tutor-tutor2] ✅ Aceitou student5@localhost[0m
+[32m[student3] ✅ Explicação recebida[0m
+[32m[student3] 🎓 progresso 0.05 → 0.17[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student3@localhost: Vídeo visual introdutório sobre aprendizagem automática
+[93m[student3] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre aprendizagem automática[0m
+[34m[student1] 🎯 A estudar português (progresso: 0.18)[0m
+[34m[student1] CFP → tutor1@localhost: português[0m
+[34m[student1] CFP → tutor2@localhost: português[0m
+[34m[student1] CFP → tutor3@localhost: português[0m
+[34m[student2] 🎯 A estudar português (progresso: 0.22)[0m
+[34m[student2] CFP → tutor1@localhost: português[0m
+[34m[student2] CFP → tutor2@localhost: português[0m
+[34m[student2] CFP → tutor3@localhost: português[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[34m[student3] 🎯 A estudar aprendizagem automática (progresso: 0.13)[0m
+[34m[student3] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student3] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student3] CFP → tutor3@localhost: aprendizagem automática[0m
+[34m[student4] 🎯 A estudar estatística (progresso: 0.17)[0m
+[34m[student4] CFP → tutor1@localhost: estatística[0m
+[34m[student4] CFP → tutor2@localhost: estatística[0m
+[34m[student4] CFP → tutor3@localhost: estatística[0m
+[92m[student4] 📈 progresso após recurso 0.38 → 0.40[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar aprendizagem automática (progresso: 0.14)[0m
+[34m[student5] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student5] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student5] CFP → tutor3@localhost: aprendizagem automática[0m
+[31m[student5] ❌ tutor3@localhost ocupado — tentar outro[0m
+[92m[student1] 📈 progresso após recurso 0.49 → 0.50[0m
+[32m[student2] ✅ Explicação recebida[0m
+[32m[student2] 🎓 progresso 0.01 → 0.11[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[student1] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[student1] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[33m[Resource] recurso enviado → student2@localhost: Vídeo visual introdutório sobre português
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student5] ❌ tutor1@localhost ocupado — tentar outro[0m
+[93m[student2] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre português[0m
+[92m[student3] 📈 progresso após recurso 0.17 → 0.22[0m
+[32m[student5] ✅ Explicação recebida[0m
+[32m[student5] 🎓 progresso 0.04 → 0.16[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[tutor2] Priority to student student3@localhost increased for matching discipline.[0m
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[student1] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student3] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[tutor2] Priority to student student5@localhost increased for matching discipline.[0m
+[31m[student3] ❌ tutor2@localhost ocupado — tentar outro[0m
+[33m[Resource] recurso enviado → student5@localhost: Vídeo kinesthetic introdutório sobre aprendizagem automática
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[93m[student5] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre aprendizagem automática[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student1] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.18 -> 0.18[0m
+[32m[Tutor-tutor2] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.23 -> 0.24[0m
+[32m[Tutor-tutor1] ✅ Aceitou student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.14 -> 0.14[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.18 -> 0.18[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+[31m[student5] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.16 -> 0.17[0m
+[92m[student2] 📈 progresso após recurso 0.11 → 0.15[0m
+[31m[student2] ❌ tutor2@localhost ocupado — tentar outro[0m
+[92m[student5] 📈 progresso após recurso 0.16 → 0.19[0m
+[32m[student4] ✅ Explicação recebida[0m
+[32m[student4] 🎓 progresso 0.02 → 0.10[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo kinesthetic introdutório sobre aprendizagem automática
+[93m[student4] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre aprendizagem automática[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[32m[Tutor-tutor2] ✅ Aceitou student3@localhost[0m
+[32m[student1] ✅ Explicação recebida[0m
+[32m[student1] 🎓 progresso 0.01 → 0.09[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student1@localhost: Vídeo visual introdutório sobre aprendizagem automática
+[93m[student1] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre aprendizagem automática[0m
+[32m[student2] ✅ Explicação recebida[0m
+[32m[student2] 🎓 progresso 0.27 → 0.33[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student2@localhost: Vídeo visual introdutório sobre estatística
+[93m[student2] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística[0m
+[34m[student1] 🎯 A estudar aprendizagem automática (progresso: 0.20)[0m
+[34m[student1] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor3@localhost: aprendizagem automática[0m
+[34m[student2] 🎯 A estudar estatística (progresso: 0.25)[0m
+[34m[student2] CFP → tutor1@localhost: estatística[0m
+[34m[student2] CFP → tutor2@localhost: estatística[0m
+[34m[student2] CFP → tutor3@localhost: estatística[0m
+[34m[student3] 🎯 A estudar programação (progresso: 0.14)[0m
+[34m[student3] CFP → tutor1@localhost: programação[0m
+[34m[student3] CFP → tutor2@localhost: programação[0m
+[34m[student3] CFP → tutor3@localhost: programação[0m
+[31m[student3] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student4] 🎯 A estudar aprendizagem automática (progresso: 0.19)[0m
+[34m[student4] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student4] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student4] CFP → tutor3@localhost: aprendizagem automática[0m
+[92m[student4] 📈 progresso após recurso 0.10 → 0.14[0m
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar português (progresso: 0.17)[0m
+[34m[student5] CFP → tutor1@localhost: português[0m
+[34m[student5] CFP → tutor2@localhost: português[0m
+[34m[student5] CFP → tutor3@localhost: português[0m
+[31m[student5] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student5] ❌ tutor3@localhost ocupado — tentar outro[0m
+[92m[student1] 📈 progresso após recurso 0.09 → 0.13[0m
+[32m[Tutor-tutor2] ✅ Aceitou student5@localhost[0m
+[31m[student1] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student1] ❌ tutor3@localhost ocupado — tentar outro[0m
+[32m[student3] ✅ Explicação recebida[0m
+[32m[student3] 🎓 progresso 0.32 → 0.38[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student3@localhost: Vídeo visual introdutório sobre programação
+[93m[student3] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre programação[0m
+[92m[student2] 📈 progresso após recurso 0.33 → 0.36[0m
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student1] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}
+[34m[student1] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[32m[Tutor-tutor3] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.26 -> 0.26[0m
+[32m[Tutor-tutor1] ✅ Aceitou student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.14 -> 0.15[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.5326008419972075, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.17 -> 0.17[0m
+[92m[student3] 📈 progresso após recurso 0.38 → 0.41[0m
+[31m[tutor2] Priority to student student1@localhost increased for matching discipline.[0m
+[32m[student5] ✅ Explicação recebida[0m
+[32m[student5] 🎓 progresso 0.10 → 0.16[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[student1] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[tutor2] Priority to student student4@localhost increased for matching discipline.[0m
+[31m[student2] ❌ tutor2@localhost ocupado — tentar outro[0m
+[33m[Resource] recurso enviado → student5@localhost: Vídeo kinesthetic introdutório sobre português
+[31m[student3] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[32m[Tutor-tutor2] ✅ Aceitou student3@localhost[0m
+[93m[student5] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre português[0m
+[32m[student4] ✅ Explicação recebida[0m
+[32m[student4] 🎓 progresso 0.32 → 0.39[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo kinesthetic introdutório sobre estatística bayesiana
+[93m[student4] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística bayesiana[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[32m[student1] ✅ Explicação recebida[0m
+[32m[student1] 🎓 progresso 0.14 → 0.26[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[33m[Resource] recurso enviado → student1@localhost: Vídeo visual introdutório sobre álgebra
+[93m[student1] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre álgebra[0m
+[32m[student2] ✅ Explicação recebida[0m
+[32m[student2] 🎓 progresso 0.15 → 0.23[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student2@localhost: Vídeo visual introdutório sobre português
+[93m[student2] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre português[0m
+[34m[student1] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student1] CFP → tutor1@localhost: álgebra[0m
+[34m[student1] CFP → tutor2@localhost: álgebra[0m
+[34m[student1] CFP → tutor3@localhost: álgebra[0m
+[92m[student5] 📈 progresso após recurso 0.16 → 0.21[0m
+[32m[Tutor-tutor2] ✅ Aceitou student5@localhost[0m
+[31m[tutor3] Priority to student student1@localhost increased for matching discipline.[0m
+[32m[student3] ✅ Explicação recebida[0m
+[32m[student3] 🎓 progresso 0.04 → 0.11[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student3@localhost: Vídeo visual introdutório sobre estatística bayesiana
+[93m[student3] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística bayesiana[0m
+[34m[student2] 🎯 A estudar português (progresso: 0.27)[0m
+[34m[student2] CFP → tutor1@localhost: português[0m
+[34m[student2] CFP → tutor2@localhost: português[0m
+[34m[student2] CFP → tutor3@localhost: português[0m
+[34m[student3] 🎯 A estudar estatística bayesiana (progresso: 0.16)[0m
+[34m[student3] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student3] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student3] CFP → tutor3@localhost: estatística bayesiana[0m
+[31m[tutor1] Priority to student student3@localhost increased for matching discipline.[0m
+[34m[student4] 🎯 A estudar estatística bayesiana (progresso: 0.21)[0m
+[34m[student4] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student4] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student4] CFP → tutor3@localhost: estatística bayesiana[0m
+[31m[tutor1] Priority to student student4@localhost increased for matching discipline.[0m
+[92m[student4] 📈 progresso após recurso 0.39 → 0.41[0m
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar álgebra (progresso: 0.18)[0m
+[34m[student5] CFP → tutor1@localhost: álgebra[0m
+[34m[student5] CFP → tutor2@localhost: álgebra[0m
+[34m[student5] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor3] Priority to student student5@localhost increased for matching discipline.[0m
+[31m[student5] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[92m[student1] 📈 progresso após recurso 0.26 → 0.27[0m
+[31m[student1] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[92m[student2] 📈 progresso após recurso 0.23 → 0.27[0m
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[31m[student2] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[student1] Proposal chosen: {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.23 -> 0.23[0m
+[32m[Tutor-tutor1] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[32m[student5] ✅ Explicação recebida[0m
+[32m[student5] 🎓 progresso 0.39 → 0.46[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[student1] ❌ tutor2@localhost ocupado — tentar outro[0m
+[92m[student3] 📈 progresso após recurso 0.11 → 0.13[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[31m[student2] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[33m[Resource] recurso enviado → student5@localhost: Vídeo kinesthetic introdutório sobre álgebra
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[31m[student3] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[93m[student5] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre álgebra[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.28 -> 0.28[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.17 -> 0.17[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+[31m[student5] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}
+[34m[student5] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[32m[Tutor-tutor3] ✅ Aceitou student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[32m[student4] ✅ Explicação recebida[0m
+[32m[student4] 🎓 progresso 0.02 → 0.11[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo kinesthetic introdutório sobre programação
+[93m[student4] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre programação[0m
+[92m[student5] 📈 progresso após recurso 0.46 → 0.51[0m
+[32m[Tutor-tutor1] ✅ Aceitou student2@localhost[0m
+[32m[student1] ✅ Explicação recebida[0m
+[32m[student1] 🎓 progresso 0.14 → 0.38[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student1@localhost: Vídeo visual introdutório sobre estatística bayesiana
+[93m[student1] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística bayesiana[0m
+[32m[student5] ✅ Explicação recebida[0m
+[32m[student5] 🎓 progresso 0.05 → 0.09[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student5@localhost: Vídeo kinesthetic introdutório sobre estatística
+[93m[student5] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística[0m
+[34m[student1] 🎯 A estudar estatística bayesiana (progresso: 0.27)[0m
+[34m[student1] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student1] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student1] CFP → tutor3@localhost: estatística bayesiana[0m
+[34m[student2] 🎯 A estudar estatística (progresso: 0.28)[0m
+[34m[student2] CFP → tutor1@localhost: estatística[0m
+[34m[student2] CFP → tutor2@localhost: estatística[0m
+[34m[student2] CFP → tutor3@localhost: estatística[0m
+[31m[student2] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student2] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student3] 🎯 A estudar estatística (progresso: 0.17)[0m
+[34m[student3] CFP → tutor1@localhost: estatística[0m
+[34m[student3] CFP → tutor2@localhost: estatística[0m
+[34m[student3] CFP → tutor3@localhost: estatística[0m
+[31m[student3] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.23)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[92m[student4] 📈 progresso após recurso 0.11 → 0.14[0m
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student5] CFP → tutor1@localhost: estatística[0m
+[34m[student5] CFP → tutor2@localhost: estatística[0m
+[34m[student5] CFP → tutor3@localhost: estatística[0m
+[32m[Tutor-tutor1] ✅ Aceitou student3@localhost[0m
+[32m[student2] ✅ Explicação recebida[0m
+[32m[student2] 🎓 progresso 0.36 → 0.49[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student1] 📈 progresso após recurso 0.38 → 0.43[0m
+[33m[Resource] recurso enviado → student2@localhost: Vídeo visual introdutório sobre estatística
+[31m[student1] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[student1] ❌ tutor3@localhost ocupado — tentar outro[0m
+[93m[student2] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística[0m
+[92m[student5] 📈 progresso após recurso 0.09 → 0.13[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student1] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}
+[34m[student1] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.27 -> 0.27[0m
+[32m[Tutor-tutor3] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.30 -> 0.30[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.17 -> 0.17[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.23 -> 0.23[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+[31m[student5] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'álgebra', 'expertise': 0.7481607376682953, 'slots': 3}
+[34m[student5] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student5@localhost[0m
+[31m[tutor1] Priority to student student1@localhost increased for matching discipline.[0m
+[92m[student2] 📈 progresso após recurso 0.49 → 0.51[0m
+[32m[student3] ✅ Explicação recebida[0m
+[32m[student3] 🎓 progresso 0.07 → 0.16[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[student1] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[student2] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[Resource] recurso enviado → student3@localhost: Vídeo visual introdutório sobre estatística
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[32m[Tutor-tutor1] ✅ Aceitou student2@localhost[0m
+[31m[student5] ❌ tutor1@localhost ocupado — tentar outro[0m
+[93m[student3] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística[0m
+[32m[student4] ✅ Explicação recebida[0m
+[32m[student4] 🎓 progresso 0.41 → 0.47[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo kinesthetic introdutório sobre estatística bayesiana
+[93m[student4] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística bayesiana[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[32m[student1] ✅ Explicação recebida[0m
+[32m[student1] 🎓 progresso 0.27 → 0.40[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[32m[Tutor-tutor3] ✅ Aceitou student5@localhost[0m
+[33m[Resource] recurso enviado → student1@localhost: Vídeo visual introdutório sobre álgebra
+[93m[student1] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre álgebra[0m
+[34m[student1] 🎯 A estudar álgebra (progresso: 0.30)[0m
+[34m[student1] CFP → tutor1@localhost: álgebra[0m
+[34m[student1] CFP → tutor2@localhost: álgebra[0m
+[34m[student1] CFP → tutor3@localhost: álgebra[0m
+[92m[student3] 📈 progresso após recurso 0.16 → 0.19[0m
+[32m[Tutor-tutor1] ✅ Aceitou student3@localhost[0m
+[32m[student2] ✅ Explicação recebida[0m
+[32m[student2] 🎓 progresso 0.24 → 0.38[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student2@localhost: Vídeo visual introdutório sobre estatística bayesiana
+[93m[student2] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre estatística bayesiana[0m
+[34m[student2] 🎯 A estudar estatística bayesiana (progresso: 0.32)[0m
+[34m[student2] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor3@localhost: estatística bayesiana[0m
+[34m[student3] 🎯 A estudar álgebra (progresso: 0.19)[0m
+[34m[student3] CFP → tutor1@localhost: álgebra[0m
+[34m[student3] CFP → tutor2@localhost: álgebra[0m
+[34m[student3] CFP → tutor3@localhost: álgebra[0m
+[31m[student3] ❌ tutor2@localhost ocupado — tentar outro[0m
+[34m[student4] 🎯 A estudar estatística bayesiana (progresso: 0.24)[0m
+[34m[student4] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student4] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student4] CFP → tutor3@localhost: estatística bayesiana[0m
+[92m[student4] 📈 progresso após recurso 0.47 → 0.49[0m
+[31m[student4] ❌ tutor2@localhost ocupado — tentar outro[0m
+[34m[student5] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student5] CFP → tutor1@localhost: álgebra[0m
+[34m[student5] CFP → tutor2@localhost: álgebra[0m
+[34m[student5] CFP → tutor3@localhost: álgebra[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= aprendizagem automática, exp=0.5326008419972075, slots=2)[0m
+[92m[student1] 📈 progresso após recurso 0.40 → 0.44[0m
+[31m[tutor3] Priority to student student1@localhost increased for matching discipline.[0m
+[31m[student1] ❌ tutor2@localhost ocupado — tentar outro[0m
+[32m[student5] ✅ Explicação recebida[0m
+[32m[student5] 🎓 progresso 0.51 → 0.61[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[tutor3] Priority to student student3@localhost increased for matching discipline.[0m
+[31m[student1] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[tutor3] Priority to student student5@localhost increased for matching discipline.[0m
+[33m[Resource] recurso enviado → student5@localhost: Vídeo kinesthetic introdutório sobre álgebra
+[31m[student3] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[student4] ❌ tutor3@localhost ocupado — tentar outro[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= álgebra, exp=0.7481607376682953, slots=3)[0m
+[93m[student5] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre álgebra[0m
+[31m[student1] Proposal chosen: {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.30 -> 0.30[0m
+[92m[student2] 📈 progresso após recurso 0.38 → 0.40[0m
+[31m[student2] ❌ tutor2@localhost ocupado — tentar outro[0m
+[31m[tutor1] Priority to student student2@localhost increased for matching discipline.[0m
+[31m[student2] ❌ tutor3@localhost ocupado — tentar outro[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[32m[student3] ✅ Explicação recebida[0m
+[32m[student3] 🎓 progresso 0.10 → 0.17[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[student1] ❌ tutor1@localhost ocupado — tentar outro[0m
+[31m[tutor1] Priority to student student4@localhost increased for matching discipline.[0m
+[31m[student2] ❌ tutor1@localhost ocupado — tentar outro[0m
+[33m[Resource] recurso enviado → student3@localhost: Vídeo visual introdutório sobre álgebra
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= estatística bayesiana, exp=0.9862017375285732, slots=2)[0m
+[32m[Tutor-tutor1] ✅ Aceitou student1@localhost[0m
+[31m[student4] ❌ tutor1@localhost ocupado — tentar outro[0m
+[93m[student3] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre álgebra[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.33 -> 0.33[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}[0m
+{'tutor': 'tutor1@localhost', 'discipline': 'estatística bayesiana', 'expertise': 0.9862017375285732, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor1@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] ❌ Nenhum tutor respondeu — pedir peer[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.25 -> 0.25[0m
+[35m[Peer-peer1] ✅ Ajudando student4@localhost[0m
+
+⏳ Simulação terminada. A encerrar agentes...
+
+🔻 A parar resource...
+Progresso Final: 0.16362894830266342 -> 0.3028708976272026
+🔻 A parar student1...
+Progresso Final: 0.21667139846686553 -> 0.32669887473909126
+🔻 A parar student2...
+Progresso Final: 0.10879361040336549 -> 0.20473775013586218
+🔻 A parar student3...
+Progresso Final: 0.1645728553282103 -> 0.24516329976466358
+🔻 A parar student4...
+Progresso Final: 0.14086864846032146 -> 0.23545715871623848
+🔻 A parar student5...
+🔻 A parar tutor1...
+🔻 A parar tutor2...
+🔻 A parar tutor3...
+🔻 A parar peer1...
+
+✅ Todos agentes terminados. Sistema encerrado.
+

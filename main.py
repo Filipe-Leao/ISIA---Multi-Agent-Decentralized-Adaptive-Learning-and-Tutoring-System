@@ -7,7 +7,7 @@ from resource_manager import ResourceManagerAgent
 
 async def main():
     # Criar agentes
-    number_students = 3
+    number_students = 5
     number_tutors = 3
     number_peers = 1
 
