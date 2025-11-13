@@ -1,0 +1,1517 @@
+[36m[student1] estilo=kinesthetic progresso médio=0.19[0m
+[36m[student2] estilo=auditory progresso médio=0.17[0m
+[36m[student3] estilo=cinestésico progresso médio=0.21[0m
+[36m[student4] estilo=visual progresso médio=0.19[0m
+[36m[student5] estilo=auditory progresso médio=0.24[0m
+[36m[student6] estilo=auditory progresso médio=0.14[0m
+[36m[student7] estilo=visual progresso médio=0.22[0m
+[36m[student8] estilo=visual progresso médio=0.14[0m
+[36m[student9] estilo=visual progresso médio=0.2[0m
+[36m[student10] estilo=kinesthetic progresso médio=0.21[0m
+
+Criados estudantes
+
+Criados tutores
+
+Criados 10 estudantes, 3 tutores e 1 peers.
+
+Resource Manager ativo.
+[36m[Student-student1] Iniciado
+[student1] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student2] Iniciado
+[student2] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student3] Iniciado
+[student3] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student4] Iniciado
+[student4] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student5] Iniciado
+[student5] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student6] Iniciado
+[student6] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student7] Iniciado
+[student7] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student8] Iniciado
+[student8] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student9] Iniciado
+[student9] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Student-student10] Iniciado
+[student10] PresenceInfo(Type: PresenceType.AVAILABLE, Show: PresenceShow.CHAT, Status: Ready to chat, Priority: 0)
+[36m[Tutor-tutor1] Iniciado | Capacidade: 2 | Available: 2 | Expertise: 0.7989495645794151[0m
+[36m[Tutor-tutor2] Iniciado | Capacidade: 2 | Available: 2 | Expertise: 0.8570839860314052[0m
+[36m[Tutor-tutor3] Iniciado | Capacidade: 2 | Available: 2 | Expertise: 0.810203309178817[0m
+[35m[Peer-peer1] Pronto para ajudar colegas 👥[0m
+[student1] 🔔 Subscribed to resource@localhost
+[student1] 🔔 Subscribed to tutor1@localhost
+[student1] 🔔 Subscribed to tutor2@localhost
+[student1] 🔔 Subscribed to tutor3@localhost
+[student1] 🔔 Subscribed to peer1@localhost
+[student2] 🔔 Subscribed to resource@localhost
+[student2] 🔔 Subscribed to tutor1@localhost
+[student2] 🔔 Subscribed to tutor2@localhost
+[student2] 🔔 Subscribed to tutor3@localhost
+[student2] 🔔 Subscribed to peer1@localhost
+[student3] 🔔 Subscribed to resource@localhost
+[student3] 🔔 Subscribed to tutor1@localhost
+[student3] 🔔 Subscribed to tutor2@localhost
+[student3] 🔔 Subscribed to tutor3@localhost
+[student3] 🔔 Subscribed to peer1@localhost
+[student4] 🔔 Subscribed to resource@localhost
+[student4] 🔔 Subscribed to tutor1@localhost
+[student4] 🔔 Subscribed to tutor2@localhost
+[student4] 🔔 Subscribed to tutor3@localhost
+[student4] 🔔 Subscribed to peer1@localhost
+[student5] 🔔 Subscribed to resource@localhost
+[student5] 🔔 Subscribed to tutor1@localhost
+[student5] 🔔 Subscribed to tutor2@localhost
+[student5] 🔔 Subscribed to tutor3@localhost
+[student5] 🔔 Subscribed to peer1@localhost
+[student6] 🔔 Subscribed to resource@localhost
+[student6] 🔔 Subscribed to tutor1@localhost
+[student6] 🔔 Subscribed to tutor2@localhost
+[student6] 🔔 Subscribed to tutor3@localhost
+[student6] 🔔 Subscribed to peer1@localhost
+[student7] 🔔 Subscribed to resource@localhost
+[student7] 🔔 Subscribed to tutor1@localhost
+[student7] 🔔 Subscribed to tutor2@localhost
+[student7] 🔔 Subscribed to tutor3@localhost
+[student7] 🔔 Subscribed to peer1@localhost
+[student8] 🔔 Subscribed to resource@localhost
+[student8] 🔔 Subscribed to tutor1@localhost
+[student8] 🔔 Subscribed to tutor2@localhost
+[student8] 🔔 Subscribed to tutor3@localhost
+[student8] 🔔 Subscribed to peer1@localhost
+[student9] 🔔 Subscribed to resource@localhost
+[student9] 🔔 Subscribed to tutor1@localhost
+[student9] 🔔 Subscribed to tutor2@localhost
+[student9] 🔔 Subscribed to tutor3@localhost
+[student9] 🔔 Subscribed to peer1@localhost
+[student10] 🔔 Subscribed to resource@localhost
+[student10] 🔔 Subscribed to tutor1@localhost
+[student10] 🔔 Subscribed to tutor2@localhost
+[student10] 🔔 Subscribed to tutor3@localhost
+[student10] 🔔 Subscribed to peer1@localhost
+[tutor1] 🔔 Subscribed to resource@localhost
+[tutor2] 🔔 Subscribed to resource@localhost
+[tutor3] 🔔 Subscribed to resource@localhost
+[peer1] 🔔 Subscribed to resource@localhost
+
+✅ Todos agentes iniciados. Simulação a correr...
+
+[34m[student1] 🎯 A estudar aprendizagem automática (progresso: 0.25)[0m
+[34m[student1] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.6395615653875922)]
+[tutor2] 📩 Queue: [('student1@localhost', 0.654095515853877)]
+[31m[tutor3] Priority to student student1@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student1@localhost', 1.6270832845450474)]
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student2] 🎯 A estudar estatística bayesiana (progresso: 0.37)[0m
+[34m[student2] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.5924908906573092)]
+[tutor2] 📩 Queue: [('student2@localhost', 0.6279784423590837)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.5367617177977505)]
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student3] 🎯 A estudar português (progresso: 0.28)[0m
+[34m[student3] CFP → tutor1@localhost: português[0m
+[34m[student3] CFP → tutor2@localhost: português[0m
+[34m[student3] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.668911715412162)]
+[tutor2] 📩 Queue: [('student3@localhost', 0.6644084726614057)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.6801522592430407)]
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.02)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.8421676700482191)]
+[tutor2] 📩 Queue: [('student4@localhost', 0.9132862142342613)]
+[tutor3] 📩 Queue: [('student4@localhost', 0.8426781443429211)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.03)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.7800411273837973)]
+[tutor2] 📩 Queue: [('student5@localhost', 0.9173799963572342)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.832099011421814)]
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student6] 🎯 A estudar estatística bayesiana (progresso: 0.36)[0m
+[34m[student6] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student6@localhost', 0.6063595235786733)]
+[tutor2] 📩 Queue: [('student6@localhost', 0.5764516084347947)]
+[tutor3] 📩 Queue: [('student6@localhost', 0.6051825862324067)]
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student7] 🎯 A estudar álgebra (progresso: 0.23)[0m
+[34m[student7] CFP → tutor1@localhost: álgebra[0m
+[34m[student7] CFP → tutor2@localhost: álgebra[0m
+[34m[student7] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student7@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student7@localhost', 1.6537269503925858)]
+[31m[tutor2] Priority to student student7@localhost increased for matching discipline.[0m
+[tutor2] 📩 Queue: [('student7@localhost', 1.7177132182136476)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.7057517348613958)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar aprendizagem automática (progresso: 0.17)[0m
+[34m[student8] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student8] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student8] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student8@localhost', 0.7319799694589137)]
+[tutor2] 📩 Queue: [('student8@localhost', 0.7361074102779612)]
+[31m[tutor3] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student8@localhost', 1.7614387536891685)]
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student9] 🎯 A estudar português (progresso: 0.34)[0m
+[34m[student9] CFP → tutor1@localhost: português[0m
+[34m[student9] CFP → tutor2@localhost: português[0m
+[34m[student9] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.5832783771073656)]
+[tutor2] 📩 Queue: [('student9@localhost', 0.6642290768232254)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.5622871282939829)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student1] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[32m[Tutor-tutor3] ✅ Aceitou student1@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar estatística (progresso: 0.33)[0m
+[34m[student10] CFP → tutor1@localhost: estatística[0m
+[34m[student10] CFP → tutor2@localhost: estatística[0m
+[34m[student10] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student10@localhost', 0.5809203128048656)]
+[tutor2] 📩 Queue: [('student10@localhost', 0.5980402455287518)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.17 -> 0.17[0m
+[32m[Tutor-tutor2] ✅ Aceitou student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[student6] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.14 -> 0.14[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[student7] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student8] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.14 -> 0.14[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[tutor3] 📩 Queue: [('student10@localhost', 0.565171584845888)]
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[32m[student1] ✅ Explicação recebida por tutor3@localhost[0m
+[32m[student1] 🎓 progresso 0.25 → 0.37[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[33m[Resource] recurso enviado → student1@localhost: Vídeo kinesthetic introdutório sobre aprendizagem automática
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[32m[Tutor-tutor3] ✅ Aceitou student8@localhost[0m
+[93m[student1] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre aprendizagem automática[0m
+[31m[student10] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student10] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student10] ⏳ A aguardar explicação...[0m
+[35m[student10] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[32m[Tutor-tutor2] ✅ Aceitou student3@localhost[0m
+[32m[student2] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student2] 🎓 progresso 0.37 → 0.43[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student2@localhost: Vídeo auditory introdutório sobre estatística bayesiana
+[93m[student2] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre estatística bayesiana[0m
+[34m[student1] 🎯 A estudar aprendizagem automática (progresso: 0.21)[0m
+[34m[student1] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student1] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.7277248599238667)]
+[34m[student2] 🎯 A estudar estatística bayesiana (progresso: 0.18)[0m
+[34m[student2] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student2] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.6730067214057641)]
+[34m[student3] 🎯 A estudar português (progresso: 0.21)[0m
+[34m[student3] CFP → tutor1@localhost: português[0m
+[34m[student3] CFP → tutor2@localhost: português[0m
+[34m[student3] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.6310607601833644)]
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.19)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.743413283885485)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.24)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.6943632538821843)]
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[92m[student1] 📈 progresso após recurso 0.37 → 0.41[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[32m[student8] ✅ Explicação recebida por tutor3@localhost[0m
+[32m[student8] 🎓 progresso 0.17 → 0.29[0m
+[33m[student8] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[tutor3] Priority to student student1@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student1@localhost', 1.7063955418279175)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.7483263444405952)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.734859686363418)]
+[33m[Resource] recurso enviado → student8@localhost: Vídeo visual introdutório sobre aprendizagem automática
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[tutor3] 📩 Queue: [('student4@localhost', 0.7022296630011764)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.6806543436151475)]
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[93m[student8] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre aprendizagem automática[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student6] 🎯 A estudar estatística bayesiana (progresso: 0.14)[0m
+[34m[student6] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student6@localhost', 0.7172550846361622)]
+[tutor3] 📩 Queue: [('student6@localhost', 0.7360334291114311)]
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[32m[Tutor-tutor2] ✅ Aceitou student4@localhost[0m
+[32m[student3] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student3] 🎓 progresso 0.28 → 0.32[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student2] 📈 progresso após recurso 0.43 → 0.48[0m
+[33m[Resource] recurso enviado → student3@localhost: Vídeo kinesthetic introdutório sobre português
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[93m[student3] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre português[0m
+[34m[student7] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student7] CFP → tutor1@localhost: álgebra[0m
+[34m[student7] CFP → tutor2@localhost: álgebra[0m
+[34m[student7] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student7@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student7@localhost', 1.7108671433576683)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.6296013067107293)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar aprendizagem automática (progresso: 0.16)[0m
+[34m[student8] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student8] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student8] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student8@localhost', 0.7429894049803399)]
+[31m[tutor3] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student8@localhost', 1.7523442082333687)]
+[34m[student9] 🎯 A estudar português (progresso: 0.20)[0m
+[34m[student9] CFP → tutor1@localhost: português[0m
+[34m[student9] CFP → tutor2@localhost: português[0m
+[34m[student9] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.7403826820092356)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.7284103226777765)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student10] CFP → tutor1@localhost: estatística[0m
+[34m[student10] CFP → tutor2@localhost: estatística[0m
+[34m[student10] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student10@localhost', 0.7131878855370137)]
+[tutor3] 📩 Queue: [('student10@localhost', 0.7057626860762454)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[92m[student8] 📈 progresso após recurso 0.29 → 0.30[0m
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student6] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.14 -> 0.14[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[92m[student3] 📈 progresso após recurso 0.32 → 0.35[0m
+[32m[Tutor-tutor2] ✅ Aceitou student5@localhost[0m
+[32m[student4] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student4] 🎓 progresso 0.02 → 0.09[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student4@localhost: Vídeo visual introdutório sobre programação
+[93m[student4] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre programação[0m
+[31m[student7] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[student10] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student10] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student10] ⏳ A aguardar explicação...[0m
+[35m[student10] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[34m[student1] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student1] CFP → tutor1@localhost: estatística[0m
+[34m[student1] CFP → tutor2@localhost: estatística[0m
+[34m[student1] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.6716546820522933)]
+[tutor3] 📩 Queue: [('student1@localhost', 0.7084159814233353)]
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student2] 🎯 A estudar estatística (progresso: 0.19)[0m
+[34m[student2] CFP → tutor1@localhost: estatística[0m
+[34m[student2] CFP → tutor2@localhost: estatística[0m
+[34m[student2] CFP → tutor3@localhost: estatística[0m
+[32m[Tutor-tutor2] ✅ Aceitou student6@localhost[0m
+[92m[student4] 📈 progresso após recurso 0.09 → 0.12[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.6620408158286325)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.7377454291701425)]
+[32m[student5] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student5] 🎓 progresso 0.03 → 0.13[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[Resource] recurso enviado → student5@localhost: Vídeo auditory introdutório sobre estatística bayesiana
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[93m[student5] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre estatística bayesiana[0m
+[34m[student3] 🎯 A estudar programação (progresso: 0.22)[0m
+[34m[student3] CFP → tutor1@localhost: programação[0m
+[34m[student3] CFP → tutor2@localhost: programação[0m
+[34m[student3] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.6878332077345781)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.6362069756003438)]
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.20)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.6470628714673691)]
+[tutor3] 📩 Queue: [('student4@localhost', 0.6836017609683073)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.26)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.6032093659051189)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.6480841014002441)]
+[34m[student6] 🎯 A estudar estatística bayesiana (progresso: 0.14)[0m
+[34m[student6] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student6] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student6@localhost', 0.778416913661983)]
+[tutor3] 📩 Queue: [('student6@localhost', 0.7929200984759075)]
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student7] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student7] CFP → tutor1@localhost: álgebra[0m
+[34m[student7] CFP → tutor2@localhost: álgebra[0m
+[34m[student7] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student7@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student7@localhost', 1.6792862032114675)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.6698914811742217)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar álgebra (progresso: 0.16)[0m
+[34m[student8] CFP → tutor1@localhost: álgebra[0m
+[34m[student8] CFP → tutor2@localhost: álgebra[0m
+[34m[student8] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student8@localhost', 1.7148079638679024)]
+[tutor3] 📩 Queue: [('student8@localhost', 0.6927096226787224)]
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student9] 🎯 A estudar português (progresso: 0.20)[0m
+[34m[student9] CFP → tutor1@localhost: português[0m
+[34m[student9] CFP → tutor2@localhost: português[0m
+[34m[student9] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.7083092941147411)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.7391951734833146)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student10] CFP → tutor1@localhost: estatística[0m
+[34m[student10] CFP → tutor2@localhost: estatística[0m
+[34m[student10] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student10@localhost', 0.7231010535120133)]
+[tutor3] 📩 Queue: [('student10@localhost', 0.7104470408443508)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[32m[Tutor-tutor2] ✅ Aceitou student7@localhost[0m
+[92m[student5] 📈 progresso após recurso 0.13 → 0.15[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[32m[student6] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student6] 🎓 progresso 0.36 → 0.44[0m
+[33m[student6] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[33m[Resource] recurso enviado → student6@localhost: Vídeo auditory introdutório sobre estatística bayesiana
+[93m[student6] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre estatística bayesiana[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.26 -> 0.26[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[student6] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.15 -> 0.16[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[student7] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[student10] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student10] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student10] ⏳ A aguardar explicação...[0m
+[35m[student10] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor2] ❌ Rejeitado por student8@localhost[0m
+[32m[Tutor-tutor2] ✅ Aceitou student9@localhost[0m
+[32m[student7] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student7] 🎓 progresso 0.23 → 0.31[0m
+[33m[student7] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student6] 📈 progresso após recurso 0.44 → 0.47[0m
+[33m[Resource] recurso enviado → student7@localhost: Vídeo visual introdutório sobre álgebra
+[93m[student7] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre álgebra[0m
+[34m[student1] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student1] CFP → tutor1@localhost: estatística[0m
+[34m[student1] CFP → tutor2@localhost: estatística[0m
+[34m[student1] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.6303654765585046)]
+[tutor3] 📩 Queue: [('student1@localhost', 0.6511596699126527)]
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student2] 🎯 A estudar estatística (progresso: 0.19)[0m
+[34m[student2] CFP → tutor1@localhost: estatística[0m
+[34m[student2] CFP → tutor2@localhost: estatística[0m
+[34m[student2] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.7001506350448444)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.6630632297303453)]
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student3] 🎯 A estudar programação (progresso: 0.22)[0m
+[34m[student3] CFP → tutor1@localhost: programação[0m
+[34m[student3] CFP → tutor2@localhost: programação[0m
+[34m[student3] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.7053152121651083)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.6879374039540733)]
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.20)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.7260278327724385)]
+[tutor3] 📩 Queue: [('student4@localhost', 0.6577467334879327)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.26)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.5984755875388632)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.6000652571112348)]
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student6] 🎯 A estudar aprendizagem automática (progresso: 0.16)[0m
+[34m[student6] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student6] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student6] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student6@localhost', 0.7166871479136495)]
+[31m[tutor3] Priority to student student6@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student6@localhost', 1.6807832650921293)]
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[32m[Tutor-tutor2] ✅ Aceitou student10@localhost[0m
+[32m[student9] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student9] 🎓 progresso 0.34 → 0.38[0m
+[33m[student9] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student7] 📈 progresso após recurso 0.31 → 0.35[0m
+[33m[Resource] recurso enviado → student9@localhost: Vídeo visual introdutório sobre português
+[93m[student9] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre português[0m
+[34m[student7] 🎯 A estudar programação (progresso: 0.24)[0m
+[34m[student7] CFP → tutor1@localhost: programação[0m
+[34m[student7] CFP → tutor2@localhost: programação[0m
+[34m[student7] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student7@localhost', 0.688208582951271)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.660022116687289)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar álgebra (progresso: 0.16)[0m
+[34m[student8] CFP → tutor1@localhost: álgebra[0m
+[34m[student8] CFP → tutor2@localhost: álgebra[0m
+[34m[student8] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student8@localhost', 1.7431424270431664)]
+[tutor3] 📩 Queue: [('student8@localhost', 0.6955235182713058)]
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student9] 🎯 A estudar português (progresso: 0.20)[0m
+[34m[student9] CFP → tutor1@localhost: português[0m
+[34m[student9] CFP → tutor2@localhost: português[0m
+[34m[student9] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.6545628769314638)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.7340415589585936)]
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student10] CFP → tutor1@localhost: estatística[0m
+[34m[student10] CFP → tutor2@localhost: estatística[0m
+[34m[student10] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student10@localhost', 0.637153692276828)]
+[tutor3] 📩 Queue: [('student10@localhost', 0.715214623333172)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.26 -> 0.26[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[student6] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student6] Proposal chosen: {'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}[0m
+{'tutor': 'tutor3@localhost', 'discipline': 'aprendizagem automática', 'expertise': 0.810203309178817, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor3@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[32m[Tutor-tutor3] ✅ Aceitou student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[tutor2] 📩 Queue: [('student1@localhost', 0.7181524824296467)]
+[tutor2] 📩 Queue: [('student2@localhost', 0.7731929159768466)]
+[92m[student9] 📈 progresso após recurso 0.38 → 0.42[0m
+[32m[student10] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student10] 🎓 progresso 0.33 → 0.40[0m
+[33m[student10] 🔎 A pedir recurso complementar ao Resource Manager...
+[tutor2] 📩 Queue: [('student3@localhost', 0.6879194288483997)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[tutor2] 📩 Queue: [('student4@localhost', 0.7596359636479464)]
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[tutor2] 📩 Queue: [('student5@localhost', 0.7141264697513929)]
+[33m[Resource] recurso enviado → student10@localhost: Vídeo kinesthetic introdutório sobre estatística
+[33m[student3] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[tutor2] 📩 Queue: [('student6@localhost', 0.7620539973203195)]
+[33m[student4] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[31m[tutor2] Priority to student student7@localhost increased for matching discipline.[0m
+[tutor2] 📩 Queue: [('student7@localhost', 1.7176934731475935)]
+[33m[student5] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[tutor2] 📩 Queue: [('student8@localhost', 0.724000817091216)]
+[93m[student10] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística[0m
+[33m[student6] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[tutor2] 📩 Queue: [('student9@localhost', 0.7098877478564294)]
+[33m[student7] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[32m[Tutor-tutor2] ✅ Aceitou student1@localhost[0m
+[33m[student8] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[student10] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student10] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student10] ⏳ A aguardar explicação...[0m
+[35m[student10] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[34m[student1] 🎯 A estudar estatística (progresso: 0.21)[0m
+[34m[student1] CFP → tutor1@localhost: estatística[0m
+[34m[student1] CFP → tutor2@localhost: estatística[0m
+[34m[student1] CFP → tutor3@localhost: estatística[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.6873126615494919)]
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[32m[student6] ✅ Explicação recebida por tutor3@localhost[0m
+[32m[student6] 🎓 progresso 0.14 → 0.31[0m
+[33m[student6] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[33m[Resource] recurso enviado → student6@localhost: Vídeo auditory introdutório sobre aprendizagem automática
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[93m[student6] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre aprendizagem automática[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[tutor3] 📩 Queue: [('student1@localhost', 0.7272493836267087)]
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student2] 🎯 A estudar estatística (progresso: 0.19)[0m
+[34m[student2] CFP → tutor1@localhost: estatística[0m
+[34m[student2] CFP → tutor2@localhost: estatística[0m
+[34m[student2] CFP → tutor3@localhost: estatística[0m
+[92m[student10] 📈 progresso após recurso 0.40 → 0.42[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.6521878632791347)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.6912725186691687)]
+[tutor2] 📩 Queue: [('student10@localhost', 0.7438374308463961)]
+[32m[Tutor-tutor2] ✅ Aceitou student2@localhost[0m
+[32m[student1] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student1] 🎓 progresso 0.30 → 0.42[0m
+[33m[student1] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[student10] 📩 Proposta de tutor2@localhost: (discipline= álgebra, exp=0.8570839860314052, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[33m[Resource] recurso enviado → student1@localhost: Vídeo kinesthetic introdutório sobre estatística
+[93m[student1] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre estatística[0m
+[34m[student3] 🎯 A estudar programação (progresso: 0.22)[0m
+[34m[student3] CFP → tutor1@localhost: programação[0m
+[34m[student3] CFP → tutor2@localhost: programação[0m
+[34m[student3] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.641576973858549)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.7145701788773937)]
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student4] 🎯 A estudar programação (progresso: 0.20)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.7327510240190009)]
+[tutor3] 📩 Queue: [('student4@localhost', 0.6979964991244652)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.26)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.6819274241686767)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.6002313967940208)]
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student6] 🎯 A estudar aprendizagem automática (progresso: 0.19)[0m
+[34m[student6] CFP → tutor1@localhost: aprendizagem automática[0m
+[34m[student6] CFP → tutor2@localhost: aprendizagem automática[0m
+[34m[student6] CFP → tutor3@localhost: aprendizagem automática[0m
+[tutor1] 📩 Queue: [('student6@localhost', 0.7225411949862898)]
+[31m[tutor3] Priority to student student6@localhost increased for matching discipline.[0m
+[tutor3] 📩 Queue: [('student6@localhost', 1.7538477575548805)]
+[34m[student7] 🎯 A estudar programação (progresso: 0.24)[0m
+[34m[student7] CFP → tutor1@localhost: programação[0m
+[34m[student7] CFP → tutor2@localhost: programação[0m
+[34m[student7] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student7@localhost', 0.6729802850589697)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.6814293261221565)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar álgebra (progresso: 0.16)[0m
+[34m[student8] CFP → tutor1@localhost: álgebra[0m
+[34m[student8] CFP → tutor2@localhost: álgebra[0m
+[34m[student8] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student8@localhost', 1.7094745920554901)]
+[tutor3] 📩 Queue: [('student8@localhost', 0.6965040671815143)]
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student9] 🎯 A estudar programação (progresso: 0.21)[0m
+[34m[student9] CFP → tutor1@localhost: programação[0m
+[34m[student9] CFP → tutor2@localhost: programação[0m
+[34m[student9] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.6982453508465642)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.6908516369290921)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.23 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student10] CFP → tutor1@localhost: álgebra[0m
+[34m[student10] CFP → tutor2@localhost: álgebra[0m
+[34m[student10] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student10@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student10@localhost', 1.6869220919929504)]
+[tutor3] 📩 Queue: [('student10@localhost', 0.7111894214746826)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[92m[student6] 📈 progresso após recurso 0.31 → 0.33[0m
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[32m[Tutor-tutor2] ✅ Aceitou student3@localhost[0m
+[92m[student1] 📈 progresso após recurso 0.42 → 0.46[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[32m[student2] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student2] 🎓 progresso 0.36 → 0.47[0m
+[33m[student2] 🔎 A pedir recurso complementar ao Resource Manager...
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[33m[Resource] recurso enviado → student2@localhost: Vídeo auditory introdutório sobre estatística
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[93m[student2] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre estatística[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.20 -> 0.20[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.26 -> 0.26[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[student6] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[student10] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student10] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student10] ⏳ A aguardar explicação...[0m
+[35m[student10] 📊 Progresso geral atualizado: 0.22 -> 0.22[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student10@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student10@localhost[0m
+[32m[Tutor-tutor2] ✅ Aceitou student4@localhost[0m
+[32m[student3] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student3] 🎓 progresso 0.12 → 0.23[0m
+[33m[student3] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student2] 📈 progresso após recurso 0.47 → 0.49[0m
+[33m[Resource] recurso enviado → student3@localhost: Vídeo kinesthetic introdutório sobre programação
+[93m[student3] 📘 Recurso complementar recebido: Vídeo kinesthetic introdutório sobre programação[0m
+[34m[student1] 🎯 A estudar português (progresso: 0.24)[0m
+[34m[student1] CFP → tutor1@localhost: português[0m
+[34m[student1] CFP → tutor2@localhost: português[0m
+[34m[student1] CFP → tutor3@localhost: português[0m
+[tutor1] 📩 Queue: [('student1@localhost', 0.7070106077038925)]
+[tutor3] 📩 Queue: [('student1@localhost', 0.6649586518214577)]
+[33m[student1] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student1] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student2] 🎯 A estudar programação (progresso: 0.21)[0m
+[34m[student2] CFP → tutor1@localhost: programação[0m
+[34m[student2] CFP → tutor2@localhost: programação[0m
+[34m[student2] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student2@localhost', 0.6528205693043136)]
+[tutor3] 📩 Queue: [('student2@localhost', 0.7383291140943699)]
+[33m[student2] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student2] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student3] 🎯 A estudar programação (progresso: 0.24)[0m
+[34m[student3] CFP → tutor1@localhost: programação[0m
+[34m[student3] CFP → tutor2@localhost: programação[0m
+[34m[student3] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student3@localhost', 0.6942158138221983)]
+[tutor3] 📩 Queue: [('student3@localhost', 0.7114529616323622)]
+[34m[student4] 🎯 A estudar programação (progresso: 0.20)[0m
+[34m[student4] CFP → tutor1@localhost: programação[0m
+[34m[student4] CFP → tutor2@localhost: programação[0m
+[34m[student4] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student4@localhost', 0.6387601899575538)]
+[tutor3] 📩 Queue: [('student4@localhost', 0.7021203990842673)]
+[33m[student4] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student4] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student5] 🎯 A estudar estatística bayesiana (progresso: 0.26)[0m
+[34m[student5] CFP → tutor1@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor2@localhost: estatística bayesiana[0m
+[34m[student5] CFP → tutor3@localhost: estatística bayesiana[0m
+[tutor1] 📩 Queue: [('student5@localhost', 0.6728543155128348)]
+[tutor3] 📩 Queue: [('student5@localhost', 0.6608879614864394)]
+[33m[student5] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student5] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student6] 🎯 A estudar álgebra (progresso: 0.19)[0m
+[34m[student6] CFP → tutor1@localhost: álgebra[0m
+[34m[student6] CFP → tutor2@localhost: álgebra[0m
+[34m[student6] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student6@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student6@localhost', 1.7325590153133685)]
+[tutor3] 📩 Queue: [('student6@localhost', 0.7058295435347878)]
+[33m[student6] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student6] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[32m[Tutor-tutor2] ✅ Aceitou student5@localhost[0m
+[32m[student4] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student4] 🎓 progresso 0.12 → 0.16[0m
+[33m[student4] 🔎 A pedir recurso complementar ao Resource Manager...
+[92m[student3] 📈 progresso após recurso 0.23 → 0.25[0m
+[33m[student3] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student3] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[33m[Resource] recurso enviado → student4@localhost: Vídeo visual introdutório sobre programação
+[93m[student4] 📘 Recurso complementar recebido: Vídeo visual introdutório sobre programação[0m
+[34m[student7] 🎯 A estudar programação (progresso: 0.24)[0m
+[34m[student7] CFP → tutor1@localhost: programação[0m
+[34m[student7] CFP → tutor2@localhost: programação[0m
+[34m[student7] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student7@localhost', 0.684221185002132)]
+[tutor3] 📩 Queue: [('student7@localhost', 0.6398138327246845)]
+[33m[student7] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student7] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student8] 🎯 A estudar álgebra (progresso: 0.16)[0m
+[34m[student8] CFP → tutor1@localhost: álgebra[0m
+[34m[student8] CFP → tutor2@localhost: álgebra[0m
+[34m[student8] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student8@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student8@localhost', 1.6795636133753882)]
+[tutor3] 📩 Queue: [('student8@localhost', 0.7204561832921733)]
+[33m[student8] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student8] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[34m[student9] 🎯 A estudar programação (progresso: 0.21)[0m
+[34m[student9] CFP → tutor1@localhost: programação[0m
+[34m[student9] CFP → tutor2@localhost: programação[0m
+[34m[student9] CFP → tutor3@localhost: programação[0m
+[tutor1] 📩 Queue: [('student9@localhost', 0.666355390343224)]
+[tutor3] 📩 Queue: [('student9@localhost', 0.7051639755678802)]
+[33m[student9] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student9] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student1] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student1] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student1] ⏳ A aguardar explicação...[0m
+[35m[student1] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student1@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student1@localhost[0m
+[34m[student10] 🎯 A estudar álgebra (progresso: 0.22)[0m
+[34m[student10] CFP → tutor1@localhost: álgebra[0m
+[34m[student10] CFP → tutor2@localhost: álgebra[0m
+[34m[student10] CFP → tutor3@localhost: álgebra[0m
+[31m[tutor1] Priority to student student10@localhost increased for matching discipline.[0m
+[tutor1] 📩 Queue: [('student10@localhost', 1.6341116543978518)]
+[tutor3] 📩 Queue: [('student10@localhost', 0.728710485554058)]
+[33m[student10] 📩 Proposta de tutor1@localhost: (discipline= álgebra, exp=0.7989495645794151, slots=2)[0m
+[33m[student10] 📩 Proposta de tutor3@localhost: (discipline= aprendizagem automática, exp=0.810203309178817, slots=2)[0m
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student2] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student2] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student2] ⏳ A aguardar explicação...[0m
+[35m[student2] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student2@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student2@localhost[0m
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student3] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student3] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student3] ⏳ A aguardar explicação...[0m
+[35m[student3] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student3@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student3@localhost[0m
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student4] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student4] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student4] ⏳ A aguardar explicação...[0m
+[35m[student4] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student4@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student4@localhost[0m
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student5] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student5] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student5] ⏳ A aguardar explicação...[0m
+[35m[student5] 📊 Progresso geral atualizado: 0.26 -> 0.26[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student5@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student5@localhost[0m
+[31m[student6] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student6] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student6] ⏳ A aguardar explicação...[0m
+[35m[student6] 📊 Progresso geral atualizado: 0.19 -> 0.19[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student6@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student6@localhost[0m
+[32m[Tutor-tutor2] ✅ Aceitou student6@localhost[0m
+[92m[student4] 📈 progresso após recurso 0.16 → 0.18[0m
+[32m[student5] ✅ Explicação recebida por tutor2@localhost[0m
+[32m[student5] 🎓 progresso 0.15 → 0.22[0m
+[33m[student5] 🔎 A pedir recurso complementar ao Resource Manager...
+[33m[Resource] recurso enviado → student5@localhost: Vídeo auditory introdutório sobre estatística bayesiana
+[93m[student5] 📘 Recurso complementar recebido: Vídeo auditory introdutório sobre estatística bayesiana[0m
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student7] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student7] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student7] ⏳ A aguardar explicação...[0m
+[35m[student7] 📊 Progresso geral atualizado: 0.24 -> 0.24[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student7@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student7@localhost[0m
+[31m[student8] Proposal chosen: {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student8] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student8] ⏳ A aguardar explicação...[0m
+[35m[student8] 📊 Progresso geral atualizado: 0.16 -> 0.16[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student8@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student8@localhost[0m
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[31m[student9] Proposal chosen (different discipline): {'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}[0m
+{'tutor': 'tutor2@localhost', 'discipline': 'álgebra', 'expertise': 0.8570839860314052, 'slots': 2}
+[34m[student9] ✉️ Aceitou proposta de tutor2@localhost[0m
+[34m[student9] ⏳ A aguardar explicação...[0m
+[35m[student9] 📊 Progresso geral atualizado: 0.21 -> 0.21[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor3] ❌ Rejeitado por student9@localhost[0m
+[31m[Tutor-tutor1] ❌ Rejeitado por student9@localhost[0m
+
+⏳ Simulação terminada. A encerrar agentes...
+
+🔻 A parar resource...
+🔻 A parar student1...
+Progresso Final: 0.18639124477689115 -> 0.2401682212822922
+🔻 A parar student2...
+Progresso Final: 0.16983217980281642 -> 0.20937534484093479
+🔻 A parar student3...
+Progresso Final: 0.21072370530979012 -> 0.24442571894639573
+🔻 A parar student4...
+Progresso Final: 0.18831411099888787 -> 0.21399433501353773
+🔻 A parar student5...
+Progresso Final: 0.24164996062869504 -> 0.27389512556685797
+🔻 A parar student6...
+Progresso Final: 0.1416891681639289 -> 0.19156307757694177
+🔻 A parar student7...
+Progresso Final: 0.22385042392575502 -> 0.2427018423576406
+🔻 A parar student8...
+Progresso Final: 0.14080237173546817 -> 0.16183596725155217
+🔻 A parar student9...
+Progresso Final: 0.195458364672454 -> 0.20941107150717017
+🔻 A parar student10...
+Progresso Final: 0.20772494684945733 -> 0.22262663087043133
+🔻 A parar tutor1...
+🔻 A parar tutor2...
+🔻 A parar tutor3...
+🔻 A parar peer1...
+
+✅ Todos agentes terminados. Sistema encerrado.
+

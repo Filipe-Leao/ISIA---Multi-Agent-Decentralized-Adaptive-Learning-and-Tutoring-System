@@ -219,7 +219,7 @@ class StudentAgent(Agent):
                     priority=2  # connection priority
                 ) 
 
-                print(Fore.GREEN + f"[{self.agent.name}] ✅ Explicação recebida" + Style.RESET_ALL)
+                print(Fore.GREEN + f"[{self.agent.name}] ✅ Explicação recebida por {chosen}" + Style.RESET_ALL)
                 old = self.agent.knowledge[self.agent.topic]
 
                 if chosen == "peer":

@@ -7,7 +7,7 @@ from resource_manager import ResourceManagerAgent
 
 async def main():
     # Criar agentes
-    number_students = 5
+    number_students = 10
     number_tutors = 3
     number_peers = 1
 
@@ -70,9 +70,9 @@ async def main():
 
     # Stop agents
     for name, agent in agents.items():
+        print(f"🔻 A parar {name}...")
         if name.startswith("student"):
             print(f"Progresso Final: {agent.initial_progress} -> {agent.progress}")
-        print(f"🔻 A parar {name}...")
         await agent.stop()
 
     print("\n✅ Todos agentes terminados. Sistema encerrado.\n")

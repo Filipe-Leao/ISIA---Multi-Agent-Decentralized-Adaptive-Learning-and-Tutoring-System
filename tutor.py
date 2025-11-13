@@ -3,6 +3,7 @@ from spade.message import Message
 from spade.behaviour import *
 from spade.presence import *
 from spade import behaviour
+import random
 import asyncio
 from colorama import Fore, Style
 
@@ -58,6 +59,7 @@ class TutorAgent(Agent):
 
             # ---------- CFP received ----------
             if perf == "cfp":
+                random.seed()
                 parts = dict(p.split(":") for p in msg.body.split(";"))
                 student_progress = float(parts.get("progress", 0))
 
@@ -67,12 +69,13 @@ class TutorAgent(Agent):
                 if str(parts["topic"]) == str(self.agent.discipline): 
                     priority = 1
                     print(Fore.RED + f"[{self.agent.name}] Priority to student {msg.sender} increased for matching discipline." + Style.RESET_ALL)
-                priority += self.agent.expertise * (1 - student_progress)
+                priority += self.agent.expertise * (1 - student_progress) + random.uniform(0,0.1)
 
                 self.agent.queue.append((str(msg.sender), priority))
+                print(f"[{self.agent.name}] 📩 Queue: {self.agent.queue}")
                 self.agent.queue.sort(key=lambda x: x[1], reverse=True)
 
-                chosen_student = self.agent.queue[0][0]
+                chosen_student = self.agent.queue.pop(0)[0]
 
                 # if tutor available and this student is highest priority
                 if self.agent.available_slots > 0 and str(msg.sender) == chosen_student:
