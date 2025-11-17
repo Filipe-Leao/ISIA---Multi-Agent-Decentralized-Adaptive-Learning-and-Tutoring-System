@@ -1,0 +1,27 @@
+# ===== SPADE Framework =====
+# SPADE versão antiga compatível com PresenceType / PresenceShow
+spade==4.1.2
+
+# ===== Interface Gráfica =====
+# PySide6 para interface gráfica (compatível com Python 3.11)
+PySide6>=6.4.0
+qasync>=0.24.0
+
+# ===== Análise de Dados e Visualização =====
+numpy>=1.19.5
+pandas>=1.1.5
+matplotlib>=3.3.4
+
+# ===== Utilitários Assíncronos =====
+aiofiles>=0.8.0
+async-timeout>=3.0.1
+
+# ===== Utilitários Adicionais =====
+# Para geração de logs avançados
+colorlog>=6.7.0
+
+# Para melhor formatação de dados
+tabulate>=0.9.0
+
+# Para configurações
+python==3.11
