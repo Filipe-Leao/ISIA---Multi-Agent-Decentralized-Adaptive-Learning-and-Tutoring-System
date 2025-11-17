@@ -30,33 +30,34 @@ from resource_manager import ResourceManagerAgent
 
 
 class MainSimulation:
-    """Main simulation logic adapted from main.py with robust error handling"""
+    """Main simulation logic adapted exactly from main.py"""
 
     def __init__(self, gui_window=None):
         self.gui = gui_window
         self.agents = {}
-        self.running = False
-        self.sim_task = None
+        self._running = False
+        
+    @property
+    def running(self):
+        return self._running
         
     def set_gui(self, gui_window):
         """Connect to GUI window for logging"""
         self.gui = gui_window
         
     def log(self, text):
-        """Log message to GUI"""
-        if self.gui and hasattr(self.gui, 'logs_tab'):
-            timestamp = datetime.now().strftime("%H:%M:%S")
-            self.gui.logs_tab.log(f"[{timestamp}] {text}")
-            
+        """Log message to GUI and console"""
+        # Print to console (will be intercepted and sent to GUI automatically)
+        print(text)
+        
     async def run_simulation(self, num_students=10, num_tutors=3, num_peers=1, duration=30, server="localhost", password="1234"):
-        """Run simulation exactly like main.py with robust error handling"""
+        """Run simulation using EXACT main.py logic"""
         try:
-            self.running = True
-            self.log("🚀 Sistema Multi-Agente de Tutoria Iniciado")
+            self._running = True
             
-            # Use main.py configuration exactly
+            # Use main.py configuration exactly - same variable names and flow
             number_students = num_students
-            number_tutors = num_tutors
+            number_tutors = num_tutors  
             number_peers = num_peers
 
             disciplines = [
@@ -70,231 +71,240 @@ class MainSimulation:
             learning_styles = ["visual", "auditory", "cinestésico", "kinesthetic"]
             
             # Create agents exactly like main.py
-            self.agents = {
+            agents = {
                 "resource": ResourceManagerAgent(f"resource@{server}", password),
             }
-            
+
             # Create students exactly like main.py
             for i in range(1, number_students + 1):
-                self.agents.update({f"student{i}": StudentAgent(f"student{i}@{server}", password, learning_style=random.choice(learning_styles))})
+                agents.update({f"student{i}": StudentAgent(f"student{i}@{server}", password, learning_style=random.choice(learning_styles))})
 
-            self.log(f"📚 Criados {number_students} estudantes")
+            print(f"\nCriados estudantes")
             
-            # Create tutors exactly like main.py
+            # Create tutors exactly like main.py  
             for i in range(1, number_tutors + 1):
                 random.seed()
                 cap = round(random.uniform(1, 3))
-                self.agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@{server}", password, discipline=random.choice(disciplines), expertise=random.uniform(0.5, 1), capacity=cap)})
-            self.log(f"👨‍🏫 Criados {number_tutors} tutores")
+                agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@{server}", password, discipline=random.choice(disciplines), expertise=random.uniform(0.5, 1), capacity=cap)})
+            print(f"\nCriados tutores")
 
             # Create peers exactly like main.py
             for i in range(1, number_peers + 1):
-                self.agents.update({f"peer{i}": PeerAgent(f"peer{i}@{server}", password)})
+                agents.update({f"peer{i}": PeerAgent(f"peer{i}@{server}", password)})
             
-            self.log(f"👥 Criados {number_peers} peers")
-            self.log(f"✅ Total: {number_students} estudantes, {number_tutors} tutores e {number_peers} peers")
+            print(f"\nCriados {number_students} estudantes, {number_tutors} tutores e {number_peers} peers.\n")
             
-            # Start agents exactly like main.py with robust error handling
-            self.log("🔄 Iniciando agentes...")
-            simulation_mode = False
+            # Store agents for stopping later
+            self.agents = agents
             
-            for name, agent in self.agents.items():
-                try:
-                    result = await agent.start(auto_register=True)
-                    if result:
-                        if hasattr(agent, 'simulation_mode') and agent.simulation_mode:
-                            self.log(f"🤖 {name} iniciado em modo simulação")
-                            simulation_mode = True
-                        else:
-                            self.log(f"✅ {name} conectado ao XMPP")
-                    else:
-                        self.log(f"🤖 {name} iniciado em modo simulação")
-                        simulation_mode = True
-                except Exception as e:
-                    self.log(f"🤖 {name} em modo simulação: {e}")
-                    simulation_mode = True
+            # Start agents exactly like main.py
+            for name, agent in agents.items():
+                await agent.start(auto_register=True)
 
-            if simulation_mode:
-                self.log("⚙️ Sistema funcionando em modo simulação offline")
-                self.log("💡 Para conectividade XMPP real, execute 'spade run' em outro terminal")
-            
             await asyncio.sleep(1)
 
-            # Subscribe students to all non-students (exactly like main.py)
-            # Só fazer subscrições se não estivermos em modo simulação
-            if not simulation_mode:
-                self.log("🔗 Configurando subscrições XMPP...")
-                for name, agent in self.agents.items():
-                    if name.startswith("student"):
-                        for other_name, other_agent in self.agents.items():
-                            if not other_name.startswith("student"):
-                                try:
-                                    agent.presence.subscribe(other_agent.jid)
-                                    self.log(f"🔔 {name} subscreveu a {other_name}")
-                                except Exception as e:
-                                    self.log(f"⚠️ Erro na subscrição {name} -> {other_name}: {e}")
+            # Fazer subscrições centralmente: estudantes subscrevem a todos os não-estudantes (EXACTLY like main.py)
+            for name, agent in agents.items():
+                if name.startswith("student"):
+                    for n, a in agents.items():
+                        if n.startswith("student"):
+                            continue
+                        agent.presence.subscribe(a.jid)
+                        print(f"[{agent.name}] 🔔 Subscribed to {a.jid}")
+                else:
+                    if name.startswith("resource"):
+                        continue
+                    if "resource" in agents and agent.jid != agents["resource"].jid:
+                        agent.presence.subscribe(agents["resource"].jid)
+                        print(f"[{agent.name}] 🔔 Subscribed to {agents['resource'].jid}")
 
-                # Tutors and peers subscribe to resource manager (like main.py)
-                for name, agent in self.agents.items():
-                    if name.startswith(("tutor", "peer")):
-                        try:
-                            agent.presence.subscribe(self.agents["resource"].jid)
-                            self.log(f"🔔 {name} subscreveu ao resource manager")
-                        except Exception as e:
-                            self.log(f"⚠️ Erro na subscrição {name} -> resource: {e}")
+            print("\n✅ Todos agentes iniciados. Simulação a correr...\n")
 
-                await asyncio.sleep(2)
-                self.log("📡 Subscrições XMPP configuradas")
-            else:
-                self.log("📡 Subscrições ignoradas (modo simulação)")
-
-            self.log(f"⏱️ Simulação rodando por {duration} segundos...")
-
-            # Monitor loop exactly like main.py
+            # Run simulation with periodic updates for GUI
             start_time = asyncio.get_event_loop().time()
             
-            while asyncio.get_event_loop().time() - start_time < duration and self.running:
-                await asyncio.sleep(5)
-                elapsed = asyncio.get_event_loop().time() - start_time
-                remaining = duration - elapsed
-                self.log(f"⏰ Tempo: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+            while asyncio.get_event_loop().time() - start_time < duration and self._running:
+                await asyncio.sleep(2)  # Update every 2 seconds
                 
-                # Show student progress
-                for name, agent in self.agents.items():
-                    if name.startswith("student") and hasattr(agent, 'progress'):
-                        self.log(f"📚 {name}: progresso {agent.progress:.2f}")
+                # Update GUI panels if available
+                if self.gui and hasattr(self.gui, 'agent_status'):
+                    self.gui.agent_status.update_status(agents)
+                    
+                # Update metrics
+                if self.gui and hasattr(self.gui, 'metrics_tab'):
+                    self.gui.metrics_tab.update_metrics(agents)
+                
+                # Show periodic progress (every 5 seconds)
+                elapsed = asyncio.get_event_loop().time() - start_time
+                if int(elapsed) % 5 == 0 and elapsed > 0:
+                    remaining = duration - elapsed
+                    print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
 
-            self.log("⏳ Simulação terminada. Parando agentes...")
+            print("\n⏳ Simulação terminada. A encerrar agentes...\n")
 
-            # Stop agents and show progress exactly like main.py
-            for name, agent in self.agents.items():
-                try:
-                    if name.startswith("student"):
-                        self.log(f"📊 {name} progresso final: {agent.progress:.2f}")
-                    await agent.stop()
-                    self.log(f"🔻 {name} parado")
-                except Exception as e:
-                    self.log(f"⚠️ Erro ao parar {name}: {e}")
+            # Stop agents exactly like main.py
+            for name, agent in agents.items():
+                print(f"🔻 A parar {name}...")
+                if name.startswith("student"):
+                    print(f"Progresso Final: {agent.initial_progress} -> {agent.progress}")
+                await agent.stop()
 
-            if simulation_mode:
-                self.log("✅ Simulação offline concluída!")
-            else:
-                self.log("✅ Simulação XMPP concluída!")
+            print("\n✅ Todos agentes terminados. Sistema encerrado.\n")
             
         except Exception as e:
-            self.log(f"❌ Erro na simulação: {e}")
+            print(f"❌ Erro na simulação: {e}")
             import traceback
-            self.log(f"🔍 Detalhes: {traceback.format_exc()}")
+            traceback.print_exc()
         finally:
-            self.running = False
+            self._running = False
     
     async def stop_simulation(self):
         """Stop the running simulation"""
-        if not self.running:
-            self.log("⚠️ Simulação não está rodando")
+        if not self._running:
+            print("⚠️ Simulação não está rodando")
             return
             
-        self.log("🛑 Parando simulação...")
-        self.running = False
+        print("🛑 Parando simulação...")
+        self._running = False
         
         if hasattr(self, 'agents') and self.agents:
             for name, agent in self.agents.items():
                 try:
-                    self.log(f"🔻 Parando {name}...")
+                    print(f"🔻 Parando {name}...")
                     await agent.stop()
                 except Exception as e:
-                    self.log(f"⚠️ Erro ao parar {name}: {e}")
+                    print(f"⚠️ Erro ao parar {name}: {e}")
             
             self.agents.clear()
         
-        self.log("✅ Simulação parada com sucesso")
+        print("✅ Simulação parada com sucesso")
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("ISIA - Sistema Multi-Agente de Tutoria")
+        self.setWindowTitle("🎓 ISIA - Sistema Multi-Agente de Tutoria Adaptativa")
         self.setGeometry(100, 100, 1400, 900)
         
-        # Aplicar estilo
-        self.setStyleSheet(CHALKBOARD_STYLE)
+        # Setup background first
+        self.setup_background()
         
-        # Widget central
-        central_widget = QWidget()
-        self.setCentralWidget(central_widget)
-        
-        # Layout principal
-        main_layout = QHBoxLayout(central_widget)
-        
-        # Criar splitter principal
-        main_splitter = QSplitter(Qt.Horizontal)
-        main_layout.addWidget(main_splitter)
-        
-        # Painel esquerdo - configuração e status
-        left_panel = QWidget()
-        left_layout = QVBoxLayout(left_panel)
-        
-        # Título
-        title = QLabel("🎓 ISIA Multi-Agent System")
-        title.setObjectName("title")
-        left_layout.addWidget(title)
-        
-        # Criar instância de simulação primeiro
+        # Main simulation logic (replaces SimulationController)
         self.simulation = MainSimulation(self)
         
-        # Painel de configuração (precisa da instância de simulação)
+        # Central Widget
+        central = QWidget()
+        self.setCentralWidget(central)
+        main_layout = QVBoxLayout(central)
+        main_layout.setContentsMargins(20, 20, 20, 20)
+        main_layout.setSpacing(15)
+        
+        # Title Label
+        title = QLabel("🎓 ISIA - Sistema Inteligente de Tutoria Adaptativa")
+        title.setStyleSheet("""
+            QLabel {
+                font-size: 24px;
+                font-weight: bold;
+                color: #ffffff;
+                background-color: rgba(34, 34, 34, 200);
+                padding: 15px;
+                border-radius: 8px;
+                border: 2px solid #4CAF50;
+            }
+        """)
+        title.setAlignment(Qt.AlignCenter)
+        main_layout.addWidget(title)
+        
+        # Main content splitter
+        splitter = QSplitter(Qt.Horizontal)
+        
+        # Left panel - Configuration + Status
+        left_panel = QWidget()
+        left_layout = QVBoxLayout(left_panel)
+        left_layout.setSpacing(15)
+        
+        # Config Panel (now with new simulation logic)
         self.config_panel = ConfigPanel(self.simulation)
         left_layout.addWidget(self.config_panel)
         
-        # Status dos agentes
+        # Agent Status Panel
         self.agent_status = AgentStatusPanel()
-        left_layout.addWidget(self.agent_status)
+        left_layout.addWidget(self.agent_status, 1)
         
-        main_splitter.addWidget(left_panel)
+        splitter.addWidget(left_panel)
         
-        # Painel direito - logs e métricas
+        # Right panel - Tabs
         right_panel = QWidget()
         right_layout = QVBoxLayout(right_panel)
+        right_layout.setContentsMargins(0, 0, 0, 0)
         
-        # Tabs para logs e métricas
-        self.tabs = QTabWidget()
+        # Tab widget
+        tabs = QTabWidget()
+        tabs.setStyleSheet("""
+            QTabWidget::pane {
+                background-color: rgba(255, 255, 255, 230);
+                border: 2px solid #4CAF50;
+                border-radius: 8px;
+            }
+            QTabBar::tab {
+                background-color: rgba(100, 100, 100, 200);
+                color: white;
+                padding: 10px 20px;
+                margin: 2px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                font-weight: bold;
+            }
+            QTabBar::tab:selected {
+                background-color: #4CAF50;
+                color: white;
+            }
+            QTabBar::tab:hover {
+                background-color: rgba(76, 175, 80, 150);
+            }
+        """)
+        
+        # Add tabs
         self.logs_tab = LogsTab()
         self.metrics_tab = MetricsTab()
         
-        self.tabs.addTab(self.logs_tab, "📜 Logs")
-        self.tabs.addTab(self.metrics_tab, "📊 Métricas")
+        tabs.addTab(self.logs_tab, "📋 Logs do Sistema")
+        tabs.addTab(self.metrics_tab, "📊 Métricas")
         
-        right_layout.addWidget(self.tabs)
-        main_splitter.addWidget(right_panel)
+        right_layout.addWidget(tabs)
+        splitter.addWidget(right_panel)
         
-        # Configurar proporções do splitter
-        main_splitter.setSizes([400, 1000])
+        # Splitter proportions
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
         
-        # A simulação já foi criada acima
-        # self.simulation já existe e está conectada ao config_panel
+        main_layout.addWidget(splitter, 1)
+        
+        # Initial log message
+        self.logs_tab.log("🌟 Sistema ISIA iniciado - Interface do main.py")
+        self.logs_tab.log("💡 Configure parâmetros e clique 'Iniciar Simulação'")
+        self.logs_tab.log("📋 Todos os logs dos agentes aparecerão aqui em tempo real")
+        self.logs_tab.log("🔧 Para conectividade XMPP completa, execute 'spade run' antes de iniciar")
+    
+    def setup_background(self):
+        """Setup background with modern dark theme"""
+        # Use a beautiful gradient background instead of image
+        self.setStyleSheet("""
+            QMainWindow {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                    stop:0 #1a1a2e, stop:0.3 #16213e, stop:0.7 #0f3460, stop:1 #1a1a2e);
+            }
+        """)
+
 
 def start_gui_app():
-    """Função para iniciar a aplicação GUI"""
-    app = QApplication.instance()
-    if app is None:
-        app = QApplication(sys.argv)
-    
-    # Configurar loop assíncrono
+    app = QApplication(sys.argv)
+    app.setStyleSheet(CHALKBOARD_STYLE)
     loop = qasync.QEventLoop(app)
     asyncio.set_event_loop(loop)
-    
-    # Criar e mostrar janela principal
-    window = MainWindow()
-    window.show()
-    
-    print("🖥️ Interface gráfica ISIA iniciada")
-    print("💡 Use o painel de configuração para iniciar a simulação")
-    
-    # Executar aplicação
+
+    win = MainWindow()
+    win.show()
+
     with loop:
         loop.run_forever()
-
-if __name__ == "__main__":
-    start_gui_app()
-
-
