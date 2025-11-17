@@ -71,20 +71,31 @@ class ConfigPanel(QWidget):
         self.setLayout(layout)
 
     def start_sim(self):
-        asyncio.create_task(
-            self.simulation.run_simulation(
-                self.s_students.value(),
-                self.s_tutors.value(),
-                self.s_peers.value(),
-                self.s_duration.value(),
-                server=self.s_server.text(),
-                password=self.s_password.text()
-            )
-        )
-        self.btn_start.setEnabled(False)
-        self.btn_stop.setEnabled(True)
+        # Start simulation and update button states
+        async def run_and_update():
+            self.btn_start.setEnabled(False)
+            self.btn_stop.setEnabled(True)
+            
+            try:
+                await self.simulation.run_simulation(
+                    self.s_students.value(),
+                    self.s_tutors.value(),
+                    self.s_peers.value(),
+                    self.s_duration.value(),
+                    server=self.s_server.text(),
+                    password=self.s_password.text()
+                )
+            finally:
+                # Re-enable start button when simulation ends
+                self.btn_start.setEnabled(True)
+                self.btn_stop.setEnabled(False)
+        
+        asyncio.create_task(run_and_update())
 
     def stop_sim(self):
-        asyncio.create_task(self.simulation.stop_simulation())
-        self.btn_start.setEnabled(True)
-        self.btn_stop.setEnabled(False)
+        async def stop_and_update():
+            await self.simulation.stop_simulation()
+            self.btn_start.setEnabled(True)
+            self.btn_stop.setEnabled(False)
+            
+        asyncio.create_task(stop_and_update())
