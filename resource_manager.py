@@ -5,8 +5,15 @@ from colorama import Fore, Style
 import random
 
 class ResourceManagerAgent(Agent):
+    def __init__(self, jid, password):
+        super().__init__(jid, password)
+        self.is_stopping = False  # Flag para parar behaviours
+    
     class ResourceBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
+            if self.agent.is_stopping:
+                return
+            
             random.seed()
             msg = await self.receive(timeout=10)
             if not msg:
