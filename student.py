@@ -8,17 +8,14 @@ from metrics import MetricsLogger
 
 
 class StudentAgent(Agent):
-    def __init__(self, jid, password, learning_style="visual"):
+    def __init__(self, jid, password, learning_style="visual", disciplines={"algebra", "estatística", "programação"}):
         super().__init__(jid, password)
         self.learning_style = learning_style
-        self.knowledge = {
-            "estatística bayesiana": random.uniform(0, 0.4),
-            "aprendizagem automática": random.uniform(0, 0.4),
-            "programação": random.uniform(0, 0.4),
-            "estatística": random.uniform(0, 0.4),
-            "português": random.uniform(0, 0.4),
-            "álgebra": random.uniform(0, 0.4),
-        }
+        self.knowledge = {}
+        for discipline in disciplines:
+            self.knowledge.update({discipline: random.uniform(0, 0.4)})
+        print(self.knowledge)
+        self.initial_knowledge = self.knowledge.copy()
         self.tutor_message = NotImplementedError
         self.progress = sum(self.knowledge.values()) / len(self.knowledge)
         self.initial_progress = self.progress
@@ -87,13 +84,18 @@ class StudentAgent(Agent):
             print(Fore.GREEN + f"[{self.agent.name}] ✅ Recebeu sinal de início - começando estudos" + Style.RESET_ALL)
             await asyncio.sleep(2)
             
-            self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
-            self.agent.progress = self.agent.knowledge[self.agent.topic]
             while self.agent.progress < 1.0 and not self.agent.is_stopping:
+                self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
+                self.agent.progress_topic = self.agent.knowledge[self.agent.topic]
+                if (self.agent.progress_topic >= 1.0):
+                    continue
                 print(Fore.BLUE + f"[{self.agent.name}] 🎯 A estudar {self.agent.topic} (progresso: {self.agent.progress:.2f})" + Style.RESET_ALL)
                 await self.ask_for_help()
                 await self.update_progress()
                 await asyncio.sleep(2) 
+            
+            print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Max Progress!" + Style.RESET_ALL)
+            await self.agent.stop()
 
         async def update_progress(self):
             old = self.agent.progress

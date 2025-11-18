@@ -77,11 +77,20 @@ class ConfigPanel(QWidget):
             self.btn_stop.setEnabled(True)
             
             try:
+
+                print("Starting simulation from GUI...")
+                print("------------------------------")
+                print(f"Estudantes: {self.s_students.value()}")
+                print(f"Tutores: {self.s_tutors.value()}")
+                print(f"Peers: {self.s_peers.value()}")
+                print(f"Duração: {self.s_duration.value()} segundos")
+                print(f"Servidor: {self.s_server.text()}")
+                print("------------------------------")
                 await self.simulation.run_simulation(
-                    self.s_students.value(),
-                    self.s_tutors.value(),
-                    self.s_peers.value(),
-                    self.s_duration.value(),
+                    num_students=self.s_students.value(),
+                    num_tutors=self.s_tutors.value(),
+                    num_peers=self.s_peers.value(),
+                    duration=self.s_duration.value(),
                     server=self.s_server.text(),
                     password=self.s_password.text()
                 )

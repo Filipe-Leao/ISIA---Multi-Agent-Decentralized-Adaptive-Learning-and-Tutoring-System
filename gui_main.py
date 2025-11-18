@@ -49,6 +49,55 @@ class MainSimulation:
         """Log message to GUI and console"""
         # Print to console (will be intercepted and sent to GUI automatically)
         print(text)
+
+    async def simulate(self, agents, duration=None):
+        """Simulate the multi-agent tutoring system for a specified duration or until the end."""
+        if duration is None:
+            print("Simulação a decorrer até ao fim dos agentes...\n")
+            start_time = asyncio.get_event_loop().time()
+            while any(agent.is_alive() for name, agent in agents.items() if name.startswith("student")):
+                # Update GUI panels if available
+                if self.gui and hasattr(self.gui, 'agent_status'):
+                    self.gui.agent_status.update_status(agents)
+                    
+                # Update metrics
+                if self.gui and hasattr(self.gui, 'metrics_tab'):
+                    self.gui.metrics_tab.update_metrics(agents)
+
+                # Show periodic progress (every 5 seconds)
+                elapsed = asyncio.get_event_loop().time() - start_time
+                if int(elapsed) % 5 == 0 and elapsed > 0:
+                    remaining = duration - elapsed
+                    print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+
+                for name, agent in agents.items():
+                    if name.startswith("student") and not agent.is_alive():
+                        print(f"❌ Estudante {name} terminou a sua atividade.")
+                #print("⏳ Agentes ainda ativos, a aguardar...")
+                await asyncio.sleep(1)
+        else:
+            print(f"Simulação a decorrer por {duration} segundos...\n")
+            while asyncio.get_event_loop().time() - start_time < duration:
+                await asyncio.sleep(1)
+                # Update GUI panels if available
+                if self.gui and hasattr(self.gui, 'agent_status'):
+                    self.gui.agent_status.update_status(agents)
+                    
+                # Update metrics
+                if self.gui and hasattr(self.gui, 'metrics_tab'):
+                    self.gui.metrics_tab.update_metrics(agents)
+
+                # Show periodic progress (every 5 seconds)
+                elapsed = asyncio.get_event_loop().time() - start_time
+                if int(elapsed) % 5 == 0 and elapsed > 0:
+                    remaining = duration - elapsed
+                    print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+
+                for name, agent in agents.items():
+                    if name.startswith("student") and not agent.is_alive():
+                        print(f"❌ Estudante {name} terminou a sua atividade.")
+                await asyncio.sleep(1)
+        return
         
     async def run_simulation(self, num_students=10, num_tutors=3, num_peers=1, duration=30, server="localhost", password="1234"):
         """Run simulation using EXACT main.py logic"""
@@ -77,7 +126,7 @@ class MainSimulation:
 
             # Create students exactly like main.py
             for i in range(1, number_students + 1):
-                agents.update({f"student{i}": StudentAgent(f"student{i}@{server}", password, learning_style=random.choice(learning_styles))})
+                agents.update({f"student{i}": StudentAgent(f"student{i}@{server}", password, learning_style=random.choice(learning_styles), disciplines=disciplines)})
 
             print(f"\nCriados estudantes")
             
@@ -121,24 +170,7 @@ class MainSimulation:
             print("\n✅ Todos agentes iniciados. Simulação a correr...\n")
 
             # Run simulation with periodic updates for GUI
-            start_time = asyncio.get_event_loop().time()
-            
-            while asyncio.get_event_loop().time() - start_time < duration and self._running:
-                await asyncio.sleep(2)  # Update every 2 seconds
-                
-                # Update GUI panels if available
-                if self.gui and hasattr(self.gui, 'agent_status'):
-                    self.gui.agent_status.update_status(agents)
-                    
-                # Update metrics
-                if self.gui and hasattr(self.gui, 'metrics_tab'):
-                    self.gui.metrics_tab.update_metrics(agents)
-                
-                # Show periodic progress (every 5 seconds)
-                elapsed = asyncio.get_event_loop().time() - start_time
-                if int(elapsed) % 5 == 0 and elapsed > 0:
-                    remaining = duration - elapsed
-                    print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+            await self.simulate(agents, duration=duration)
 
             print("\n⏳ Simulação terminada. A encerrar agentes...\n")
 

@@ -5,6 +5,20 @@ from tutor import TutorAgent
 from peer import PeerAgent
 from resource_manager import ResourceManagerAgent
 
+async def simulate(agents, duration_seconds=None):
+    """Simulate the multi-agent tutoring system for a specified duration or until the end."""
+    if duration_seconds is None:
+        print("Simulação a decorrer até ao fim dos agentes...\n")
+        while any(agent.is_alive() for name, agent in agents.items() if name.startswith("student")):
+            for name, agent in agents.items():
+                if name.startswith("student") and not agent.is_alive():
+                    print(f"❌ Estudante {name} terminou a sua atividade.")
+            #print("⏳ Agentes ainda ativos, a aguardar...")
+            await asyncio.sleep(1)
+    else:
+        print(f"Simulação a decorrer por {duration_seconds} segundos...\n")
+        await asyncio.sleep(duration_seconds)
+    return
 async def main():
     # Criar agentes
     number_students = 10
@@ -26,7 +40,7 @@ async def main():
     }
 
     for i in range(1, number_students + 1):
-        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(learning_styles))})
+        agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(learning_styles), disciplines=disciplines)})
 
     print(f"\nCriados estudantes")
     for i in range(1, number_tutors + 1):
@@ -64,7 +78,7 @@ async def main():
     print("\n✅ Todos agentes iniciados. Simulação a correr...\n")
 
     # Tempo da simulação
-    await asyncio.sleep(30)
+    await simulate(agents, duration_seconds=None)
 
     print("\n⏳ Simulação terminada. A encerrar agentes...\n")
 
@@ -73,6 +87,8 @@ async def main():
         print(f"🔻 A parar {name}...")
         if name.startswith("student"):
             print(f"Progresso Final: {agent.initial_progress} -> {agent.progress}")
+            for discipline, knowledge in agent.knowledge.items():
+                print(f" - {discipline}:  {agent.initial_knowledge[discipline]:.2f} -> {knowledge:.2f}")
         await agent.stop()
 
     print("\n✅ Todos agentes terminados. Sistema encerrado.\n")

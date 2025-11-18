@@ -110,13 +110,13 @@ class AgentStatusPanel(QWidget):
                 layout.setContentsMargins(5, 2, 5, 2)  # Reduce margins
                 
                 # Basic info (more compact)
-                basic_info = QLabel(f"📚 {agent.name}")
+                basic_info = QLabel(f"📚 {name}")
                 basic_info.setStyleSheet("font-weight: bold; color: #2E86AB; font-size: 10px;")
                 basic_info.setMinimumWidth(80)
                 layout.addWidget(basic_info)
                 
                 # Learning style
-                style_label = QLabel(f"({agent.learning_style})")
+                style_label = QLabel(f"({agent.get('learning_style')})")
                 style_label.setStyleSheet("color: #666; font-size: 9px;")
                 style_label.setMinimumWidth(70)
                 layout.addWidget(style_label)
@@ -124,15 +124,15 @@ class AgentStatusPanel(QWidget):
                 # Progress bar (compact)
                 progress_bar = QProgressBar()
                 progress_bar.setRange(0, 100)
-                progress_bar.setValue(int(agent.progress * 100))
-                progress_bar.setFormat(f"{agent.progress:.3f}")
+                progress_bar.setValue(int(agent.get('progress', 0) * 100))
+                progress_bar.setFormat(f"{agent.get('progress', 0):.3f}")
                 progress_bar.setMaximumHeight(15)
                 progress_bar.setMinimumWidth(100)
                 layout.addWidget(progress_bar)
                 
                 # Current topic if available (compact)
-                if hasattr(agent, 'topic') and agent.topic:
-                    topic_label = QLabel(f"📖 {agent.topic[:15]}...")  # Truncate topic
+                if agent.get('topic'):
+                    topic_label = QLabel(f"📖 {agent.get('topic')[:15]}...")  # Truncate topic
                     topic_label.setStyleSheet("color: #A23B72; font-style: italic; font-size: 9px;")
                     topic_label.setMinimumWidth(120)
                     layout.addWidget(topic_label)
@@ -158,33 +158,33 @@ class AgentStatusPanel(QWidget):
                 layout.setContentsMargins(5, 2, 5, 2)
                 
                 # Tutor name
-                header = QLabel(f"👨‍🏫 {agent.name}")
+                header = QLabel(f"👨‍🏫 {name}")
                 header.setStyleSheet("font-weight: bold; color: #F18F01; font-size: 10px;")
                 header.setMinimumWidth(80)
                 layout.addWidget(header)
                 
                 # Discipline (truncated)
-                disc_short = agent.discipline[:12] + "..." if len(agent.discipline) > 12 else agent.discipline
+                disc_short = agent.get('discipline')[:12] + "..." if len(agent.get('discipline')) > 12 else agent.get('discipline')
                 info1 = QLabel(f"📚 {disc_short}")
                 info1.setStyleSheet("color: #333; font-size: 9px;")
                 info1.setMinimumWidth(100)
                 layout.addWidget(info1)
                 
                 # Expertise
-                info2 = QLabel(f"🎯 {agent.expertise:.2f}")
+                info2 = QLabel(f"🎯 {agent.get('expertise', 0):.2f}")
                 info2.setStyleSheet("color: #333; font-size: 9px;")
                 info2.setMinimumWidth(50)
                 layout.addWidget(info2)
                 
                 # Slots
-                info3 = QLabel(f"👥 {agent.available_slots}/{agent.capacity}")
+                info3 = QLabel(f"👥 {agent.get('available_slots', 0)}/{agent.get('capacity', 0)}")
                 info3.setStyleSheet("color: #333; font-size: 9px;")
                 info3.setMinimumWidth(40)
                 layout.addWidget(info3)
                 
                 # Queue status (compact)
-                if hasattr(agent, 'queue') and agent.queue:
-                    queue_info = QLabel(f"📋 {len(agent.queue)}")
+                if agent.get('queue') and len(agent.get('queue')) > 0:
+                    queue_info = QLabel(f"📋 {len(agent.get('queue'))}")
                     queue_info.setStyleSheet("color: #C73E1D; font-weight: bold; font-size: 9px;")
                 else:
                     queue_info = QLabel("📋 0")
@@ -210,7 +210,7 @@ class AgentStatusPanel(QWidget):
                 layout = QHBoxLayout()
                 layout.setContentsMargins(5, 2, 5, 2)
                 
-                header = QLabel(f"👥 {agent.name}")
+                header = QLabel(f"👥 {name}")
                 header.setStyleSheet("font-weight: bold; color: #8E44AD; font-size: 10px;")
                 layout.addWidget(header)
                 

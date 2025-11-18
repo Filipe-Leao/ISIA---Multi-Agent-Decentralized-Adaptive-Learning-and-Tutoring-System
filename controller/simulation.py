@@ -67,7 +67,37 @@ class SimulationController(QObject):
         elif not self.stdout_redirector:
             print(formatted_msg)
     
-    async def run_simulation(self, num_students, num_tutors, num_peers, 
+    async def simulate(self, agents, duration=None):
+        """Simulate the multi-agent tutoring system for a specified duration or until the end."""
+        start_time = asyncio.get_event_loop().time()
+        if duration is None:
+            print("Simulação a decorrer até ao fim dos agentes...\n")
+            while any(agent.is_alive() for name, agent in agents.items() if name.startswith("student")):
+                elapsed = asyncio.get_event_loop().time() - start_time
+                remaining = duration - elapsed
+                print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+
+                for name, agent in agents.items():
+                    if name.startswith("student") and not agent.is_alive():
+                        print(f"❌ Estudante {name} terminou a sua atividade.")
+                #print("⏳ Agentes ainda ativos, a aguardar...")
+                await asyncio.sleep(1)
+        else:
+            print(f"Simulação a decorrer por {duration} segundos...\n")
+            while asyncio.get_event_loop().time() - start_time < duration:
+                elapsed = asyncio.get_event_loop().time() - start_time
+                remaining = duration - elapsed
+                print(f"⏰ Simulação: {elapsed:.0f}s / {duration}s (restante: {remaining:.0f}s)")
+
+                for name, agent in agents.items():
+                    if name.startswith("student") and not agent.is_alive():
+                        print(f"❌ Estudante {name} terminou a sua atividade.")
+                await asyncio.sleep(1)
+
+            print("⏳ Duração da simulação atingida.")
+        return
+
+    async def run_simulation(self, num_students, num_tutors, num_peers, duration=30,
                             server="localhost", password="1234"):
         """
         Inicia a simulação com agentes SPADE reais
@@ -79,6 +109,11 @@ class SimulationController(QObject):
             server: Servidor XMPP
             password: Senha para os agentes
         """
+
+        print(f"------------------------------\n")
+        print(f"Iniciando simulação com parâmetros:")
+        print(f"Estudantes: {num_students}\nTutores: {num_tutors}\nPeers: {num_peers}\nDuração: {duration} segundos\nServidor: {server}")
+        print("------------------------------")
         try:
             self.is_running = True
             
@@ -190,10 +225,9 @@ class SimulationController(QObject):
             # Atualizar status inicial
             self.update_status()
             
+            start_time = asyncio.get_event_loop().time()
             # Loop de monitoramento (atualizar a cada 3 segundos)
-            while self.is_running:
-                await asyncio.sleep(3)
-                self.update_status()
+            await self.simulate(self.agents, duration=duration)
                 
         except Exception as e:
             self.log(f"❌ Erro na simulação: {e}")
