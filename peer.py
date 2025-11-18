@@ -6,6 +6,11 @@ import asyncio
 from colorama import Fore, Style
 
 class PeerAgent(Agent):
+    def __init__(self, jid, password):
+        super().__init__(jid, password)
+        self.can_start_helping = False  # Flag para controlar início
+        self.is_stopping = False  # Flag para parar behaviours
+    
     async def setup(self):
         print(Fore.MAGENTA + f"[Peer-{self.name}] Pronto para ajudar colegas 👥" + Style.RESET_ALL)
         self.add_behaviour(self.HelpPeers())
@@ -37,6 +42,15 @@ class PeerAgent(Agent):
             
     class HelpPeers(CyclicBehaviour):
         async def run(self):
+            # 🔴 VERIFICAR SE ESTÁ PARANDO
+            if self.agent.is_stopping:
+                return
+            
+            # 🔴 ESPERAR ATÉ TODOS OS AGENTES ESTAREM PRONTOS
+            if not self.agent.can_start_helping:
+                await asyncio.sleep(1)
+                return
+            
             msg = await self.receive(timeout=5)
             if msg and msg.get_metadata("performative") == "peer-help":
                 print(Fore.MAGENTA + f"[Peer-{self.agent.name}] ✅ Ajudando {msg.sender}" + Style.RESET_ALL)
