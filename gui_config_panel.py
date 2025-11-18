@@ -5,59 +5,60 @@ import asyncio
 
 
 class ConfigPanel(QWidget):
-    def __init__(self, simulation):
+    def __init__(self, controller):
         super().__init__()
-        self.simulation = simulation
+        self.controller = controller
 
         layout = QVBoxLayout()
 
         # Configurações
-        config_group = QGroupBox("Configurações da Simulação")
+        config_group = QGroupBox("⚙️ Configurações")
         form = QFormLayout()
 
-        # XMPP Server
+        # Servidor XMPP
         self.s_server = QLineEdit()
         self.s_server.setText("localhost")
         self.s_server.setPlaceholderText("Ex: localhost ou jabber.hot-chilli.net")
+        form.addRow("Servidor XMPP:", self.s_server)
         
-        # Password
+        # Senha
         self.s_password = QLineEdit()
         self.s_password.setText("1234")
         self.s_password.setEchoMode(QLineEdit.Password)
+        form.addRow("Senha:", self.s_password)
 
         self.s_students = QSpinBox()
-        self.s_students.setRange(1, 20)
-        self.s_students.setValue(10)  # Default from main.py
+        self.s_students.setRange(1, 10)
+        self.s_students.setValue(3)
+        form.addRow("Estudantes:", self.s_students)
 
         self.s_tutors = QSpinBox()
         self.s_tutors.setRange(1, 10)
-        self.s_tutors.setValue(3)  # Default from main.py
+        self.s_tutors.setValue(3)
+        form.addRow("Tutores:", self.s_tutors)
 
         self.s_peers = QSpinBox()
         self.s_peers.setRange(0, 5)
-        self.s_peers.setValue(1)  # Default from main.py
-
+        self.s_peers.setValue(1)
+        form.addRow("Peers:", self.s_peers)
+        
+        # Duração da simulação
         self.s_duration = QSpinBox()
-        self.s_duration.setRange(10, 600)
-        self.s_duration.setValue(30)  # Default from main.py (30 seconds)
-        self.s_duration.setSuffix(" segundos")
-
-        form.addRow("🌐 Servidor XMPP:", self.s_server)
-        form.addRow("🔑 Senha:", self.s_password)
-        form.addRow("🎓 Estudantes:", self.s_students)
-        form.addRow("👨‍🏫 Tutores:", self.s_tutors)
-        form.addRow("👥 Peers:", self.s_peers)
-        form.addRow("⏱️ Duração:", self.s_duration)
+        self.s_duration.setRange(0, 3600)
+        self.s_duration.setValue(0)
+        self.s_duration.setSuffix(" s")
+        self.s_duration.setSpecialValueText("Manual")
+        form.addRow("Duração:", self.s_duration)
         
         config_group.setLayout(form)
         layout.addWidget(config_group)
 
         # Controles
-        controls_group = QGroupBox("Controles")
+        controls_group = QGroupBox("Simulação")
         controls_layout = QVBoxLayout()
         
-        self.btn_start = QPushButton("🚀 Iniciar Simulação")
-        self.btn_stop = QPushButton("⏹️ Parar Simulação")
+        self.btn_start = QPushButton("Start ▶️")
+        self.btn_stop = QPushButton("Stop ⏹️")
         self.btn_stop.setEnabled(False)
 
         controls_layout.addWidget(self.btn_start)
@@ -71,40 +72,32 @@ class ConfigPanel(QWidget):
         self.setLayout(layout)
 
     def start_sim(self):
-        # Start simulation and update button states
-        async def run_and_update():
-            self.btn_start.setEnabled(False)
-            self.btn_stop.setEnabled(True)
-            
-            try:
-
-                print("Starting simulation from GUI...")
-                print("------------------------------")
-                print(f"Estudantes: {self.s_students.value()}")
-                print(f"Tutores: {self.s_tutors.value()}")
-                print(f"Peers: {self.s_peers.value()}")
-                print(f"Duração: {self.s_duration.value()} segundos")
-                print(f"Servidor: {self.s_server.text()}")
-                print("------------------------------")
-                await self.simulation.run_simulation(
-                    num_students=self.s_students.value(),
-                    num_tutors=self.s_tutors.value(),
-                    num_peers=self.s_peers.value(),
-                    duration=self.s_duration.value(),
-                    server=self.s_server.text(),
-                    password=self.s_password.text()
-                )
-            finally:
-                # Re-enable start button when simulation ends
-                self.btn_start.setEnabled(True)
-                self.btn_stop.setEnabled(False)
+        """Inicia a simulação"""
+        # Desabilitar botão start
+        self.btn_start.setEnabled(False)
+        self.btn_stop.setEnabled(True)
         
-        asyncio.create_task(run_and_update())
+        # Criar task assíncrona e adicionar callback
+        task = asyncio.create_task(
+            self.controller.run_simulation(
+                num_students=self.s_students.value(),
+                num_tutors=self.s_tutors.value(),
+                num_peers=self.s_peers.value(),
+                server=self.s_server.text(),
+                password=self.s_password.text(),
+                duration=self.s_duration.value()
+            )
+        )
+        
+        # Quando terminar, re-habilitar botão
+        task.add_done_callback(lambda _: self.on_simulation_finished())
 
     def stop_sim(self):
-        async def stop_and_update():
-            await self.simulation.stop_simulation()
-            self.btn_start.setEnabled(True)
-            self.btn_stop.setEnabled(False)
-            
-        asyncio.create_task(stop_and_update())
+        """Para a simulação"""
+        # Parar simulação
+        asyncio.create_task(self.controller.stop_simulation())
+        
+    def on_simulation_finished(self):
+        """Callback quando simulação termina"""
+        self.btn_start.setEnabled(True)
+        self.btn_stop.setEnabled(False)
