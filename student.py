@@ -23,6 +23,8 @@ class StudentAgent(Agent):
         self.progress = sum(self.knowledge.values()) / len(self.knowledge)
         self.initial_progress = self.progress
         self.logger = MetricsLogger()
+        self.can_start_studying = False  # Flag para controlar início
+        self.is_stopping = False  # Flag para parar behaviours
         print(Fore.CYAN + f"[{self.name}] estilo={self.learning_style} progresso médio={round(self.progress, 2)}" + Style.RESET_ALL)
 
     async def setup(self):
@@ -32,6 +34,12 @@ class StudentAgent(Agent):
         self.add_behaviour(self.study)
         self.add_behaviour(self.ReceiveBehaviour())
         self.proposals = []
+    
+    async def teardown(self):
+        """Chamado quando o agente está parando"""
+        final_progress = sum(self.knowledge.values()) / len(self.knowledge)
+        print(Fore.YELLOW + f"🔻 A parar {self.name}..." + Style.RESET_ALL)
+        print(Fore.CYAN + f"Progresso Final: {self.initial_progress} -> {final_progress}" + Style.RESET_ALL)
 
     class Subscription(behaviour.OneShotBehaviour):
         """ Manages presence subscriptions with other agents. """
@@ -71,10 +79,17 @@ class StudentAgent(Agent):
             self.chosen_tutor_expertise = None
             self.start_time = time.time()
             print(f"[{self.agent.name}] {self.agent.presence.get_presence()}")
-            await asyncio.sleep(5)
+            
+            # 🔴 ESPERAR ATÉ TODOS OS AGENTES ESTAREM PRONTOS
+            while not self.agent.can_start_studying:
+                await asyncio.sleep(1)
+            
+            print(Fore.GREEN + f"[{self.agent.name}] ✅ Recebeu sinal de início - começando estudos" + Style.RESET_ALL)
+            await asyncio.sleep(2)
+            
             self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
             self.agent.progress = self.agent.knowledge[self.agent.topic]
-            while self.agent.progress < 1.0:
+            while self.agent.progress < 1.0 and not self.agent.is_stopping:
                 print(Fore.BLUE + f"[{self.agent.name}] 🎯 A estudar {self.agent.topic} (progresso: {self.agent.progress:.2f})" + Style.RESET_ALL)
                 await self.ask_for_help()
                 await self.update_progress()
@@ -87,6 +102,14 @@ class StudentAgent(Agent):
             await asyncio.sleep(1)
 
         async def ask_for_help(self):
+            if self.agent.is_stopping:
+                return
+            
+            # 🔴 LIMPAR propostas antigas antes de novo pedido
+            self.agent.proposals = []
+            self.chosen_tutor = None
+            self.chosen_tutor_expertise = None
+            
             tutors = []
             peers = []
             contacts = self.agent.presence.get_contacts()
@@ -129,28 +152,34 @@ class StudentAgent(Agent):
 
             # ✅ Escolher o tutor com vagas
             for p in self.agent.proposals:
+                if self.agent.is_stopping:
+                    return
+                    
                 if p["slots"] > 0 and p["discipline"] == self.agent.topic:
                     self.chosen_tutor = p["tutor"]
                     print(Fore.RED + f"[{self.agent.name}] Proposal chosen: {p}" + Style.RESET_ALL)
                     self.agent.tutor_message = p
-                    print(self.agent.tutor_message)
                     break
                 elif p["slots"] > 0 and p["expertise"] >= (self.chosen_tutor_expertise if self.chosen_tutor_expertise else 0):
                     self.chosen_tutor = p["tutor"]
                     print(Fore.RED + f"[{self.agent.name}] Proposal chosen (different discipline): {p}" + Style.RESET_ALL)
                     self.agent.tutor_message = p
-                    print(self.agent.tutor_message)
                     self.chosen_tutor = p["tutor"]
                     self.chosen_tutor_expertise = p["expertise"]
             
             
 
             if not self.chosen_tutor:
+                if self.agent.is_stopping:
+                    return
                 print(Fore.YELLOW + f"[{self.agent.name}] Nenhum tutor com vagas — tentar novamente em 3s" + Style.RESET_ALL)
                 await asyncio.sleep(3)
                 await self.ask_for_help()
                 return
 
+            if self.agent.is_stopping:
+                return
+                
             print(Fore.BLUE + f"[{self.agent.name}] ✉️ Aceitou proposta de {self.chosen_tutor}" + Style.RESET_ALL)
 
             msg = Message(to=self.chosen_tutor)
@@ -158,12 +187,22 @@ class StudentAgent(Agent):
             await self.send(msg)
 
             # Rejeitar os outros
+            rejected_tutors = set()  # 🔴 Controlar rejeições únicas
             for p in self.agent.proposals:
-                if p["tutor"] != self.chosen_tutor:
+                if self.agent.is_stopping:
+                    return
+                if p["tutor"] != self.chosen_tutor and p["tutor"] not in rejected_tutors:
                     rej = Message(to=p["tutor"])
                     rej.set_metadata("performative", "reject-proposal")
                     await self.send(rej)
+                    rejected_tutors.add(p["tutor"])
+            
+            # 🔴 LIMPAR PROPOSTAS após processar
+            self.agent.proposals = []
 
+            if self.agent.is_stopping:
+                return
+                
             self.agent.presence.set_presence(
                 presence_type=PresenceType.AVAILABLE,  # set availability
                 show=PresenceShow.DND,  # show status
@@ -174,10 +213,15 @@ class StudentAgent(Agent):
             print(Fore.BLUE + f"[{self.agent.name}] ⏳ A aguardar explicação..." + Style.RESET_ALL)
 
         async def run(self):
+            if self.agent.is_stopping:
+                return
             await asyncio.sleep(1)
 
     class ReceiveBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
+            if self.agent.is_stopping:
+                return
+            
             self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
             msg = await self.receive(timeout=1)
             if not msg:
