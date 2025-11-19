@@ -9,6 +9,7 @@ from metrics import MetricsLogger
 
 class StudentAgent(Agent):
     def __init__(self, jid, password, learning_style="visual", disciplines={"algebra", "estatística", "programação"}):
+        random.seed(1)
         super().__init__(jid, password)
         self.learning_style = learning_style
         self.knowledge = {}
@@ -83,7 +84,7 @@ class StudentAgent(Agent):
             
             print(Fore.GREEN + f"[{self.agent.name}] ✅ Recebeu sinal de início - começando estudos" + Style.RESET_ALL)
             await asyncio.sleep(2)
-            
+            random.seed(1)
             while self.agent.progress < 1.0 and not self.agent.is_stopping:
                 self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
                 self.agent.progress_topic = self.agent.knowledge[self.agent.topic]

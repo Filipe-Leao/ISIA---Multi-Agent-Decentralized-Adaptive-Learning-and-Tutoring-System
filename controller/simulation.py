@@ -80,6 +80,7 @@ class SimulationController(QObject):
             password: Senha para os agentes
             duration: Duração da simulação em segundos (0 = manual)
         """
+        random.seed(1)
         try:
             self.is_running = True
             self._simulation_duration = duration  # 🔴 Armazenar duração

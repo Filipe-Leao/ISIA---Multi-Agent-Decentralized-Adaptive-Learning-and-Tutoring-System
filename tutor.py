@@ -11,6 +11,7 @@ from colorama import Fore, Style
 
 class TutorAgent(Agent):
     def __init__(self, jid, password, discipline, expertise=0.5, capacity=1):
+        random.seed(1)
         super().__init__(jid, password)
         self.discipline = discipline
         self.capacity = capacity

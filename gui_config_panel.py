@@ -28,12 +28,12 @@ class ConfigPanel(QWidget):
         form.addRow("Senha:", self.s_password)
 
         self.s_students = QSpinBox()
-        self.s_students.setRange(1, 10)
+        self.s_students.setRange(1, 50)
         self.s_students.setValue(3)
         form.addRow("Estudantes:", self.s_students)
 
         self.s_tutors = QSpinBox()
-        self.s_tutors.setRange(1, 10)
+        self.s_tutors.setRange(1, 20)
         self.s_tutors.setValue(3)
         form.addRow("Tutores:", self.s_tutors)
 
