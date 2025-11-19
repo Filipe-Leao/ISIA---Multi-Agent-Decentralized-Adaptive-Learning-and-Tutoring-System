@@ -307,5 +307,3 @@ class StudentAgent(Agent):
                 self.agent.knowledge[self.agent.topic] = min(1.0, old + random.uniform(0.01, 0.05))
                 await asyncio.sleep(2)
                 print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 📈 progresso após recurso {old:.2f} → {self.agent.knowledge[self.agent.topic]:.2f}" + Style.RESET_ALL)
-                self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
-                self.agent.progress = self.agent.knowledge[self.agent.topic]
