@@ -28,17 +28,17 @@ async def main():
     for i in range(1, number_students + 1):
         agents.update({f"student{i}": StudentAgent(f"student{i}@localhost", "1234", learning_style=random.choice(learning_styles))})
 
-    print(f"\nCriados estudantes")
+    print(f"\nStudents created")
     for i in range(1, number_tutors + 1):
         random.seed()
         cap = round(random.uniform(1, 3))
         agents.update({f"tutor{i}": TutorAgent(f"tutor{i}@localhost", "1234", discipline=random.choice(disciplines), expertise=random.uniform(0.5, 1), capacity=cap)})
-    print(f"\nCriados tutores")
+    print(f"\nTutors created")
 
     for i in range(1, number_peers + 1):
         agents.update({f"peer{i}": PeerAgent(f"peer{i}@localhost", "1234")})
     
-    print(f"\nCriados {number_students} estudantes, {number_tutors} tutores e {number_peers} peers.\n")
+    print(f"\nCreated {number_students} students, {number_tutors} tutors and {number_peers} peers.\n")
     
     # Start agents
     for name, agent in agents.items():
@@ -61,21 +61,21 @@ async def main():
                 agent.presence.subscribe(agents["resource"].jid)
                 print(f"[{agent.name}] 🔔 Subscribed to {agents['resource'].jid}")
 
-    print("\n✅ Todos agentes iniciados. Simulação a correr...\n")
+    print("\n✅ All agents started. Simulation running...\n")
 
     # Tempo da simulação
     await asyncio.sleep(30)
 
-    print("\n⏳ Simulação terminada. A encerrar agentes...\n")
+    print("\n⏳ Simulation ended. Shutting down agents...\n")
 
     # Stop agents
     for name, agent in agents.items():
-        print(f"🔻 A parar {name}...")
+        print(f"🔻 Stopping {name}...")
         if name.startswith("student"):
-            print(f"Progresso Final: {agent.initial_progress} -> {agent.progress}")
+            print(f"Final Progress: {agent.initial_progress} -> {agent.progress}")
         await agent.stop()
 
-    print("\n✅ Todos agentes terminados. Sistema encerrado.\n")
+    print("\n✅ All agents terminated. System shutdown.\n")
 
 if __name__ == "__main__":
     asyncio.run(main())

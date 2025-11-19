@@ -5,15 +5,22 @@ from colorama import Fore, Style
 import random
 
 class ResourceManagerAgent(Agent):
+    def __init__(self, jid, password):
+        super().__init__(jid, password)
+        self.is_stopping = False  # Flag para parar behaviours
+    
     class ResourceBehaviour(behaviour.CyclicBehaviour):
         async def run(self):
+            if self.agent.is_stopping:
+                return
+            
             random.seed()
             msg = await self.receive(timeout=10)
             if not msg:
                 return
 
             parts = dict(p.split(":") for p in msg.body.split(";"))
-            topic = parts.get("topic", "desconhecido")
+            topic = parts.get("topic", "unknown")
             progress = float(parts.get("progress", 0))
             
             style_map = {
@@ -25,17 +32,17 @@ class ResourceManagerAgent(Agent):
             style = style_map.get(parts.get("style", ""), "visual")
 
             if progress < 0.5:
-                resource = f"Vídeo {style} introdutório sobre {topic}"
+                resource = f"Introductory video {style} about {topic}"
             else:
-                resource = f"Exercício {style} avançado sobre {topic}"
+                resource = f"Advanced exercise {style} on the {topic}"
 
             resp = Message(to=str(msg.sender))
             resp.body = f"resource:{resource}"
             resp.metadata["performative"] = "resource-recommendation"
             await self.send(resp)
 
-            print(Fore.YELLOW + f"[Resource] recurso enviado → {msg.sender}: {resource}")
+            print(Fore.YELLOW + f"[Resource] resource asset sent → {msg.sender}: {resource}")
 
     async def setup(self):
-        print("Resource Manager ativo.")
+        print("Resource Manager active.")
         self.add_behaviour(self.ResourceBehaviour())

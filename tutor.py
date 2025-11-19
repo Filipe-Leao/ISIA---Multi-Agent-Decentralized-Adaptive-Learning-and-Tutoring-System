@@ -16,9 +16,11 @@ class TutorAgent(Agent):
         self.available_slots = capacity
         self.expertise = expertise    # <-- NEW
         self.queue = []  # (student, priority)
+        self.can_start_helping = False  # Flag para controlar início
+        self.is_stopping = False  # Flag para parar behaviours
 
     async def setup(self):
-        print(Fore.CYAN + f"[Tutor-{self.name}] Iniciado | Capacidade: {self.capacity} | Available: {self.available_slots} | Expertise: {self.expertise}" + Style.RESET_ALL)
+        print(Fore.CYAN + f"[Tutor-{self.name}] Started | Capacity: {self.capacity} | Available: {self.available_slots} | Expertise: {self.expertise}" + Style.RESET_ALL)
         self.add_behaviour(self.HelpResponder())
         self.add_behaviour(self.Subscription())
 
@@ -51,6 +53,15 @@ class TutorAgent(Agent):
 
     class HelpResponder(behaviour.CyclicBehaviour):
         async def run(self):
+            # 🔴 VERIFICAR SE ESTÁ PARANDO
+            if self.agent.is_stopping:
+                return
+            
+            # 🔴 ESPERAR ATÉ TODOS OS AGENTES ESTAREM PRONTOS
+            if not self.agent.can_start_helping:
+                await asyncio.sleep(1)
+                return
+            
             msg = await self.receive(timeout=5)
             if not msg:
                 return
@@ -71,6 +82,9 @@ class TutorAgent(Agent):
                     print(Fore.RED + f"[{self.agent.name}] Priority to student {msg.sender} increased for matching discipline." + Style.RESET_ALL)
                 priority += self.agent.expertise * (1 - student_progress) + random.uniform(0,0.1)
 
+                # 🔴 EVITAR DUPLICADOS: Remover pedidos anteriores do mesmo estudante
+                self.agent.queue = [(s, p) for s, p in self.agent.queue if s != str(msg.sender)]
+                
                 self.agent.queue.append((str(msg.sender), priority))
                 print(f"[{self.agent.name}] 📩 Queue: {self.agent.queue}")
                 self.agent.queue.sort(key=lambda x: x[1], reverse=True)
@@ -93,7 +107,7 @@ class TutorAgent(Agent):
             # ---------- Acceptance ----------
             elif perf == "accept-proposal":
                 self.agent.available_slots -= 1
-                print(Fore.GREEN + f"[Tutor-{self.agent.name}] ✅ Aceitou {msg.sender}" + Style.RESET_ALL)
+                print(Fore.GREEN + f"[Tutor-{self.agent.name}] ✅ Accepted {msg.sender}" + Style.RESET_ALL)
 
                 await asyncio.sleep(2)  # simulate teaching time
 
@@ -106,4 +120,4 @@ class TutorAgent(Agent):
 
             # ---------- Rejection ----------
             elif perf == "reject-proposal":
-                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejeitado por {msg.sender}" + Style.RESET_ALL)
+                print(Fore.RED + f"[Tutor-{self.agent.name}] ❌ Rejecterd by {msg.sender}" + Style.RESET_ALL)
