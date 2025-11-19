@@ -1,3 +1,4 @@
+import math
 from spade.agent import Agent
 from spade.message import Message
 from spade.behaviour import *
@@ -14,8 +15,10 @@ class TutorAgent(Agent):
         self.discipline = discipline
         self.capacity = capacity
         self.available_slots = capacity
+        self.number_of_students = 0
         self.expertise = expertise    # <-- NEW
         self.queue = []  # (student, priority)
+        self.last_helped_student = None
         self.can_start_helping = False  # Flag para controlar início
         self.is_stopping = False  # Flag para parar behaviours
 
@@ -38,6 +41,7 @@ class TutorAgent(Agent):
             print(f"[{self.agent.name}] Agent {peer_jid.split('@')[0]} asked for subscription. Let's approve it")
             self.presence.approve_subscription(peer_jid)
             self.presence.subscribe(peer_jid)
+            print(f"[{self.agent.name}] Subscribed to {peer_jid.split('@')[0]}")
 
         async def run(self):
             self.presence.set_presence(
@@ -65,6 +69,9 @@ class TutorAgent(Agent):
             msg = await self.receive(timeout=5)
             if not msg:
                 return
+            
+            print(f"[{self.agent.name}] Waiting for messages... Number of students: {self.agent.number_of_students}")
+
 
             perf = msg.get_metadata("performative")
 
@@ -78,8 +85,11 @@ class TutorAgent(Agent):
 
                 # priority = expertise * (1 - student_progress)
                 if str(parts["topic"]) == str(self.agent.discipline): 
-                    priority = 1
+                    priority += 1
                     print(Fore.RED + f"[{self.agent.name}] Priority to student {msg.sender} increased for matching discipline." + Style.RESET_ALL)
+                
+                if str(msg.sender) == self.agent.last_helped_student: 
+                    priority += 0.3
                 priority += self.agent.expertise * (1 - student_progress) + random.uniform(0,0.1)
 
                 # 🔴 EVITAR DUPLICADOS: Remover pedidos anteriores do mesmo estudante
@@ -89,6 +99,8 @@ class TutorAgent(Agent):
                 print(f"[{self.agent.name}] 📩 Queue: {self.agent.queue}")
                 self.agent.queue.sort(key=lambda x: x[1], reverse=True)
 
+                print(f"[{self.agent.name}] 📩 Queue sorted: {len(self.agent.queue)}")
+            
                 chosen_student = self.agent.queue.pop(0)[0]
 
                 # if tutor available and this student is highest priority

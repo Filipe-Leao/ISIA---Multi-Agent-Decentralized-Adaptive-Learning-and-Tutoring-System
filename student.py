@@ -109,8 +109,6 @@ class StudentAgent(Agent):
             
             # 🔴 LIMPAR propostas antigas antes de novo pedido
             self.agent.proposals = []
-            self.chosen_tutor = None
-            self.chosen_tutor_expertise = None
             
             tutors = []
             peers = []
@@ -276,11 +274,15 @@ class StudentAgent(Agent):
                     self.agent.knowledge[self.agent.topic] = min(1.0, old + (random.uniform(0.05, 0.15) * self.agent.tutor_message["expertise"]))
                 print(Fore.GREEN + f"[{self.agent.name}] 🎓 progresso {old:.2f} → {self.agent.knowledge[self.agent.topic]:.2f}" + Style.RESET_ALL)
 
+                self.chosen_tutor = None
+                self.chosen_tutor_expertise = None
+
                 # Registar no logger
                 self.agent.logger.log(
                     student=self.agent.name,
                     tutor=chosen,
                     topic=self.agent.topic,
+                    general_progress=self.agent.progress,
                     response_time=rt,
                     proposals_received=len(self.agent.proposals),
                     chosen_tutor=chosen,

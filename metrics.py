@@ -12,6 +12,7 @@ class MetricsLogger:
                 "student",
                 "tutor",
                 "topic",
+                "general_progress",
                 "response_time",
                 "proposals_received",
                 "chosen_tutor",
@@ -19,7 +20,7 @@ class MetricsLogger:
                 "peer_used"
             ])
 
-    def log(self, student, tutor, topic, response_time, proposals_received, chosen_tutor, rejected_count, peer_used):
+    def log(self, student, tutor, topic, general_progress, response_time, proposals_received, chosen_tutor, rejected_count, peer_used):
         with open(self.filename, mode="a", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([
@@ -27,6 +28,7 @@ class MetricsLogger:
                 student,
                 tutor,
                 topic,
+                general_progress,
                 response_time,
                 proposals_received,
                 chosen_tutor,

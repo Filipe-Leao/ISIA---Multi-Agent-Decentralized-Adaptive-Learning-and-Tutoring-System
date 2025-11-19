@@ -1,1 +1,5 @@
-timestamp,student,tutor,topic,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
+timestamp,student,tutor,topic,general_progress,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
+2025-11-19 18:17:26.786723,student1,tutor3@localhost,estatística bayesiana,0.22514535283679293,17.92,0,tutor3@localhost,-1,False
+2025-11-19 18:17:27.388515,student3,tutor2@localhost,álgebra,0.1365049453176441,18.06,0,tutor2@localhost,-1,False
+2025-11-19 18:17:28.786762,student2,tutor3@localhost,aprendizagem automática,0.14703548115097448,19.69,2,tutor3@localhost,1,False
+2025-11-19 18:17:31.786308,student1,tutor2@localhost,álgebra,0.23520281219013997,22.92,0,tutor2@localhost,-1,False

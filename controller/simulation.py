@@ -110,7 +110,7 @@ class SimulationController(QObject):
             for i in range(1, num_students + 1):
                 style = random.choice(learning_styles)
                 jid = f"student{i}@{server}"
-                student = StudentAgent(jid, password, learning_style=style)
+                student = StudentAgent(jid, password, learning_style=style, disciplines=disciplines)
                 self.agents[f'student{i}'] = student
                 self.log(f"   Student {i}: {jid} (style: {style})")
             
@@ -169,6 +169,8 @@ class SimulationController(QObject):
                         try:
                             agent.presence.subscribe(self.agents["resource"].jid)
                             self.log(f"   [{name}] Subscribed to {self.agents['resource'].jid}")
+                            if name.startswith("tutor"):
+                                agent.number_of_students = num_students
                         except Exception as e:
                             self.log(f"   Subscription error {name} -> resource: {e}")
             
