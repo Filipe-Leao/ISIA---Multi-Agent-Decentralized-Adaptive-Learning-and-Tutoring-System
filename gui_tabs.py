@@ -11,20 +11,21 @@ class LogsTab(QWidget):
     def __init__(self):
         super().__init__()
         layout = QVBoxLayout()
+        layout.setContentsMargins(0, 0, 0, 0)
         
         # Create scroll area for logs
         self.log_widget = QTextEdit()
         self.log_widget.setReadOnly(True)
-        self.log_widget.setFont(QFont("Consolas", 9))
+        self.log_widget.setFont(QFont("Consolas", 10))
         
-        # Style the log widget
+        # Estilo escuro simples para logs
         self.log_widget.setStyleSheet("""
             QTextEdit {
                 background-color: #1e1e1e;
                 color: #ffffff;
-                border: 1px solid #4CAF50;
+                border: 2px solid #32CD32;
                 border-radius: 5px;
-                padding: 5px;
+                padding: 10px;
             }
         """)
         
@@ -44,6 +45,7 @@ class MetricsTab(QWidget):
         
         # Main layout
         main_layout = QVBoxLayout()
+        main_layout.setContentsMargins(0, 0, 0, 0)
         
         # Create scroll area for metrics
         scroll_area = QScrollArea()
@@ -54,9 +56,10 @@ class MetricsTab(QWidget):
         # Create content widget for scroll area
         content_widget = QWidget()
         content_layout = QVBoxLayout(content_widget)
+        content_layout.setContentsMargins(0, 0, 0, 0)
         
         # Create matplotlib figure and canvas
-        self.figure = Figure(figsize=(12, 10))  # Increased height
+        self.figure = Figure(figsize=(12, 10))
         self.canvas = FigureCanvasQTAgg(self.figure)
         
         # Set minimum size for better visibility
@@ -85,16 +88,17 @@ class MetricsTab(QWidget):
             ax3 = self.figure.add_subplot(2, 2, 3)
             ax4 = self.figure.add_subplot(2, 2, 4)
             
-            # Filter agents safely
-            students = [a for name, a in agents.items() if name.startswith("student") and hasattr(a, 'progress')]
-            tutors = [a for name, a in agents.items() if name.startswith("tutor") and hasattr(a, 'discipline')]
-            peers = [a for name, a in agents.items() if name.startswith("peer")]
+            # Filter agents safely (agents agora são dicts)
+            students = {name: a for name, a in agents.items() if name.startswith("student")}
+            tutors = {name: a for name, a in agents.items() if name.startswith("tutor")}
+            peers = {name: a for name, a in agents.items() if name.startswith("peer")}
             
             # Gráfico 1: Progresso individual dos estudantes
             if students:
-                student_names = [s.name for s in students]
-                current_progress = [getattr(s, 'progress', 0) for s in students]
-                initial_progress = [getattr(s, 'initial_progress', 0) for s in students]
+                student_names = list(students.keys())
+                current_progress = [students[name].get('progress', 0) for name in student_names]
+                # Obter progresso inicial real dos estudantes
+                initial_progress = [students[name].get('initial_progress', 0) for name in student_names]
                 
                 x = range(len(student_names))
                 bars1 = ax1.bar([i-0.2 for i in x], initial_progress, width=0.4, 
@@ -118,10 +122,11 @@ class MetricsTab(QWidget):
                 available_slots = []
                 capacities = []
                 
-                for tutor in tutors:
-                    tutor_names.append(f"{tutor.name}\n({getattr(tutor, 'discipline', 'N/A')})")
-                    available_slots.append(getattr(tutor, 'available_slots', 0))
-                    capacities.append(getattr(tutor, 'capacity', 1))
+                for name, tutor in tutors.items():
+                    discipline = tutor.get('discipline', 'N/A')[:10]  # Truncar
+                    tutor_names.append(f"{name}\n({discipline})")
+                    available_slots.append(tutor.get('available_slots', 0))
+                    capacities.append(tutor.get('capacity', 1))
                 
                 x = range(len(tutor_names))
                 ax2.bar(x, capacities, alpha=0.3, label='Capacidade Total', color='lightgreen')
@@ -139,8 +144,8 @@ class MetricsTab(QWidget):
             # Gráfico 3: Distribuição de estilos de aprendizagem
             if students:
                 styles = {}
-                for student in students:
-                    style = getattr(student, 'learning_style', 'unknown')
+                for name, student in students.items():
+                    style = student.get('learning_style', 'unknown')
                     styles[style] = styles.get(style, 0) + 1
                 
                 if styles:
@@ -155,7 +160,8 @@ class MetricsTab(QWidget):
             
             # Gráfico 4: Progresso médio vs tempo (simulado)
             if students:
-                avg_progress = sum(getattr(s, 'progress', 0) for s in students) / len(students)
+                progress_values = [student.get('progress', 0) for student in students.values()]
+                avg_progress = sum(progress_values) / len(progress_values)
                 
                 # Create a simple progress indicator
                 categories = ['Inicial', 'Atual', 'Meta']
