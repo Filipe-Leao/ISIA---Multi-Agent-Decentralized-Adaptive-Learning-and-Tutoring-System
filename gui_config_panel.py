@@ -38,9 +38,9 @@ class ConfigPanel(QWidget):
         form.addRow("Tutores:", self.s_tutors)
 
         self.s_peers = QSpinBox()
-        self.s_peers.setRange(0, 5)
+        self.s_peers.setRange(0, 10)
         self.s_peers.setValue(1)
-        form.addRow("Peers:", self.s_peers)
+        form.addRow("Auxiliares:", self.s_peers)
         
         # Duração da simulação
         self.s_duration = QSpinBox()

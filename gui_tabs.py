@@ -33,10 +33,15 @@ class LogsTab(QWidget):
         self.setLayout(layout)
 
     def log(self, text):
-        self.log_widget.append(text)
-        # Auto-scroll to bottom
         scrollbar = self.log_widget.verticalScrollBar()
-        scrollbar.setValue(scrollbar.maximum())
+        # Verificar se está no fundo (com margem de 10 pixels)
+        was_at_bottom = scrollbar.value() >= scrollbar.maximum() - 10
+        
+        self.log_widget.append(text)
+        
+        # Só fazer auto-scroll se estava no fundo
+        if was_at_bottom:
+            scrollbar.setValue(scrollbar.maximum())
 
 
 class MetricsTab(QWidget):
@@ -126,7 +131,7 @@ class MetricsTab(QWidget):
                     ax1.plot(x_data, history, marker='o', linestyle='-', linewidth=2,
                             markersize=6, label=label, color=color)
                 
-                ax1.set_title('Progresso dos Estudantes')
+                ax1.set_title('Progresso Geral dos Estudantes')
                 ax1.set_xlabel('Tempo')
                 ax1.set_ylabel('Progresso escolar')
                 ax1.set_ylim(0, 1)
@@ -157,6 +162,8 @@ class MetricsTab(QWidget):
                 ax2.set_xticklabels([name.split('\n')[0].replace('tutor', 'T') for name in tutor_names])
                 ax2.legend()
                 ax2.set_ylabel('Slots')
+                # Forçar eixo Y a mostrar apenas números inteiros
+                ax2.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
             else:
                 ax2.text(0.5, 0.5, 'Aguardando dados\ndos tutores', 
                         ha='center', va='center', transform=ax2.transAxes)

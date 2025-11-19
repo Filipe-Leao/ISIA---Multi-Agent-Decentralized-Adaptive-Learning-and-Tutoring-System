@@ -8,10 +8,16 @@ from metrics import MetricsLogger
 
 
 class StudentAgent(Agent):
-    def __init__(self, jid, password, learning_style="visual", disciplines={"algebra", "estatística", "programação"}):
+    def __init__(self, jid, password, learning_style="visual", disciplines=None):
         random.seed(1)
         super().__init__(jid, password)
         self.learning_style = learning_style
+        
+        # Usar disciplinas padrão se não fornecidas
+        if disciplines is None:
+            disciplines = ["estatística bayesiana", "aprendizagem automática", "programação",
+                          "estatística", "português", "álgebra"]
+        
         self.knowledge = {}
         for discipline in disciplines:
             self.knowledge.update({discipline: random.uniform(0, 0.4)})
@@ -84,7 +90,7 @@ class StudentAgent(Agent):
             
             print(Fore.GREEN + f"[{self.agent.name}] ✅ Recebeu sinal de início - começando estudos" + Style.RESET_ALL)
             await asyncio.sleep(2)
-            random.seed(1)
+            
             while self.agent.progress < 1.0 and not self.agent.is_stopping:
                 self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
                 self.agent.progress_topic = self.agent.knowledge[self.agent.topic]
@@ -95,8 +101,10 @@ class StudentAgent(Agent):
                 await self.update_progress()
                 await asyncio.sleep(2) 
             
-            print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Max Progress!" + Style.RESET_ALL)
-            await self.agent.stop()
+            if self.agent.progress >= 1.0:
+                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Max Progress!" + Style.RESET_ALL)
+                # Não parar o agente, apenas parar de estudar
+                return
 
         async def update_progress(self):
             old = self.agent.progress
@@ -216,6 +224,9 @@ class StudentAgent(Agent):
         async def run(self):
             if self.agent.is_stopping:
                 return
+            # ✅ Parar se já atingiu 100%
+            if self.agent.progress >= 1.0:
+                return
             await asyncio.sleep(1)
 
     class ReceiveBehaviour(behaviour.CyclicBehaviour):
@@ -224,6 +235,11 @@ class StudentAgent(Agent):
                 return
             
             self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
+            
+            # ✅ Parar se já atingiu 100%
+            if self.agent.progress >= 1.0:
+                return
+            
             msg = await self.receive(timeout=1)
             if not msg:
                 return
@@ -237,13 +253,16 @@ class StudentAgent(Agent):
                 expertise = float(parts.get("expertise", 0))
                 slots = int(parts.get("slots", 0))
 
-                self.agent.proposals.append({
-                    "tutor": str(msg.sender),
-                    "discipline": discipline,
-                    "expertise": expertise,
-                    "slots": slots
-                })
-                print(Fore.YELLOW + f"[{self.agent.name}] 📩 Proposta de {msg.sender}: (discipline= {discipline}, exp={expertise}, slots={slots})" + Style.RESET_ALL)
+                # 🔴 EVITAR DUPLICADOS: Verificar se já existe proposta deste tutor
+                tutor_jid = str(msg.sender)
+                if not any(p["tutor"] == tutor_jid for p in self.agent.proposals):
+                    self.agent.proposals.append({
+                        "tutor": tutor_jid,
+                        "discipline": discipline,
+                        "expertise": expertise,
+                        "slots": slots
+                    })
+                    print(Fore.YELLOW + f"[{self.agent.name}] 📩 Proposta de {msg.sender}: (discipline= {discipline}, exp={expertise}, slots={slots})" + Style.RESET_ALL)
 
             # --- tutor rejeitou ---
             elif perf == "refuse":
