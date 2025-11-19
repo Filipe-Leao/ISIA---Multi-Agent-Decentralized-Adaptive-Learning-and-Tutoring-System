@@ -23,7 +23,7 @@ from controller.simulation import SimulationController
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("🎓 ISIA - Sistema Multi-Agente de Tutoria Adaptativa")
+        self.setWindowTitle("ISIA - Multi Agent Decentralized Adaptive Learning and Tutoring System")
         self.setGeometry(100, 100, 1400, 900)
         
         # Controller (Core SPADE logic)
@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
         main_layout.setSpacing(15)
         
         # Title Label
-        title = QLabel("🎓 ISIA - Sistema Inteligente de Tutoria Adaptativa")
+        title = QLabel("ISIA - Multi Agent Decentralized Adaptive Learning and Tutoring System")
         title.setStyleSheet("""
             QLabel {
                 font-size: 24px;
@@ -121,8 +121,8 @@ class MainWindow(QMainWindow):
         self.connect_signals()
         
         # Initial log message
-        self.logs_tab.log("🌟 Sistema iniciado. Configure os parâmetros e clique em 'Iniciar Simulação'")
-        self.logs_tab.log("📌 Certifique-se de que um servidor XMPP está rodando antes de iniciar")
+        self.logs_tab.log("Sistema iniciado. Configure os parâmetros e clique em 'Start'")
+        self.logs_tab.log("Certifique-se de que 'spade run' está ativo noutro terminal")
     
     def connect_signals(self):
         """Conecta os signals do controller aos componentes da GUI"""
