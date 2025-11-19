@@ -80,7 +80,6 @@ class SimulationController(QObject):
             password: Senha para os agentes
             duration: Duração da simulação em segundos (0 = manual)
         """
-        random.seed(1)
         try:
             self.is_running = True
             self._simulation_duration = duration  # 🔴 Armazenar duração
@@ -170,8 +169,6 @@ class SimulationController(QObject):
                         try:
                             agent.presence.subscribe(self.agents["resource"].jid)
                             self.log(f"   [{name}] Subscribed to {self.agents['resource'].jid}")
-                            if name.startswith("tutor"):
-                                agent.number_of_students = num_students
                         except Exception as e:
                             self.log(f"   Subscription error {name} -> resource: {e}")
             
@@ -211,6 +208,19 @@ class SimulationController(QObject):
                         self.log(f"Simulation time ({self._simulation_duration}s) reached - stopping automatically...")
                         await self.stop_simulation()
                         break
+                
+                # ✅ Verificar se todos os estudantes chegaram a 100%
+                all_students_complete = True
+                for name, agent in self.agents.items():
+                    if name.startswith("student"):
+                        if hasattr(agent, 'progress') and agent.progress < 1.0:
+                            all_students_complete = False
+                            break
+                
+                if all_students_complete:
+                    self.log("All students reached 100% progress - stopping automatically...")
+                    await self.stop_simulation()
+                    break
                 
         except Exception as e:
             self.log(f"Simulation error: {e}")
@@ -263,14 +273,7 @@ class SimulationController(QObject):
         self.log("Stopping simulation...")
         self.is_running = False
         
-        # 🔴 PRIMEIRO: Sinalizar todos os agentes para parar
-        for name, agent in self.agents.items():
-            agent.is_stopping = True
-        
-        # 🔴 SEGUNDO: Aguardar behaviours processarem a flag
-        await asyncio.sleep(1.5)
-        
-        # 🔴 TERCEIRO: Mostrar progresso final após aguardar
+        # 🔴 PRIMEIRO: Mostrar progresso final ANTES de sinalizar parada
         self.log("Final student progress:")
         for name, agent in self.agents.items():
             if name.startswith("student"):
@@ -280,6 +283,13 @@ class SimulationController(QObject):
                     self.log(f"   {agent.name}: {agent.initial_progress:.4f} -> {final_progress:.4f}")
                 except Exception as e:
                     self.log(f"   Error displaying progress for {name}: {e}")
+        
+        # 🔴 SEGUNDO: Sinalizar todos os agentes para parar
+        for name, agent in self.agents.items():
+            agent.is_stopping = True
+        
+        # 🔴 TERCEIRO: Aguardar behaviours processarem a flag
+        await asyncio.sleep(1.5)
         
         # 🔴 QUARTO: Parar todos os agentes
         self.log("Stopping all agents...")
