@@ -1,5 +1,40 @@
 timestamp,student,tutor,topic,general_progress,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
-2025-11-19 18:17:26.786723,student1,tutor3@localhost,estatística bayesiana,0.22514535283679293,17.92,0,tutor3@localhost,-1,False
-2025-11-19 18:17:27.388515,student3,tutor2@localhost,álgebra,0.1365049453176441,18.06,0,tutor2@localhost,-1,False
-2025-11-19 18:17:28.786762,student2,tutor3@localhost,aprendizagem automática,0.14703548115097448,19.69,2,tutor3@localhost,1,False
-2025-11-19 18:17:31.786308,student1,tutor2@localhost,álgebra,0.23520281219013997,22.92,0,tutor2@localhost,-1,False
+2025-11-19 18:39:39.789683,student1,tutor1@localhost,português,0.17556546374644233,17.8,0,tutor1@localhost,-1,False
+2025-11-19 18:39:40.289612,student2,tutor2@localhost,programação,0.26283010642726673,18.09,0,tutor2@localhost,-1,False
+2025-11-19 18:39:42.292868,student3,tutor2@localhost,português,0.23095897426498505,19.89,2,tutor2@localhost,1,False
+2025-11-19 18:39:44.788593,student1,tutor1@localhost,estatística,0.18901879081629736,22.8,0,tutor1@localhost,-1,False
+2025-11-19 18:39:46.793933,student2,tutor1@localhost,programação,0.2831410779042404,24.59,2,tutor1@localhost,1,False
+2025-11-19 18:39:48.792833,student3,tutor3@localhost,álgebra,0.24218226638746918,26.39,0,tutor3@localhost,-1,False
+2025-11-19 18:39:50.289783,student2,tutor2@localhost,aprendizagem automática,0.3071808538194454,28.09,1,tutor2@localhost,0,False
+2025-11-19 18:39:50.795853,student1,tutor1@localhost,aprendizagem automática,0.21663461854079966,28.8,0,tutor1@localhost,-1,False
+2025-11-19 18:39:50.799395,student3,tutor3@localhost,português,0.2675734854252605,28.39,1,tutor3@localhost,0,False
+2025-11-19 18:39:54.789961,student1,tutor1@localhost,estatística,0.23241135956834705,32.8,0,tutor1@localhost,-1,False
+2025-11-19 18:39:56.792255,student2,tutor1@localhost,aprendizagem automática,0.3200132960071667,34.59,2,tutor1@localhost,1,False
+2025-11-19 18:39:58.879905,student3,tutor2@localhost,programação,0.28242636263560555,36.47,0,tutor2@localhost,-1,False
+2025-11-19 18:40:00.807365,student1,tutor1@localhost,português,0.24728142588656288,38.81,2,tutor1@localhost,1,False
+2025-11-19 18:40:00.811432,student3,tutor2@localhost,estatística bayesiana,0.3048918763219765,38.41,1,tutor2@localhost,0,False
+2025-11-19 18:40:02.795012,student2,tutor1@localhost,álgebra,0.33723273120884745,40.6,2,tutor1@localhost,1,False
+2025-11-19 18:40:04.793634,student1,tutor1@localhost,português,0.2688708223564742,42.8,1,tutor1@localhost,0,False
+2025-11-19 18:40:05.289546,student2,tutor3@localhost,programação,0.3625452295345188,43.09,0,tutor3@localhost,-1,False
+2025-11-19 18:40:06.792513,student3,tutor1@localhost,programação,0.3261334975998096,44.39,2,tutor1@localhost,1,False
+2025-11-19 18:40:09.790996,student1,tutor1@localhost,estatística,0.28874768750058144,47.8,0,tutor1@localhost,-1,False
+2025-11-19 18:40:10.290910,student2,tutor2@localhost,programação,0.37862529348202223,48.09,0,tutor2@localhost,-1,False
+2025-11-19 18:40:12.292563,student3,tutor2@localhost,programação,0.3508494964328059,49.89,2,tutor2@localhost,1,False
+2025-11-19 18:40:14.789404,student1,tutor1@localhost,estatística,0.3144834871700349,52.8,0,tutor1@localhost,-1,False
+2025-11-19 18:40:15.289569,student2,tutor3@localhost,álgebra,0.4009837860302421,53.09,0,tutor3@localhost,-1,False
+2025-11-19 18:40:16.794166,student3,tutor1@localhost,estatística,0.3877205022056969,54.39,2,tutor1@localhost,1,False
+2025-11-19 18:40:19.789650,student1,tutor1@localhost,aprendizagem automática,0.3360717859281281,57.8,0,tutor1@localhost,-1,False
+2025-11-19 18:40:21.793474,student2,tutor1@localhost,estatística,0.42471260398279775,59.59,2,tutor1@localhost,1,False
+2025-11-19 18:40:23.789540,student3,tutor1@localhost,estatística,0.4001604844829408,61.38,0,tutor1@localhost,-1,False
+2025-11-19 18:40:25.800286,student1,tutor1@localhost,programação,0.34976342396009247,63.81,0,tutor1@localhost,-1,False
+2025-11-19 18:40:27.795143,student2,tutor1@localhost,álgebra,0.445490309503854,65.6,2,tutor1@localhost,1,False
+2025-11-19 18:40:29.976409,student3,tutor1@localhost,aprendizagem automática,0.42243228744140543,67.57,0,tutor1@localhost,-1,False
+2025-11-19 18:40:29.980825,student1,tutor2@localhost,estatística bayesiana,0.36700607004674285,67.99,0,tutor2@localhost,-1,False
+2025-11-19 18:40:30.288499,student2,tutor3@localhost,programação,0.46186983559219325,68.09,1,tutor3@localhost,0,False
+2025-11-19 18:40:31.926631,student3,tutor1@localhost,estatística,0.439982704009505,69.52,3,tutor1@localhost,2,False
+2025-11-19 18:40:34.789388,student1,tutor1@localhost,estatística bayesiana,0.38557574674532774,72.8,0,tutor1@localhost,-1,False
+2025-11-19 18:40:35.290399,student2,tutor2@localhost,programação,0.47298547110604844,73.09,0,tutor2@localhost,-1,False
+2025-11-19 18:40:36.792710,student3,tutor1@localhost,estatística bayesiana,0.46080306507796837,74.39,2,tutor1@localhost,1,False
+2025-11-19 18:40:39.789131,student1,tutor3@localhost,álgebra,0.4165691697113057,77.8,0,tutor3@localhost,-1,False
+2025-11-19 18:40:40.288834,student2,tutor1@localhost,estatística,0.48984785152862337,78.09,0,tutor1@localhost,-1,False
+2025-11-19 18:40:42.483167,student3,tutor1@localhost,álgebra,0.4974464991290047,80.08,2,tutor1@localhost,1,False
