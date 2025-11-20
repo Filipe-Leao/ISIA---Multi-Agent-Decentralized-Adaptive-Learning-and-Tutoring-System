@@ -1,1 +1,514 @@
-timestamp,student,tutor,topic,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
+timestamp,student,tutor,topic,general_progress,response_time,proposals_received,chosen_tutor,rejected_count,peer_used
+2025-11-20 12:34:17.796976,student9,tutor2@localhost,português,0.19637118517642327,49.59,0,tutor2@localhost,-1,False
+2025-11-20 12:34:17.828900,student1,tutor4@localhost,português,0.19637118517642327,86.16,0,tutor4@localhost,-1,False
+2025-11-20 12:34:17.838480,student3,tutor5@localhost,aprendizagem automática,0.19637118517642327,77.03,0,tutor5@localhost,-1,False
+2025-11-20 12:34:17.842899,student6,tutor1@localhost,álgebra,0.19637118517642327,63.34,0,tutor1@localhost,-1,False
+2025-11-20 12:34:19.819570,student2,tutor2@localhost,aprendizagem automática,0.19637118517642327,83.59,4,tutor2@localhost,3,False
+2025-11-20 12:34:21.835336,student4,tutor1@localhost,álgebra,0.19637118517642327,76.46,0,tutor1@localhost,-1,False
+2025-11-20 12:34:22.764121,student5,tutor4@localhost,português,0.19637118517642327,72.81,0,tutor4@localhost,-1,False
+2025-11-20 12:34:22.774095,student9,tutor3@localhost,aprendizagem automática,0.20606648812173453,54.56,0,tutor3@localhost,-1,False
+2025-11-20 12:34:22.775537,student2,tutor5@localhost,aprendizagem automática,0.22922691952537858,86.56,0,tutor5@localhost,-1,False
+2025-11-20 12:34:23.847258,student4,tutor1@localhost,estatística bayesiana,0.22370410906021787,78.48,0,tutor1@localhost,-1,False
+2025-11-20 12:34:23.855452,student7,tutor3@localhost,programação,0.19637118517642327,64.78,1,tutor3@localhost,0,False
+2025-11-20 12:34:25.034574,student6,tutor5@localhost,álgebra,0.21533030486052293,70.53,1,tutor5@localhost,0,False
+2025-11-20 12:34:25.042043,student3,tutor4@localhost,estatística,0.22370244743354806,84.24,1,tutor4@localhost,0,False
+2025-11-20 12:34:25.956428,student5,tutor3@localhost,aprendizagem automática,0.20906062380866666,75.93,0,tutor3@localhost,-1,False
+2025-11-20 12:34:25.963192,student7,tutor3@localhost,programação,0.20768414265271615,66.88,0,tutor3@localhost,-1,False
+2025-11-20 12:34:27.054540,student8,tutor3@localhost,aprendizagem automática,0.19637118517642327,63.41,0,tutor3@localhost,-1,False
+2025-11-20 12:34:27.059560,student1,tutor3@localhost,programação,0.21340984300574437,95.39,0,tutor3@localhost,-1,False
+2025-11-20 12:34:27.809263,student9,tutor3@localhost,aprendizagem automática,0.23068856762305132,59.6,1,tutor3@localhost,0,False
+2025-11-20 12:34:27.809263,student6,tutor1@localhost,álgebra,0.23655639043827084,73.31,2,tutor1@localhost,1,False
+2025-11-20 12:34:29.046847,student10,tutor1@localhost,aprendizagem automática,0.19637118517642327,56.29,1,tutor1@localhost,0,False
+2025-11-20 12:34:29.087929,student8,tutor3@localhost,estatística,0.21363037633971702,65.45,1,tutor3@localhost,0,False
+2025-11-20 12:34:29.838665,student4,tutor1@localhost,aprendizagem automática,0.23822802132338158,84.46,2,tutor1@localhost,1,False
+2025-11-20 12:34:29.838665,student2,tutor3@localhost,álgebra,0.24914232147404455,93.62,2,tutor3@localhost,1,False
+2025-11-20 12:34:31.155481,student3,tutor5@localhost,estatística,0.24368038862502406,90.35,0,tutor5@localhost,-1,False
+2025-11-20 12:34:31.235194,student10,tutor5@localhost,aprendizagem automática,0.21228726518846167,58.48,1,tutor5@localhost,0,False
+2025-11-20 12:34:31.890857,student7,tutor4@localhost,álgebra,0.23090344667202833,72.81,1,tutor4@localhost,0,False
+2025-11-20 12:34:33.119605,student2,tutor5@localhost,álgebra,0.2707123710018397,96.9,3,tutor5@localhost,2,False
+2025-11-20 12:34:33.166327,student6,tutor2@localhost,álgebra,0.26251460146646816,78.66,2,tutor2@localhost,1,False
+2025-11-20 12:34:33.755992,student10,tutor5@localhost,aprendizagem automática,0.23364046115226111,61.0,2,tutor5@localhost,1,False
+2025-11-20 12:34:33.967397,student5,tutor4@localhost,estatística bayesiana,0.22994747981345945,84.01,0,tutor4@localhost,-1,False
+2025-11-20 12:34:34.063407,student7,tutor4@localhost,álgebra,0.252629893055837,74.99,1,tutor4@localhost,0,False
+2025-11-20 12:34:35.331719,student9,tutor5@localhost,estatística bayesiana,0.26973806396206373,67.12,2,tutor5@localhost,1,False
+2025-11-20 12:34:35.901284,student4,tutor4@localhost,aprendizagem automática,0.24864665232408004,90.53,2,tutor4@localhost,1,False
+2025-11-20 12:34:36.022410,student1,tutor1@localhost,álgebra,0.23744074113127497,104.35,0,tutor1@localhost,-1,False
+2025-11-20 12:34:37.024619,student5,peer,estatística bayesiana,0.24566775597382443,87.07,2,peer,0,True
+2025-11-20 12:34:37.394917,student3,tutor1@localhost,álgebra,0.2695727274092612,96.59,0,tutor1@localhost,-1,False
+2025-11-20 12:34:37.953032,student2,tutor2@localhost,estatística bayesiana,0.29191746035496074,101.73,0,tutor2@localhost,-1,False
+2025-11-20 12:34:38.119504,student8,tutor2@localhost,estatística,0.22345686247991967,74.48,0,tutor2@localhost,-1,False
+2025-11-20 12:34:39.136116,student5,peer,estatística,0.2601602885633107,89.18,0,peer,0,True
+2025-11-20 12:34:39.429751,student1,tutor1@localhost,aprendizagem automática,0.2583334800319852,107.76,2,tutor1@localhost,1,False
+2025-11-20 12:34:39.545325,student3,tutor1@localhost,estatística bayesiana,0.3008669152875089,98.74,0,tutor1@localhost,-1,False
+2025-11-20 12:34:40.077275,student6,tutor2@localhost,estatística bayesiana,0.27715797650749846,85.58,2,tutor2@localhost,1,False
+2025-11-20 12:34:40.204090,student7,tutor1@localhost,estatística,0.2690247302530601,81.13,2,tutor1@localhost,1,False
+2025-11-20 12:34:41.782488,student8,tutor3@localhost,aprendizagem automática,0.23743675282533006,78.15,0,tutor3@localhost,-1,False
+2025-11-20 12:34:42.088936,student9,tutor4@localhost,estatística,0.28636785637321577,73.88,0,tutor4@localhost,-1,False
+2025-11-20 12:34:42.327929,student1,tutor3@localhost,aprendizagem automática,0.2725489452714694,110.65,0,tutor3@localhost,-1,False
+2025-11-20 12:34:42.977767,student2,tutor4@localhost,estatística,0.30420646835597104,106.76,1,tutor4@localhost,0,False
+2025-11-20 12:34:43.088539,student7,tutor3@localhost,estatística,0.28916301081599216,84.01,1,tutor3@localhost,0,False
+2025-11-20 12:34:43.774043,student10,tutor3@localhost,português,0.2528730985098841,71.01,1,tutor3@localhost,0,False
+2025-11-20 12:34:44.116473,student8,tutor3@localhost,aprendizagem automática,0.26333982776786513,80.48,0,tutor3@localhost,-1,False
+2025-11-20 12:34:45.058337,student5,peer,programação,0.2776208960329454,95.11,2,peer,0,True
+2025-11-20 12:34:45.149861,student3,tutor3@localhost,estatística bayesiana,0.3135472034397541,104.34,2,tutor3@localhost,1,False
+2025-11-20 12:34:46.212651,student4,tutor1@localhost,álgebra,0.27825515609105855,100.84,0,tutor1@localhost,-1,False
+2025-11-20 12:34:47.119990,student9,tutor5@localhost,aprendizagem automática,0.3081136055359755,78.91,0,tutor5@localhost,-1,False
+2025-11-20 12:34:47.183446,student8,tutor5@localhost,aprendizagem automática,0.2818413785683345,83.54,1,tutor5@localhost,0,False
+2025-11-20 12:34:48.367676,student10,tutor5@localhost,programação,0.269119785015929,75.61,0,tutor5@localhost,-1,False
+2025-11-20 12:34:48.424646,student3,tutor5@localhost,estatística bayesiana,0.32864657299019534,107.62,0,tutor5@localhost,-1,False
+2025-11-20 12:34:48.511053,student4,tutor1@localhost,álgebra,0.30835305510047123,103.14,0,tutor1@localhost,-1,False
+2025-11-20 12:34:49.119572,student6,tutor5@localhost,aprendizagem automática,0.28885024124730196,94.62,2,tutor5@localhost,1,False
+2025-11-20 12:34:49.211556,student1,tutor5@localhost,programação,0.2899600103736763,117.53,2,tutor5@localhost,1,False
+2025-11-20 12:34:50.359853,student7,tutor5@localhost,estatística,0.3074462143527312,91.28,2,tutor5@localhost,1,False
+2025-11-20 12:34:51.164532,student4,tutor2@localhost,português,0.32671988737577434,105.79,0,tutor2@localhost,-1,False
+2025-11-20 12:34:51.217858,student10,tutor2@localhost,programação,0.2896048692422184,78.46,0,tutor2@localhost,-1,False
+2025-11-20 12:34:52.424245,student2,tutor2@localhost,português,0.3224144141995468,116.2,2,tutor2@localhost,1,False
+2025-11-20 12:34:54.434742,student1,tutor2@localhost,estatística bayesiana,0.3042153265371195,122.76,0,tutor2@localhost,-1,False
+2025-11-20 12:34:55.045821,student2,tutor2@localhost,aprendizagem automática,0.3383811369429466,118.83,0,tutor2@localhost,-1,False
+2025-11-20 12:34:55.070073,student7,tutor2@localhost,estatística bayesiana,0.32493924781097777,95.99,3,tutor2@localhost,2,False
+2025-11-20 12:34:56.557596,student6,tutor3@localhost,estatística,0.3233822228458972,102.05,0,tutor3@localhost,-1,False
+2025-11-20 12:34:57.081816,student3,tutor3@localhost,estatística bayesiana,0.35501024667093223,116.28,0,tutor3@localhost,-1,False
+2025-11-20 12:34:58.420258,student2,tutor4@localhost,aprendizagem automática,0.3679597408709718,122.2,0,tutor4@localhost,-1,False
+2025-11-20 12:34:58.558884,student9,tutor3@localhost,aprendizagem automática,0.3268877783849222,90.35,0,tutor3@localhost,-1,False
+2025-11-20 12:34:59.256582,student8,tutor3@localhost,estatística bayesiana,0.3156064460025831,95.62,0,tutor3@localhost,-1,False
+2025-11-20 12:34:59.261500,student3,tutor3@localhost,programação,0.37050131400969954,118.45,0,tutor3@localhost,-1,False
+2025-11-20 12:35:00.361251,student7,tutor3@localhost,estatística bayesiana,0.3461637783877509,101.28,1,tutor3@localhost,0,False
+2025-11-20 12:35:00.564996,student5,peer,programação,0.2964762605544194,110.61,1,peer,0,True
+2025-11-20 12:35:01.243565,student9,tutor3@localhost,aprendizagem automática,0.34855385933169325,93.04,0,tutor3@localhost,-1,False
+2025-11-20 12:35:01.569454,student8,peer,estatística bayesiana,0.3367799751673631,97.94,1,peer,0,True
+2025-11-20 12:35:02.532027,student1,tutor4@localhost,estatística bayesiana,0.32526010996156246,130.86,0,tutor4@localhost,-1,False
+2025-11-20 12:35:02.702254,student5,peer,programação,0.31587870678934055,112.75,0,peer,0,True
+2025-11-20 12:35:03.231595,student6,tutor3@localhost,estatística bayesiana,0.3451125058172166,108.73,0,tutor3@localhost,-1,False
+2025-11-20 12:35:03.231595,student10,tutor1@localhost,álgebra,0.30549207228171654,90.47,0,tutor1@localhost,-1,False
+2025-11-20 12:35:03.620687,student9,tutor3@localhost,aprendizagem automática,0.35461311389983075,95.41,0,tutor3@localhost,-1,False
+2025-11-20 12:35:03.628009,student8,peer,estatística bayesiana,0.3591610432407777,99.99,1,peer,0,True
+2025-11-20 12:35:04.807716,student4,tutor4@localhost,programação,0.3457677165524637,119.43,1,tutor4@localhost,0,False
+2025-11-20 12:35:05.370774,student10,tutor1@localhost,estatística,0.3338028254856163,92.61,1,tutor1@localhost,0,False
+2025-11-20 12:35:05.723021,student8,peer,álgebra,0.3740609083728939,102.09,1,peer,0,True
+2025-11-20 12:35:06.408830,student6,tutor4@localhost,português,0.3569543973527661,111.91,0,tutor4@localhost,-1,False
+2025-11-20 12:35:06.900727,student2,tutor4@localhost,português,0.38893263209640555,130.68,0,tutor4@localhost,-1,False
+2025-11-20 12:35:06.918295,student4,tutor4@localhost,programação,0.3616617958654243,121.54,2,tutor4@localhost,1,False
+2025-11-20 12:35:07.315200,student1,tutor5@localhost,estatística,0.34529186730962635,135.64,0,tutor5@localhost,-1,False
+2025-11-20 12:35:08.182133,student8,peer,álgebra,0.3924892689931174,104.55,0,peer,0,True
+2025-11-20 12:35:08.189739,student9,tutor5@localhost,português,0.35461311389983075,99.98,0,tutor5@localhost,-1,False
+2025-11-20 12:35:08.405841,student10,tutor4@localhost,estatística,0.35588526244534324,95.65,0,tutor4@localhost,-1,False
+2025-11-20 12:35:09.315804,student5,peer,estatística,0.3375090718524205,119.36,1,peer,0,True
+2025-11-20 12:35:09.342747,student1,tutor5@localhost,aprendizagem automática,0.3662325033809027,137.67,1,tutor5@localhost,0,False
+2025-11-20 12:35:10.438809,student7,tutor4@localhost,estatística,0.36762962610596256,111.36,1,tutor4@localhost,0,False
+2025-11-20 12:35:11.465721,student5,peer,estatística,0.35674502252799284,121.51,0,peer,0,True
+2025-11-20 12:35:11.478075,student5,peer,estatística,0.3700667866451976,121.53,0,peer,0,True
+2025-11-20 12:35:11.482235,student10,tutor3@localhost,aprendizagem automática,0.3737461471570224,98.72,0,tutor3@localhost,-1,False
+2025-11-20 12:35:12.209138,student1,tutor3@localhost,aprendizagem automática,0.3921780481003673,140.54,1,tutor3@localhost,0,False
+2025-11-20 12:35:12.436252,student3,tutor4@localhost,estatística bayesiana,0.3924004564420946,131.63,2,tutor4@localhost,1,False
+2025-11-20 12:35:12.894115,student4,tutor4@localhost,português,0.380348602096304,127.52,2,tutor4@localhost,1,False
+2025-11-20 12:35:13.513636,student2,tutor1@localhost,álgebra,0.40352797784483735,137.29,3,tutor1@localhost,2,False
+2025-11-20 12:35:14.791131,student9,tutor3@localhost,álgebra,0.37812385984474745,106.58,0,tutor3@localhost,-1,False
+2025-11-20 12:35:14.971915,student3,tutor4@localhost,aprendizagem automática,0.41655154806011097,134.16,4,tutor4@localhost,3,False
+2025-11-20 12:35:15.520739,student5,peer,português,0.38971512900255906,125.57,3,peer,0,True
+2025-11-20 12:35:16.788943,student6,tutor5@localhost,programação,0.3742036440170355,122.29,0,tutor5@localhost,-1,False
+2025-11-20 12:35:16.989111,student7,tutor2@localhost,português,0.3881803935758039,117.91,1,tutor2@localhost,0,False
+2025-11-20 12:35:18.234244,student9,peer,álgebra,0.4017134349082219,110.03,4,peer,0,True
+2025-11-20 12:35:18.234244,student3,tutor5@localhost,aprendizagem automática,0.44047166612658356,137.43,1,tutor5@localhost,0,False
+2025-11-20 12:35:18.772910,student4,tutor1@localhost,álgebra,0.3999867032976243,133.4,1,tutor1@localhost,0,False
+2025-11-20 12:35:19.000878,student7,tutor2@localhost,português,0.39715349643571213,119.92,1,tutor2@localhost,0,False
+2025-11-20 12:35:19.009789,student2,tutor5@localhost,programação,0.43332564541409985,142.78,1,tutor5@localhost,0,False
+2025-11-20 12:35:20.263772,student9,peer,estatística,0.4130547586156852,112.05,0,peer,0,True
+2025-11-20 12:35:20.266892,student6,tutor5@localhost,estatística,0.3831770075072991,125.77,0,tutor5@localhost,-1,False
+2025-11-20 12:35:20.802167,student1,tutor1@localhost,aprendizagem automática,0.4102868978775907,149.13,1,tutor1@localhost,0,False
+2025-11-20 12:35:20.838076,student8,peer,aprendizagem automática,0.4045995674701197,117.2,1,peer,0,True
+2025-11-20 12:35:21.032605,student4,tutor1@localhost,álgebra,0.41960434485169346,135.66,1,tutor1@localhost,0,False
+2025-11-20 12:35:22.267518,student5,peer,aprendizagem automática,0.39844265104617144,132.31,0,peer,0,True
+2025-11-20 12:35:22.823921,student1,tutor2@localhost,aprendizagem automática,0.427328423494584,151.15,0,tutor2@localhost,-1,False
+2025-11-20 12:35:22.848994,student8,peer,aprendizagem automática,0.4193417673337574,119.21,0,peer,0,True
+2025-11-20 12:35:23.045659,student6,peer,estatística,0.4023024944896538,128.54,2,peer,0,True
+2025-11-20 12:35:23.081281,student3,tutor2@localhost,estatística,0.470632712232264,142.27,1,tutor2@localhost,0,False
+2025-11-20 12:35:24.277206,student9,peer,estatística,0.42551899796084197,116.07,2,peer,0,True
+2025-11-20 12:35:24.284841,student10,tutor2@localhost,programação,0.40335781053062414,111.53,1,tutor2@localhost,0,False
+2025-11-20 12:35:25.081783,student6,peer,estatística,0.41694561320897355,130.58,2,peer,0,True
+2025-11-20 12:35:25.086244,student7,tutor2@localhost,programação,0.4131922785428071,126.0,2,tutor2@localhost,1,False
+2025-11-20 12:35:26.298856,student10,tutor2@localhost,álgebra,0.4240069752447906,113.54,0,tutor2@localhost,-1,False
+2025-11-20 12:35:26.310499,student2,tutor2@localhost,aprendizagem automática,0.45567161894147956,150.09,2,tutor2@localhost,1,False
+2025-11-20 12:35:26.327870,student10,tutor2@localhost,álgebra,0.4354526898120321,113.57,1,tutor2@localhost,0,False
+2025-11-20 12:35:27.117806,student7,tutor4@localhost,programação,0.42872746131729195,128.04,1,tutor4@localhost,0,False
+2025-11-20 12:35:28.212631,student3,tutor3@localhost,estatística bayesiana,0.48191026768197937,147.41,1,tutor3@localhost,0,False
+2025-11-20 12:35:29.132442,student8,peer,estatística,0.4193417673337574,125.5,0,peer,0,True
+2025-11-20 12:35:29.299635,student5,peer,português,0.4155065192768888,139.35,0,peer,0,True
+2025-11-20 12:35:30.334826,student3,tutor3@localhost,aprendizagem automática,0.49538865424436573,149.53,0,tutor3@localhost,-1,False
+2025-11-20 12:35:30.399404,student6,peer,aprendizagem automática,0.42764907266507923,135.89,0,peer,0,True
+2025-11-20 12:35:30.466746,student10,tutor1@localhost,estatística bayesiana,0.46516641932293074,117.7,1,tutor1@localhost,0,False
+2025-11-20 12:35:30.477017,student10,tutor1@localhost,estatística bayesiana,0.47869355121332685,117.71,1,tutor1@localhost,0,False
+2025-11-20 12:35:31.136454,student1,tutor1@localhost,estatística bayesiana,0.44477705724339617,159.47,0,tutor1@localhost,-1,False
+2025-11-20 12:35:31.573717,student8,peer,álgebra,0.43688595608681996,127.92,0,peer,0,True
+2025-11-20 12:35:32.458952,student2,tutor3@localhost,estatística bayesiana,0.4625200716945838,156.24,0,tutor3@localhost,-1,False
+2025-11-20 12:35:32.564291,student6,peer,aprendizagem automática,0.4386434896136204,138.06,0,peer,0,True
+2025-11-20 12:35:32.583387,student3,peer,aprendizagem automática,0.5241473120192724,151.78,1,peer,0,True
+2025-11-20 12:35:33.157690,student7,peer,aprendizagem automática,0.4512322282748555,134.08,2,peer,0,True
+2025-11-20 12:35:33.157690,student1,peer,estatística bayesiana,0.46378568854929725,161.49,0,peer,0,True
+2025-11-20 12:35:33.173918,student4,tutor5@localhost,programação,0.4399703261810494,147.8,1,tutor5@localhost,0,False
+2025-11-20 12:35:33.177063,student5,peer,português,0.42833139519141517,143.22,1,peer,0,True
+2025-11-20 12:35:34.977443,student2,tutor3@localhost,estatística bayesiana,0.48635125815176855,158.76,2,tutor3@localhost,1,False
+2025-11-20 12:35:35.309051,student6,peer,aprendizagem automática,0.4525821083484541,140.8,3,peer,0,True
+2025-11-20 12:35:35.418715,student4,tutor5@localhost,álgebra,0.4552896808337428,150.04,1,tutor5@localhost,0,False
+2025-11-20 12:35:35.421076,student1,peer,programação,0.47379778680310825,163.75,1,peer,0,True
+2025-11-20 12:35:35.431376,student7,peer,português,0.4599933400213729,136.35,3,peer,0,True
+2025-11-20 12:35:35.590788,student9,peer,álgebra,0.44073799285643095,127.37,3,peer,0,True
+2025-11-20 12:35:36.283306,student8,peer,estatística,0.4550806861696644,132.65,4,peer,0,True
+2025-11-20 12:35:36.986778,student2,tutor3@localhost,estatística bayesiana,0.5039191023986443,160.77,0,tutor3@localhost,-1,False
+2025-11-20 12:35:37.781028,student5,peer,aprendizagem automática,0.4463706579094981,147.83,0,peer,0,True
+2025-11-20 12:35:38.139823,student4,tutor4@localhost,álgebra,0.47620899846255815,152.76,4,tutor4@localhost,3,False
+2025-11-20 12:35:38.153305,student3,peer,português,0.5241473120192724,157.34,1,peer,0,True
+2025-11-20 12:35:38.339019,student6,peer,estatística,0.46241046978592576,143.84,5,peer,0,True
+2025-11-20 12:35:39.479207,student1,peer,programação,0.49101747221745945,167.81,3,peer,0,True
+2025-11-20 12:35:39.666610,student9,peer,álgebra,0.4622253058659545,131.46,3,peer,0,True
+2025-11-20 12:35:39.808052,student10,tutor5@localhost,aprendizagem automática,0.5030925596900865,127.05,0,tutor5@localhost,-1,False
+2025-11-20 12:35:40.149154,student7,peer,programação,0.4789644079106379,141.07,2,peer,0,True
+2025-11-20 12:35:41.646573,student8,peer,programação,0.471753359781407,138.01,2,peer,0,True
+2025-11-20 12:35:41.767308,student4,tutor4@localhost,aprendizagem automática,0.47620899846255815,156.4,3,tutor4@localhost,2,False
+2025-11-20 12:35:42.155068,student5,peer,estatística,0.46126165172677575,152.2,3,peer,0,True
+2025-11-20 12:35:43.646488,student7,peer,programação,0.49554189321512726,144.57,1,peer,0,True
+2025-11-20 12:35:43.765784,student9,peer,álgebra,0.4783017881848594,135.56,0,peer,0,True
+2025-11-20 12:35:44.176311,student4,tutor2@localhost,aprendizagem automática,0.5125350125514302,158.8,1,tutor2@localhost,0,False
+2025-11-20 12:35:44.422044,student6,peer,álgebra,0.47528506107561924,149.91,1,peer,0,True
+2025-11-20 12:35:44.427755,student1,peer,português,0.5094038618100414,172.76,2,peer,0,True
+2025-11-20 12:35:45.659817,student3,peer,álgebra,0.5411722720997355,164.86,1,peer,0,True
+2025-11-20 12:35:45.924083,student10,tutor2@localhost,estatística bayesiana,0.5266896167913854,133.16,1,tutor2@localhost,0,False
+2025-11-20 12:35:46.391959,student5,peer,programação,0.4835456492218258,156.44,1,peer,0,True
+2025-11-20 12:35:46.497254,student9,peer,programação,0.4857203045938661,138.28,2,peer,0,True
+2025-11-20 12:35:47.670437,student8,peer,estatística,0.4864541237834485,144.03,0,peer,0,True
+2025-11-20 12:35:48.865494,student2,tutor4@localhost,português,0.5128297270140072,172.64,0,tutor4@localhost,-1,False
+2025-11-20 12:35:48.882988,student2,tutor4@localhost,português,0.5310712244206292,172.66,0,tutor4@localhost,-1,False
+2025-11-20 12:35:48.889260,student3,peer,álgebra,0.5571718727134469,168.08,2,peer,0,True
+2025-11-20 12:35:49.693421,student10,tutor4@localhost,estatística bayesiana,0.5457733522439145,136.94,3,tutor4@localhost,2,False
+2025-11-20 12:35:50.906424,student7,peer,estatística,0.5098535699768896,151.82,0,peer,0,True
+2025-11-20 12:35:51.056308,student9,peer,estatística,0.4997796836995509,142.85,2,peer,0,True
+2025-11-20 12:35:51.719503,student4,tutor4@localhost,estatística,0.5415784480166154,166.35,3,tutor4@localhost,2,False
+2025-11-20 12:35:52.893419,student8,peer,estatística,0.5071638086123433,149.26,0,peer,0,True
+2025-11-20 12:35:53.936873,student2,peer,português,0.551889659859009,177.72,4,peer,0,True
+2025-11-20 12:35:54.821200,student9,peer,estatística,0.5132553210381555,146.61,1,peer,0,True
+2025-11-20 12:35:54.905318,student6,peer,português,0.4871726313503208,160.4,0,peer,0,True
+2025-11-20 12:35:54.914466,student4,tutor3@localhost,estatística,0.5608713377671766,169.54,1,tutor3@localhost,0,False
+2025-11-20 12:35:55.000291,student7,peer,estatística,0.5204372154718396,155.91,4,peer,0,True
+2025-11-20 12:35:55.044394,student5,peer,álgebra,0.5051252657613762,165.09,0,peer,0,True
+2025-11-20 12:35:55.048323,student10,tutor5@localhost,aprendizagem automática,0.5551998966614441,142.29,0,tutor5@localhost,-1,False
+2025-11-20 12:35:56.908981,student1,peer,estatística bayesiana,0.5301196091194867,185.24,1,peer,0,True
+2025-11-20 12:35:57.055870,student8,peer,álgebra,0.5209162394815281,153.42,1,peer,0,True
+2025-11-20 12:35:57.355858,student5,peer,programação,0.5151753352808218,167.39,1,peer,0,True
+2025-11-20 12:35:57.389668,student10,tutor5@localhost,álgebra,0.5556603470572671,144.63,1,tutor5@localhost,0,False
+2025-11-20 12:35:59.133801,student1,peer,estatística bayesiana,0.5430937289305097,187.46,2,peer,0,True
+2025-11-20 12:35:59.284034,student3,peer,português,0.5734009047033227,178.48,0,peer,0,True
+2025-11-20 12:36:00.169364,student8,peer,álgebra,0.5372212831071694,156.54,2,peer,0,True
+2025-11-20 12:36:00.212013,student4,tutor2@localhost,português,0.5784323358670213,174.84,1,tutor2@localhost,0,False
+2025-11-20 12:36:00.238573,student5,peer,programação,0.5304859213544196,170.29,1,peer,0,True
+2025-11-20 12:36:02.224262,student6,peer,português,0.5017774233150245,167.72,1,peer,0,True
+2025-11-20 12:36:02.237282,student4,tutor2@localhost,português,0.5990489313417406,176.86,0,tutor2@localhost,-1,False
+2025-11-20 12:36:02.237282,student10,tutor1@localhost,estatística bayesiana,0.5724839691551834,149.48,1,tutor1@localhost,0,False
+2025-11-20 12:36:02.269266,student2,peer,programação,0.5718030372464373,186.05,1,peer,0,True
+2025-11-20 12:36:04.254030,student9,peer,estatística,0.5344890494694571,156.05,0,peer,0,True
+2025-11-20 12:36:04.279161,student3,peer,estatística,0.5893915829212376,183.47,0,peer,0,True
+2025-11-20 12:36:04.295191,student6,peer,português,0.5188841817713984,169.79,1,peer,0,True
+2025-11-20 12:36:05.676648,student7,peer,estatística bayesiana,0.5390452741712807,166.6,1,peer,0,True
+2025-11-20 12:36:05.792677,student2,peer,programação,0.5923739113300781,189.57,2,peer,0,True
+2025-11-20 12:36:06.258703,student1,peer,estatística,0.5602405528603982,194.59,2,peer,0,True
+2025-11-20 12:36:07.681146,student3,peer,estatística bayesiana,0.6060905071569561,186.87,3,peer,0,True
+2025-11-20 12:36:08.306482,student7,peer,estatística bayesiana,0.5542737682723059,169.23,3,peer,0,True
+2025-11-20 12:36:09.683515,student1,peer,estatística bayesiana,0.5787867366609092,198.01,0,peer,0,True
+2025-11-20 12:36:11.012511,student9,peer,álgebra,0.5559456327315566,162.8,0,peer,0,True
+2025-11-20 12:36:11.044190,student6,peer,aprendizagem automática,0.540161454357292,176.54,0,peer,0,True
+2025-11-20 12:36:11.047570,student2,peer,português,0.6097540158055051,194.83,0,peer,0,True
+2025-11-20 12:36:11.069671,student4,tutor2@localhost,aprendizagem automática,0.615922292534491,185.7,0,tutor2@localhost,-1,False
+2025-11-20 12:36:11.692740,student10,tutor3@localhost,português,0.5832399495335646,158.93,0,tutor3@localhost,-1,False
+2025-11-20 12:36:13.071279,student5,peer,português,0.5494559016566887,183.12,1,peer,0,True
+2025-11-20 12:36:13.116316,student1,peer,álgebra,0.601947134247074,201.45,1,peer,0,True
+2025-11-20 12:36:13.116316,student7,peer,português,0.5730388230786966,174.04,1,peer,0,True
+2025-11-20 12:36:13.700536,student8,peer,álgebra,0.5549003605107276,170.07,2,peer,0,True
+2025-11-20 12:36:15.058206,student3,peer,álgebra,0.628046554084628,194.25,0,peer,0,True
+2025-11-20 12:36:15.710865,student4,tutor2@localhost,estatística,0.6206967924169414,190.34,1,tutor2@localhost,0,False
+2025-11-20 12:36:15.749949,student8,peer,álgebra,0.568223807931325,172.11,0,peer,0,True
+2025-11-20 12:36:15.964978,student2,peer,álgebra,0.6287596818358404,199.75,1,peer,0,True
+2025-11-20 12:36:17.109823,student10,tutor1@localhost,português,0.6038342814896093,164.34,0,tutor1@localhost,-1,False
+2025-11-20 12:36:17.190742,student7,peer,português,0.5947482591481893,178.11,1,peer,0,True
+2025-11-20 12:36:17.711217,student6,peer,estatística,0.5517348780386303,183.21,2,peer,0,True
+2025-11-20 12:36:17.735764,student4,tutor2@localhost,estatística bayesiana,0.6380865515064081,192.36,0,tutor2@localhost,-1,False
+2025-11-20 12:36:18.302510,student9,peer,estatística bayesiana,0.573215807014429,170.09,2,peer,0,True
+2025-11-20 12:36:19.179059,student5,peer,português,0.5598292164325892,189.23,0,peer,0,True
+2025-11-20 12:36:19.779681,student6,peer,estatística,0.5665527686320914,185.28,0,peer,0,True
+2025-11-20 12:36:20.178519,student10,peer,português,0.6238276692344028,167.42,3,peer,0,True
+2025-11-20 12:36:20.392912,student3,peer,estatística,0.6467079551666547,199.59,1,peer,0,True
+2025-11-20 12:36:20.483676,student9,peer,estatística bayesiana,0.5818354968458458,172.28,2,peer,0,True
+2025-11-20 12:36:21.141838,student2,peer,álgebra,0.6392436078228197,204.92,1,peer,0,True
+2025-11-20 12:36:21.194007,student4,tutor4@localhost,estatística bayesiana,0.6616939237417917,195.82,2,tutor4@localhost,1,False
+2025-11-20 12:36:21.764877,student5,peer,português,0.5681014867389036,191.81,1,peer,0,True
+2025-11-20 12:36:22.479395,student1,peer,programação,0.6172854347734464,210.81,0,peer,0,True
+2025-11-20 12:36:22.545883,student9,peer,estatística,0.5980446917620389,174.34,0,peer,0,True
+2025-11-20 12:36:23.240206,student8,peer,português,0.5783446797398547,179.61,0,peer,0,True
+2025-11-20 12:36:23.690061,student6,peer,estatística,0.5779204480936103,189.19,1,peer,0,True
+2025-11-20 12:36:23.764070,student2,peer,estatística,0.6494669303013806,207.55,1,peer,0,True
+2025-11-20 12:36:23.830907,student5,peer,estatística bayesiana,0.5806177964131675,193.88,0,peer,0,True
+2025-11-20 12:36:25.195841,student3,peer,álgebra,0.6673032811758842,204.39,0,peer,0,True
+2025-11-20 12:36:25.266803,student9,peer,estatística,0.6137927807504295,177.05,2,peer,0,True
+2025-11-20 12:36:25.292309,student8,peer,português,0.602200711743223,181.65,2,peer,0,True
+2025-11-20 12:36:25.702385,student7,peer,português,0.6120530891280677,186.61,1,peer,0,True
+2025-11-20 12:36:26.035818,student2,peer,estatística,0.662183740890877,209.82,2,peer,0,True
+2025-11-20 12:36:26.085454,student4,tutor4@localhost,português,0.6761026202887769,200.71,1,tutor4@localhost,0,False
+2025-11-20 12:36:26.173378,student1,peer,programação,0.63364230348228,214.5,3,peer,0,True
+2025-11-20 12:36:26.548019,student10,peer,estatística,0.6437341782629861,173.77,1,peer,0,True
+2025-11-20 12:36:27.518571,student8,peer,álgebra,0.6160222989620672,183.89,2,peer,0,True
+2025-11-20 12:36:28.022436,student5,peer,português,0.5949816056814323,198.07,3,peer,0,True
+2025-11-20 12:36:28.482262,student6,peer,estatística,0.5903015553981324,193.98,3,peer,0,True
+2025-11-20 12:36:28.506727,student1,peer,álgebra,0.6514508828050877,216.84,2,peer,0,True
+2025-11-20 12:36:30.032538,student7,peer,aprendizagem automática,0.6250335280607905,190.95,0,peer,0,True
+2025-11-20 12:36:30.506169,student10,peer,estatística,0.661451726019442,177.74,0,peer,0,True
+2025-11-20 12:36:31.084737,student4,tutor2@localhost,programação,0.6961220953648288,205.71,1,tutor2@localhost,0,False
+2025-11-20 12:36:31.184601,student6,peer,estatística,0.6015773751277181,196.68,1,peer,0,True
+2025-11-20 12:36:31.198169,student8,peer,álgebra,0.6338434489801635,187.56,2,peer,0,True
+2025-11-20 12:36:32.041833,student3,peer,português,0.6869976703796454,211.24,1,peer,0,True
+2025-11-20 12:36:33.123085,student5,peer,álgebra,0.6096367645318974,203.17,2,peer,0,True
+2025-11-20 12:36:33.201974,student1,peer,estatística bayesiana,0.6660161447641177,221.53,2,peer,0,True
+2025-11-20 12:36:33.206845,student7,peer,programação,0.6412138122879038,194.12,2,peer,0,True
+2025-11-20 12:36:35.191408,student3,peer,estatística,0.7064343541629715,214.38,1,peer,0,True
+2025-11-20 12:36:35.264839,student2,peer,estatística bayesiana,0.6784179089737027,219.05,0,peer,0,True
+2025-11-20 12:36:36.119298,student6,peer,álgebra,0.6137723977017563,201.62,1,peer,0,True
+2025-11-20 12:36:36.188431,student4,tutor4@localhost,português,0.7108313367740173,210.81,1,tutor4@localhost,0,False
+2025-11-20 12:36:36.194458,student5,peer,álgebra,0.6271726377007997,206.24,2,peer,0,True
+2025-11-20 12:36:37.299323,student9,peer,álgebra,0.6285739547723551,189.09,2,peer,0,True
+2025-11-20 12:36:38.392443,student7,peer,estatística bayesiana,0.6533609701734822,199.31,2,peer,0,True
+2025-11-20 12:36:38.395259,student2,peer,programação,0.6979454630575256,222.18,2,peer,0,True
+2025-11-20 12:36:39.302895,student10,peer,programação,0.671713564879803,186.54,0,peer,0,True
+2025-11-20 12:36:40.382284,student3,peer,álgebra,0.7256567089076245,219.58,1,peer,0,True
+2025-11-20 12:36:40.444358,student8,peer,português,0.646561065204421,196.81,1,peer,0,True
+2025-11-20 12:36:41.116507,student6,peer,programação,0.6268229944507561,206.62,1,peer,0,True
+2025-11-20 12:36:41.213420,student5,peer,álgebra,0.6410447231658775,211.26,1,peer,0,True
+2025-11-20 12:36:42.397225,student9,peer,álgebra,0.644095458931631,194.18,1,peer,0,True
+2025-11-20 12:36:42.447531,student10,peer,português,0.6922512265291174,189.69,1,peer,0,True
+2025-11-20 12:36:43.108142,student7,peer,estatística,0.6703081597769022,204.03,2,peer,0,True
+2025-11-20 12:36:43.232395,student3,peer,português,0.73794790519483,222.43,2,peer,0,True
+2025-11-20 12:36:44.398452,student1,peer,estatística bayesiana,0.6763117226978775,232.73,0,peer,0,True
+2025-11-20 12:36:45.120311,student4,tutor4@localhost,estatística,0.725968427319977,219.75,1,tutor4@localhost,0,False
+2025-11-20 12:36:45.271789,student9,peer,álgebra,0.6624399557350821,197.05,2,peer,0,True
+2025-11-20 12:36:46.153960,student6,peer,programação,0.6465806480615212,211.65,1,peer,0,True
+2025-11-20 12:36:46.258031,student5,peer,estatística bayesiana,0.6588917780586664,216.3,1,peer,0,True
+2025-11-20 12:36:47.116067,student2,peer,português,0.7134608872579995,230.9,1,peer,0,True
+2025-11-20 12:36:47.310738,student1,peer,português,0.6967469859447156,235.64,0,peer,0,True
+2025-11-20 12:36:48.517888,student4,tutor4@localhost,português,0.7457012108266182,223.14,2,tutor4@localhost,1,False
+2025-11-20 12:36:48.524088,student9,peer,português,0.6680911656618607,200.31,2,peer,0,True
+2025-11-20 12:36:49.114605,student8,peer,português,0.666220085818123,205.48,2,peer,0,True
+2025-11-20 12:36:50.283337,student1,peer,português,0.712470377948558,238.61,2,peer,0,True
+2025-11-20 12:36:50.523159,student3,peer,português,0.7513008259900236,229.71,0,peer,0,True
+2025-11-20 12:36:51.126429,student10,peer,português,0.7059095224565463,198.36,0,peer,0,True
+2025-11-20 12:36:51.196966,student8,peer,português,0.6849862462081985,207.56,0,peer,0,True
+2025-11-20 12:36:51.199050,student6,peer,álgebra,0.6663327807335538,216.7,1,peer,0,True
+2025-11-20 12:36:51.288273,student2,peer,programação,0.7267625234613715,235.07,1,peer,0,True
+2025-11-20 12:36:52.521169,student7,peer,álgebra,0.6875245219394857,213.44,1,peer,0,True
+2025-11-20 12:36:53.204060,student10,peer,estatística,0.7232990731750366,200.43,1,peer,0,True
+2025-11-20 12:36:53.292694,student9,peer,programação,0.6819884739248036,205.08,3,peer,0,True
+2025-11-20 12:36:54.522324,student2,peer,estatística bayesiana,0.7429146822819667,238.3,0,peer,0,True
+2025-11-20 12:36:54.550149,student7,peer,álgebra,0.6986883367409452,215.47,1,peer,0,True
+2025-11-20 12:36:55.335568,student3,peer,português,0.7744951983939337,234.53,0,peer,0,True
+2025-11-20 12:36:56.166460,student6,peer,estatística bayesiana,0.6858949235921402,221.67,0,peer,0,True
+2025-11-20 12:36:56.308235,student4,tutor3@localhost,estatística bayesiana,0.7680064190196645,230.93,0,tutor3@localhost,-1,False
+2025-11-20 12:36:56.523690,student1,peer,português,0.7224678387396928,244.85,0,peer,0,True
+2025-11-20 12:36:58.172520,student3,peer,estatística bayesiana,0.7836034437895195,237.37,2,peer,0,True
+2025-11-20 12:36:58.667028,student8,peer,programação,0.7046555693443493,215.03,2,peer,0,True
+2025-11-20 12:36:58.707921,student4,tutor3@localhost,estatística,0.7942364826613447,233.33,1,tutor3@localhost,0,False
+2025-11-20 12:36:59.420574,student5,peer,álgebra,0.6719439698233433,229.47,0,peer,0,True
+2025-11-20 12:37:00.169804,student9,peer,estatística,0.7050928320483459,211.96,0,peer,0,True
+2025-11-20 12:37:01.415696,student7,peer,estatística,0.7156408733080637,222.33,0,peer,0,True
+2025-11-20 12:37:01.427437,student8,peer,programação,0.7255261234471627,217.79,1,peer,0,True
+2025-11-20 12:37:01.445199,student5,peer,álgebra,0.6842640686323741,231.49,0,peer,0,True
+2025-11-20 12:37:02.186488,student9,peer,estatística,0.7186307015532236,213.98,0,peer,0,True
+2025-11-20 12:37:02.198721,student2,peer,álgebra,0.757051474242473,245.98,0,peer,0,True
+2025-11-20 12:37:03.421904,student10,peer,programação,0.7355914380812137,210.66,0,peer,0,True
+2025-11-20 12:37:03.430505,student3,peer,estatística,0.8032338880155652,242.63,0,peer,0,True
+2025-11-20 12:37:03.485407,student10,peer,programação,0.7434022452831056,210.72,0,peer,0,True
+2025-11-20 12:37:04.201016,student7,peer,aprendizagem automática,0.724869632827183,225.12,3,peer,0,True
+2025-11-20 12:37:04.227339,student2,peer,programação,0.7702602924845953,248.01,0,peer,0,True
+2025-11-20 12:37:05.437839,student4,tutor5@localhost,programação,0.8167019240351462,240.07,0,tutor5@localhost,-1,False
+2025-11-20 12:37:05.534040,student3,peer,estatística,0.8143021015620883,244.72,3,peer,0,True
+2025-11-20 12:37:06.205270,student5,peer,português,0.6987271363080735,236.25,0,peer,0,True
+2025-11-20 12:37:06.407459,student9,peer,português,0.7186307015532236,218.2,0,peer,0,True
+2025-11-20 12:37:07.468601,student8,peer,estatística bayesiana,0.7420881112014035,223.83,0,peer,0,True
+2025-11-20 12:37:07.547299,student10,peer,estatística bayesiana,0.7628913582554419,214.78,3,peer,0,True
+2025-11-20 12:37:08.205554,student1,peer,estatística,0.7328678440989149,256.54,1,peer,0,True
+2025-11-20 12:37:08.225672,student5,peer,aprendizagem automática,0.717154180618467,238.27,0,peer,0,True
+2025-11-20 12:37:09.225277,student7,peer,estatística,0.7359590621529791,230.15,1,peer,0,True
+2025-11-20 12:37:09.228011,student6,peer,programação,0.6943792514438242,234.73,1,peer,0,True
+2025-11-20 12:37:10.222240,student10,peer,estatística bayesiana,0.786566489861083,217.46,0,peer,0,True
+2025-11-20 12:37:10.248701,student1,peer,estatística,0.7440227357063169,258.58,0,peer,0,True
+2025-11-20 12:37:10.439153,student8,peer,estatística bayesiana,0.7554810840719158,226.81,2,peer,0,True
+2025-11-20 12:37:11.217446,student2,peer,álgebra,0.7907155574041238,255.0,1,peer,0,True
+2025-11-20 12:37:11.486704,student6,peer,programação,0.7097091753774457,236.98,2,peer,0,True
+2025-11-20 12:37:12.670461,student1,peer,programação,0.7656788943596954,261.0,1,peer,0,True
+2025-11-20 12:37:13.225485,student4,tutor5@localhost,programação,0.8292103480400163,247.85,3,tutor5@localhost,2,False
+2025-11-20 12:37:13.259995,student2,peer,estatística bayesiana,0.806842827515927,257.04,1,peer,0,True
+2025-11-20 12:37:13.299092,student9,peer,estatística bayesiana,0.7404673496757773,225.09,3,peer,0,True
+2025-11-20 12:37:15.273486,student8,peer,estatística,0.7719253597125727,231.64,0,peer,0,True
+2025-11-20 12:37:15.309952,student1,peer,programação,0.7733695157670395,263.64,3,peer,0,True
+2025-11-20 12:37:16.558547,student4,tutor4@localhost,programação,0.8407032050666432,251.18,1,tutor4@localhost,0,False
+2025-11-20 12:37:16.645855,student6,peer,álgebra,0.7205273379404943,242.14,1,peer,0,True
+2025-11-20 12:37:16.645855,student9,peer,estatística bayesiana,0.7561080449221623,228.44,1,peer,0,True
+2025-11-20 12:37:17.377157,student7,peer,programação,0.7501226951526263,238.29,1,peer,0,True
+2025-11-20 12:37:18.579575,student3,peer,estatística,0.8284988542221928,257.77,1,peer,0,True
+2025-11-20 12:37:18.691841,student6,peer,programação,0.731940832407882,244.18,0,peer,0,True
+2025-11-20 12:37:19.317101,student10,peer,programação,0.7970228460978078,226.56,1,peer,0,True
+2025-11-20 12:37:19.377583,student5,peer,estatística,0.7294603845741379,249.42,2,peer,0,True
+2025-11-20 12:37:19.403955,student7,peer,aprendizagem automática,0.7502625227080353,240.32,1,peer,0,True
+2025-11-20 12:37:20.697381,student2,peer,estatística bayesiana,0.8235292846738895,264.48,0,peer,0,True
+2025-11-20 12:37:21.364608,student1,peer,português,0.7733695157670395,269.69,1,peer,0,True
+2025-11-20 12:37:21.388006,student4,tutor3@localhost,estatística bayesiana,0.860802754340133,256.01,1,tutor3@localhost,0,False
+2025-11-20 12:37:21.420933,student5,peer,estatística,0.746241410357977,251.47,0,peer,0,True
+2025-11-20 12:37:22.026891,student6,peer,programação,0.7475152371992934,247.53,3,peer,0,True
+2025-11-20 12:37:22.638294,student8,peer,estatística,0.7919096981782777,239.0,2,peer,0,True
+2025-11-20 12:37:23.384262,student10,peer,estatística,0.8079121710292038,230.63,3,peer,0,True
+2025-11-20 12:37:24.720101,student3,peer,português,0.8392315125512407,263.91,4,peer,0,True
+2025-11-20 12:37:25.475370,student8,peer,estatística bayesiana,0.8100587842331852,241.84,0,peer,0,True
+2025-11-20 12:37:26.974667,student5,peer,aprendizagem automática,0.7615410622329901,257.02,0,peer,0,True
+2025-11-20 12:37:27.064366,student6,peer,estatística,0.7696474742280396,252.56,0,peer,0,True
+2025-11-20 12:37:27.071088,student3,peer,português,0.8584819347228178,266.26,1,peer,0,True
+2025-11-20 12:37:27.073533,student2,peer,álgebra,0.8364202166815883,270.86,0,peer,0,True
+2025-11-20 12:37:29.474955,student2,peer,português,0.8505046690926946,273.25,0,peer,0,True
+2025-11-20 12:37:29.521483,student1,peer,estatística bayesiana,0.7935306695068342,277.85,2,peer,0,True
+2025-11-20 12:37:29.521483,student10,peer,álgebra,0.820420747816054,236.76,2,peer,0,True
+2025-11-20 12:37:29.545343,student10,peer,álgebra,0.8329963970292549,236.79,2,peer,0,True
+2025-11-20 12:37:31.485027,student4,tutor4@localhost,estatística bayesiana,0.8789905309321221,266.11,0,tutor4@localhost,-1,False
+2025-11-20 12:37:31.546169,student7,peer,estatística bayesiana,0.7663593975786543,252.46,1,peer,0,True
+2025-11-20 12:37:31.983318,student5,peer,aprendizagem automática,0.7789100385204617,262.03,1,peer,0,True
+2025-11-20 12:37:32.043282,student3,peer,álgebra,0.8747613127353846,271.24,1,peer,0,True
+2025-11-20 12:37:32.079377,student2,peer,português,0.8622996489952629,275.86,2,peer,0,True
+2025-11-20 12:37:34.009493,student6,peer,português,0.7760929236212885,259.51,2,peer,0,True
+2025-11-20 12:37:34.034971,student5,peer,estatística,0.7931774801571844,264.08,2,peer,0,True
+2025-11-20 12:37:34.075534,student8,peer,estatística,0.820075299114473,250.44,2,peer,0,True
+2025-11-20 12:37:35.540680,student1,peer,português,0.7971302670594476,283.87,0,peer,0,True
+2025-11-20 12:37:36.027132,student7,peer,estatística,0.7792946659258764,256.95,0,peer,0,True
+2025-11-20 12:37:37.173909,student10,peer,álgebra,0.8556146491237322,244.41,1,peer,0,True
+2025-11-20 12:37:37.539958,student9,peer,programação,0.7753766412635289,249.33,1,peer,0,True
+2025-11-20 12:37:37.557386,student1,peer,português,0.8080595251022853,285.89,1,peer,0,True
+2025-11-20 12:37:37.566928,student1,peer,português,0.8199305277902922,285.9,1,peer,0,True
+2025-11-20 12:37:39.176489,student3,peer,álgebra,0.8854594781447039,278.37,2,peer,0,True
+2025-11-20 12:37:39.204722,student10,peer,estatística,0.8708275241168485,246.44,0,peer,0,True
+2025-11-20 12:37:39.886437,student4,tutor2@localhost,estatística,0.8972647398607663,274.51,2,tutor2@localhost,1,False
+2025-11-20 12:37:40.599157,student9,peer,programação,0.7918936961078352,252.39,0,peer,0,True
+2025-11-20 12:37:41.199035,student5,peer,estatística bayesiana,0.8107545422192404,271.24,0,peer,0,True
+2025-11-20 12:37:41.920605,student1,peer,português,0.8367315108872244,290.25,3,peer,0,True
+2025-11-20 12:37:41.971562,student8,peer,português,0.8384608774326162,258.33,0,peer,0,True
+2025-11-20 12:37:42.508799,student6,peer,programação,0.7881212864682915,268.01,0,peer,0,True
+2025-11-20 12:37:42.600487,student4,tutor5@localhost,estatística,0.9146715346877808,277.23,1,tutor5@localhost,0,False
+2025-11-20 12:37:42.648866,student3,peer,álgebra,0.8972921013613068,281.84,2,peer,0,True
+2025-11-20 12:37:44.021496,student9,peer,português,0.809903570001726,255.81,2,peer,0,True
+2025-11-20 12:37:44.534075,student10,peer,estatística bayesiana,0.8936605569054819,251.77,2,peer,0,True
+2025-11-20 12:37:44.557874,student6,peer,aprendizagem automática,0.7915317671132946,270.05,1,peer,0,True
+2025-11-20 12:37:45.256195,student7,peer,português,0.7826909869730816,266.18,2,peer,0,True
+2025-11-20 12:37:47.273974,student7,peer,português,0.800468083308095,268.2,0,peer,0,True
+2025-11-20 12:37:47.285749,student8,peer,estatística,0.8481002345622096,263.65,1,peer,0,True
+2025-11-20 12:37:47.302361,student7,peer,português,0.8095934748276609,268.22,1,peer,0,True
+2025-11-20 12:37:47.514865,student6,peer,aprendizagem automática,0.8109589420287482,273.01,1,peer,0,True
+2025-11-20 12:37:48.553462,student4,tutor4@localhost,programação,0.9393324802870606,283.18,1,tutor4@localhost,0,False
+2025-11-20 12:37:49.277134,student2,peer,programação,0.8622996489952629,293.06,1,peer,0,True
+2025-11-20 12:37:49.306578,student8,peer,estatística bayesiana,0.8487579421256614,265.67,0,peer,0,True
+2025-11-20 12:37:50.078464,student9,peer,programação,0.8254086688985343,261.87,1,peer,0,True
+2025-11-20 12:37:51.271632,student4,peer,estatística,0.9539513253331225,285.9,2,peer,0,True
+2025-11-20 12:37:51.305545,student2,peer,programação,0.8656282077031102,295.08,1,peer,0,True
+2025-11-20 12:37:51.335379,student7,peer,aprendizagem automática,0.8261070656932198,272.25,1,peer,0,True
+2025-11-20 12:37:51.858199,student10,peer,estatística,0.9035092231481929,259.1,0,peer,0,True
+2025-11-20 12:37:52.535230,student6,peer,português,0.8229382053922366,278.03,0,peer,0,True
+2025-11-20 12:37:52.591186,student5,peer,álgebra,0.8222368884855382,282.63,0,peer,0,True
+2025-11-20 12:37:52.656328,student1,peer,álgebra,0.8367315108872244,300.99,0,peer,0,True
+2025-11-20 12:37:53.274427,student9,peer,programação,0.8394808845269162,265.07,2,peer,0,True
+2025-11-20 12:37:53.309407,student4,peer,estatística,0.9575229798153394,287.93,2,peer,0,True
+2025-11-20 12:37:53.352157,student7,peer,aprendizagem automática,0.8411972861770541,274.27,2,peer,0,True
+2025-11-20 12:37:53.892965,student8,peer,português,0.8682235255838591,270.25,2,peer,0,True
+2025-11-20 12:37:54.550836,student10,peer,português,0.9147990154948538,261.79,2,peer,0,True
+2025-11-20 12:37:54.702426,student5,peer,português,0.8359702778709351,284.75,2,peer,0,True
+2025-11-20 12:37:55.899125,student9,peer,estatística bayesiana,0.8495422940585099,267.69,0,peer,0,True
+2025-11-20 12:37:56.813799,student3,peer,programação,0.8972921013613068,296.0,0,peer,0,True
+2025-11-20 12:37:57.596272,student7,peer,estatística bayesiana,0.8656860626085617,278.52,1,peer,0,True
+2025-11-20 12:37:57.667500,student1,peer,álgebra,0.8508644563616627,306.0,1,peer,0,True
+2025-11-20 12:37:57.672384,student6,peer,português,0.8437241230579824,283.17,1,peer,0,True
+2025-11-20 12:37:59.635639,student8,peer,estatística bayesiana,0.8835052003770661,276.0,2,peer,0,True
+2025-11-20 12:37:59.660134,student10,peer,estatística bayesiana,0.9358998508551201,266.9,2,peer,0,True
+2025-11-20 12:37:59.692997,student1,peer,álgebra,0.868684180805797,308.02,0,peer,0,True
+2025-11-20 12:38:00.199378,student2,peer,estatística bayesiana,0.8656282077031102,303.97,2,peer,0,True
+2025-11-20 12:38:01.640481,student9,peer,estatística bayesiana,0.8666679763043965,273.43,0,peer,0,True
+2025-11-20 12:38:01.692732,student3,peer,estatística bayesiana,0.9145708100957647,300.88,0,peer,0,True
+2025-11-20 12:38:02.186192,student4,peer,estatística bayesiana,0.9575229798153394,296.81,1,peer,0,True
+2025-11-20 12:38:02.787080,student5,peer,álgebra,0.8530827415056698,292.84,1,peer,0,True
+2025-11-20 12:38:02.881576,student2,peer,estatística bayesiana,0.8818174967676127,306.66,1,peer,0,True
+2025-11-20 12:38:04.220858,student3,peer,programação,0.9234294924319605,303.41,1,peer,0,True
+2025-11-20 12:38:04.823362,student5,peer,aprendizagem automática,0.8721386616569314,294.87,0,peer,0,True
+2025-11-20 12:38:04.849425,student1,peer,estatística,0.8780248869086797,313.17,1,peer,0,True
+2025-11-20 12:38:05.674854,student2,peer,estatística,0.8974968595651927,309.45,2,peer,0,True
+2025-11-20 12:38:06.246690,student3,peer,programação,0.9416537051413364,305.44,1,peer,0,True
+2025-11-20 12:38:06.963450,student4,peer,estatística bayesiana,0.9767285604330245,301.59,1,peer,0,True
+2025-11-20 12:38:06.980185,student5,peer,aprendizagem automática,0.8855254059284631,297.03,1,peer,0,True
+2025-11-20 12:38:08.378875,student9,peer,estatística bayesiana,0.8846563685378649,280.16,2,peer,0,True
+2025-11-20 12:38:09.036846,student4,peer,estatística bayesiana,0.9903091529665357,303.67,0,peer,0,True
+2025-11-20 12:38:09.060361,student5,peer,álgebra,0.8855254059284631,299.1,1,peer,0,True
+2025-11-20 12:38:10.355222,student8,peer,português,0.9038403861651667,286.72,2,peer,0,True
+2025-11-20 12:38:10.407711,student9,peer,português,0.900233160754213,282.2,0,peer,0,True
+2025-11-20 12:38:11.795579,student3,peer,programação,0.9561625418889226,310.99,0,peer,0,True
+2025-11-20 12:38:12.370180,student8,peer,português,0.9167848917407628,288.74,0,peer,0,True
+2025-11-20 12:38:12.375480,student2,peer,estatística,0.9063373420104345,316.16,0,peer,0,True
+2025-11-20 12:38:12.940060,student1,peer,álgebra,0.894988861248887,321.27,1,peer,0,True
+2025-11-20 12:38:12.972958,student6,peer,português,0.8575990773792541,298.47,1,peer,0,True
+2025-11-20 12:38:13.034072,student7,peer,estatística bayesiana,0.8879862939185519,293.96,1,peer,0,True
+2025-11-20 12:38:14.419557,student2,peer,estatística,0.9236131142045768,318.19,1,peer,0,True
+2025-11-20 12:38:15.030650,student10,peer,português,0.9535809700626569,282.27,2,peer,0,True
+2025-11-20 12:38:15.076981,student7,peer,álgebra,0.9044402566680857,295.99,2,peer,0,True
+2025-11-20 12:38:15.796400,student8,peer,estatística bayesiana,0.9167848917407628,292.16,2,peer,0,True
+2025-11-20 12:38:17.028557,student6,peer,estatística bayesiana,0.8743094337345304,302.53,0,peer,0,True
+2025-11-20 12:38:17.053552,student10,peer,português,0.9583290336815423,284.3,0,peer,0,True
+2025-11-20 12:38:17.801489,student9,peer,programação,0.919713316959173,289.59,1,peer,0,True
+2025-11-20 12:38:17.954125,student1,peer,álgebra,0.9032302912697743,326.28,1,peer,0,True
+2025-11-20 12:38:19.130836,student3,peer,programação,0.9801770541840952,318.33,0,peer,0,True
+2025-11-20 12:38:19.163893,student6,peer,estatística bayesiana,0.8899789697013057,304.66,1,peer,0,True
+2025-11-20 12:38:19.939568,student9,peer,programação,0.9272274455060483,291.73,1,peer,0,True
+2025-11-20 12:38:20.308602,student1,peer,álgebra,0.9147261812430738,328.63,1,peer,0,True
+2025-11-20 12:38:20.308602,student7,peer,aprendizagem automática,0.9243834245885348,301.23,1,peer,0,True
+2025-11-20 12:38:21.799355,student10,peer,estatística,0.9583290336815423,289.04,0,peer,0,True
+2025-11-20 12:38:21.958042,student9,peer,programação,0.9396373845666658,293.75,1,peer,0,True
+2025-11-20 12:38:22.074144,student3,peer,programação,0.996329140144859,321.27,2,peer,0,True
+2025-11-20 12:38:22.996148,student1,peer,álgebra,0.9313078827305104,331.33,1,peer,0,True
+2025-11-20 12:38:23.132921,student8,peer,estatística bayesiana,0.9284776890634276,299.5,0,peer,0,True
+2025-11-20 12:38:23.796080,student7,peer,aprendizagem automática,0.9370917360093682,304.72,1,peer,0,True
+2025-11-20 12:38:23.818725,student10,peer,estatística,0.9760811213330326,291.06,0,peer,0,True
+2025-11-20 12:38:25.007174,student6,peer,estatística bayesiana,0.9017655162538946,310.51,1,peer,0,True
+2025-11-20 12:38:25.124035,student2,peer,estatística,0.9363369147883654,328.91,1,peer,0,True
+2025-11-20 12:38:27.007704,student6,peer,estatística bayesiana,0.9147890625496515,312.51,0,peer,0,True
+2025-11-20 12:38:27.018146,student9,peer,estatística bayesiana,0.9396373845666658,298.8,0,peer,0,True
+2025-11-20 12:38:27.121910,student5,peer,estatística bayesiana,0.9017458150842277,317.17,0,peer,0,True
+2025-11-20 12:38:27.169923,student2,peer,estatística,0.9558979924395891,330.94,1,peer,0,True
+2025-11-20 12:38:27.974982,student8,peer,programação,0.9363849471242034,304.34,1,peer,0,True
+2025-11-20 12:38:28.025168,student1,peer,estatística,0.9395997795220697,336.35,1,peer,0,True
+2025-11-20 12:38:28.996971,student7,peer,estatística bayesiana,0.9370917360093682,309.92,1,peer,0,True
+2025-11-20 12:38:30.103195,student5,peer,álgebra,0.9185829399347241,320.15,2,peer,0,True
+2025-11-20 12:38:30.103195,student9,peer,português,0.9542787010473225,301.9,2,peer,0,True
+2025-11-20 12:38:30.996482,student10,peer,estatística bayesiana,0.981144623515703,298.24,3,peer,0,True
+2025-11-20 12:38:32.090005,student7,peer,álgebra,0.9494802071893083,313.01,0,peer,0,True
+2025-11-20 12:38:32.996971,student8,peer,programação,0.9550788370166652,309.36,0,peer,0,True
+2025-11-20 12:38:33.325513,student9,peer,português,0.972160476943996,305.12,1,peer,0,True
+2025-11-20 12:38:33.325513,student6,peer,estatística bayesiana,0.9312131342812645,318.82,0,peer,0,True
+2025-11-20 12:38:34.109279,student7,peer,álgebra,0.9572439747058082,315.03,0,peer,0,True
+2025-11-20 12:38:35.011048,student8,peer,programação,0.9694135380072902,311.38,0,peer,0,True
+2025-11-20 12:38:35.011048,student2,peer,estatística,0.9689707393240546,338.79,0,peer,0,True
+2025-11-20 12:38:35.327383,student5,peer,estatística bayesiana,0.920185567392107,325.38,0,peer,0,True
+2025-11-20 12:38:35.336470,student1,peer,estatística,0.9555428511955636,343.67,0,peer,0,True
+2025-11-20 12:38:36.118360,student10,peer,estatística bayesiana,0.9940669552587963,303.36,0,peer,0,True
+2025-11-20 12:38:37.040535,student2,peer,estatística,0.986170116536886,340.82,0,peer,0,True
+2025-11-20 12:38:37.073878,student8,peer,programação,0.9846905060807907,313.44,3,peer,0,True
+2025-11-20 12:38:37.368026,student5,peer,estatística bayesiana,0.935286204802138,327.42,2,peer,0,True
+2025-11-20 12:38:38.018125,student9,peer,estatística bayesiana,0.9839911015303668,309.81,1,peer,0,True
+2025-11-20 12:38:38.079106,student7,peer,álgebra,0.9716359710122714,319.0,3,peer,0,True
+2025-11-20 12:38:39.098369,student8,peer,programação,0.9945248394728213,315.47,0,peer,0,True
+2025-11-20 12:38:39.109713,student6,peer,estatística bayesiana,0.9508133694422066,324.61,0,peer,0,True
+2025-11-20 12:38:39.141844,student2,peer,estatística,0.9965976462246564,342.91,2,peer,0,True
+2025-11-20 12:38:39.374319,student5,peer,estatística,0.9502947685069111,329.42,0,peer,0,True
+2025-11-20 12:38:41.154133,student6,peer,estatística bayesiana,0.9688067024490129,326.65,1,peer,0,True
+2025-11-20 12:38:41.323818,student1,peer,estatística,0.9672582036043055,349.65,1,peer,0,True
+2025-11-20 12:38:41.391994,student5,peer,estatística,0.9583484316218849,331.44,0,peer,0,True
+2025-11-20 12:38:43.191027,student7,peer,álgebra,0.9896287924967324,324.11,3,peer,0,True
+2025-11-20 12:38:43.209815,student6,peer,estatística bayesiana,0.9790515802265012,328.71,3,peer,0,True
+2025-11-20 12:38:43.343649,student9,peer,estatística bayesiana,0.9993731978685169,315.14,3,peer,0,True
+2025-11-20 12:38:45.355425,student1,peer,estatística,0.9859909531044421,353.69,4,peer,0,True
+2025-11-20 12:38:47.403388,student5,peer,estatística bayesiana,0.9583484316218849,337.45,0,peer,0,True
+2025-11-20 12:38:48.458172,student6,peer,estatística bayesiana,0.9936601986792626,333.96,1,peer,0,True
+2025-11-20 12:38:50.210869,student5,peer,estatística bayesiana,0.9772781293074676,340.26,4,peer,0,True
+2025-11-20 12:38:53.469825,student5,peer,estatística bayesiana,0.991264822617679,343.52,0,peer,0,True

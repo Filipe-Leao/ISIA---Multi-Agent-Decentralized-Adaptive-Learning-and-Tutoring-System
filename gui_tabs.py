@@ -33,15 +33,25 @@ class LogsTab(QWidget):
         self.setLayout(layout)
 
     def log(self, text):
-        self.log_widget.append(text)
-        # Auto-scroll to bottom
         scrollbar = self.log_widget.verticalScrollBar()
-        scrollbar.setValue(scrollbar.maximum())
+        # Verificar se está no fundo (com margem de 10 pixels)
+        was_at_bottom = scrollbar.value() >= scrollbar.maximum() - 10
+        
+        self.log_widget.append(text)
+        
+        # Só fazer auto-scroll se estava no fundo
+        if was_at_bottom:
+            scrollbar.setValue(scrollbar.maximum())
 
 
 class MetricsTab(QWidget):
     def __init__(self):
         super().__init__()
+        
+        # Armazenar histórico de progresso para cada estudante
+        self.progress_history = {}  # {student_name: [progress_values]}
+        self.time_points = []  # Lista de pontos de tempo
+        self.update_count = 0
         
         # Main layout
         main_layout = QVBoxLayout()
@@ -74,6 +84,20 @@ class MetricsTab(QWidget):
         # Add scroll area to main layout
         main_layout.addWidget(scroll_area)
         self.setLayout(main_layout)
+    
+    def clear_metrics(self):
+        """Limpa todos os dados históricos e gráficos"""
+        self.progress_history = {}
+        self.time_points = []
+        self.update_count = 0
+        
+        # Limpar figura
+        self.figure.clear()
+        ax = self.figure.add_subplot(1, 1, 1)
+        ax.text(0.5, 0.5, 'Aguardando início da simulação...', 
+               ha='center', va='center', transform=ax.transAxes, fontsize=14)
+        ax.axis('off')
+        self.canvas.draw()
         
     def update_metrics(self, agents):
         if not agents:
@@ -93,28 +117,44 @@ class MetricsTab(QWidget):
             tutors = {name: a for name, a in agents.items() if name.startswith("tutor")}
             peers = {name: a for name, a in agents.items() if name.startswith("peer")}
             
-            # Gráfico 1: Progresso individual dos estudantes
+            # Gráfico 1: Progresso individual dos estudantes ao longo do tempo
             if students:
-                student_names = list(students.keys())
-                current_progress = [students[name].get('progress', 0) for name in student_names]
-                # Obter progresso inicial real dos estudantes
-                initial_progress = [students[name].get('initial_progress', 0) for name in student_names]
+                # Atualizar histórico de progresso
+                self.update_count += 1
+                self.time_points.append(self.update_count)
                 
-                x = range(len(student_names))
-                bars1 = ax1.bar([i-0.2 for i in x], initial_progress, width=0.4, 
-                               alpha=0.5, label='Progresso Inicial', color='lightblue')
-                bars2 = ax1.bar([i+0.2 for i in x], current_progress, width=0.4, 
-                               alpha=0.8, label='Progresso Atual', color='darkblue')
-                ax1.set_title('Progresso dos Estudantes')
-                ax1.set_xticks(x)
-                ax1.set_xticklabels([name.replace('student', 'S') for name in student_names], rotation=45)
-                ax1.legend()
-                ax1.set_ylabel('Progresso')
+                for name, student in students.items():
+                    current_progress = student.get('progress', 0)
+                    
+                    # Inicializar histórico se for primeira vez
+                    if name not in self.progress_history:
+                        initial = student.get('initial_progress', 0)
+                        self.progress_history[name] = [initial]
+                    
+                    # Adicionar progresso atual
+                    self.progress_history[name].append(current_progress)
+                
+                # Plotar linhas para cada estudante
+                colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#FF8C94', '#A8E6CF']
+                for idx, (name, history) in enumerate(self.progress_history.items()):
+                    color = colors[idx % len(colors)]
+                    label = name.replace('student', 'Student ')
+                    
+                    # Garantir que history e time_points têm mesmo tamanho
+                    x_data = list(range(len(history)))
+                    ax1.plot(x_data, history, marker='o', linestyle='-', linewidth=2,
+                            markersize=6, label=label, color=color)
+                
+                ax1.set_title('Progresso Geral dos Estudantes')
+                ax1.set_xlabel('Tempo')
+                ax1.set_ylabel('Progresso escolar')
                 ax1.set_ylim(0, 1)
+                ax1.legend(loc='best')
+                ax1.grid(True, alpha=0.3)
             else:
-                ax1.text(0.5, 0.5, 'Aguardando dados\ndos estudantes', 
+                ax1.text(0.5, 0.5, 'Waiting for\nstudent data', 
                         ha='center', va='center', transform=ax1.transAxes)
-                ax1.set_title('Progresso dos Estudantes')
+                ax1.set_title('Student Progress Over Time')
             
             # Gráfico 2: Status dos tutores
             if tutors:
@@ -136,6 +176,8 @@ class MetricsTab(QWidget):
                 ax2.set_xticklabels([name.split('\n')[0].replace('tutor', 'T') for name in tutor_names])
                 ax2.legend()
                 ax2.set_ylabel('Slots')
+                # Forçar eixo Y a mostrar apenas números inteiros
+                ax2.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
             else:
                 ax2.text(0.5, 0.5, 'Aguardando dados\ndos tutores', 
                         ha='center', va='center', transform=ax2.transAxes)

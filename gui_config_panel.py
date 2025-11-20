@@ -28,17 +28,17 @@ class ConfigPanel(QWidget):
         form.addRow("Senha:", self.s_password)
 
         self.s_students = QSpinBox()
-        self.s_students.setRange(1, 10)
+        self.s_students.setRange(1, 50)
         self.s_students.setValue(3)
         form.addRow("Estudantes:", self.s_students)
 
         self.s_tutors = QSpinBox()
-        self.s_tutors.setRange(1, 10)
+        self.s_tutors.setRange(1, 20)
         self.s_tutors.setValue(3)
         form.addRow("Tutores:", self.s_tutors)
 
         self.s_peers = QSpinBox()
-        self.s_peers.setRange(0, 5)
+        self.s_peers.setRange(0, 10)
         self.s_peers.setValue(1)
         form.addRow("Auxiliares:", self.s_peers)
         
@@ -76,6 +76,11 @@ class ConfigPanel(QWidget):
         # Desabilitar botão start
         self.btn_start.setEnabled(False)
         self.btn_stop.setEnabled(True)
+        
+        # Limpar dados de gráficos anteriores
+        # Assumindo que gui_main passa a referência do metrics_tab
+        if hasattr(self, 'metrics_tab'):
+            self.metrics_tab.clear_metrics()
         
         # Criar task assíncrona e adicionar callback
         task = asyncio.create_task(
