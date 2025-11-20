@@ -84,6 +84,20 @@ class MetricsTab(QWidget):
         # Add scroll area to main layout
         main_layout.addWidget(scroll_area)
         self.setLayout(main_layout)
+    
+    def clear_metrics(self):
+        """Limpa todos os dados históricos e gráficos"""
+        self.progress_history = {}
+        self.time_points = []
+        self.update_count = 0
+        
+        # Limpar figura
+        self.figure.clear()
+        ax = self.figure.add_subplot(1, 1, 1)
+        ax.text(0.5, 0.5, 'Aguardando início da simulação...', 
+               ha='center', va='center', transform=ax.transAxes, fontsize=14)
+        ax.axis('off')
+        self.canvas.draw()
         
     def update_metrics(self, agents):
         if not agents:

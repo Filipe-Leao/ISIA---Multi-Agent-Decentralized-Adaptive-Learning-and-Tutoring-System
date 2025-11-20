@@ -26,9 +26,10 @@ class StudentAgent(Agent):
         self.tutor_message = NotImplementedError
         self.progress = sum(self.knowledge.values()) / len(self.knowledge)
         self.initial_progress = self.progress
+        self.topic = None 
         self.logger = MetricsLogger()
-        self.can_start_studying = False  # Flag para controlar início
-        self.is_stopping = False  # Flag para parar behaviours
+        self.can_start_studying = False  
+        self.is_stopping = False  
         print(Fore.CYAN + f"[{self.name}] estilo={self.learning_style} progresso médio={round(self.progress, 2)}" + Style.RESET_ALL)
 
     async def setup(self):
@@ -91,20 +92,24 @@ class StudentAgent(Agent):
             print(Fore.GREEN + f"[{self.agent.name}] ✅ Recebeu sinal de início - começando estudos" + Style.RESET_ALL)
             await asyncio.sleep(2)
             
-            while self.agent.progress < 1.0 and not self.agent.is_stopping:
+            while not self.agent.is_stopping:
+                # ✅ Recalcular progresso a cada iteração
+                self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
+                
+                # ✅ Verificar se já chegou a 100%
+                if self.agent.progress >= 1.0:
+                    print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Max Progress!" + Style.RESET_ALL)
+                    return
+                old = self.agent.topic
                 self.agent.topic = random.choice(list(self.agent.knowledge.keys()))
                 self.agent.progress_topic = self.agent.knowledge[self.agent.topic]
+                print(Fore.YELLOW + f"[{self.agent.name}] Mudando tópico de {old} para {self.agent.topic}" + Style.RESET_ALL)
                 if (self.agent.progress_topic >= 1.0):
                     continue
                 print(Fore.BLUE + f"[{self.agent.name}] 🎯 A estudar {self.agent.topic} (progresso: {self.agent.progress:.2f})" + Style.RESET_ALL)
                 await self.ask_for_help()
                 await self.update_progress()
-                await asyncio.sleep(2) 
-            
-            if self.agent.progress >= 1.0:
-                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Max Progress!" + Style.RESET_ALL)
-                # Não parar o agente, apenas parar de estudar
-                return
+                await asyncio.sleep(2)
 
         async def update_progress(self):
             old = self.agent.progress
@@ -155,9 +160,6 @@ class StudentAgent(Agent):
                 key=lambda p: (p["expertise"], p["slots"], random.random() * 0.01),
                 reverse=True
             )
-
-            if self.peer_used:
-                print(Fore.BLUE + f"[{self.agent.name}] {self.agent.proposals}" + Style.RESET_ALL) 
 
             # ✅ Escolher o tutor com vagas
             for p in self.agent.proposals:
@@ -271,6 +273,10 @@ class StudentAgent(Agent):
 
             # --- explicação recebida ---
             elif perf in ["inform", "peer-inform"]:
+                # ✅ Não processar se já está a parar ou em 100%
+                if self.agent.is_stopping or self.agent.progress >= 1.0:
+                    return
+                    
                 study = self.agent.study
                 chosen = "peer" if study.peer_used else study.chosen_tutor
                 end = time.time()
@@ -310,6 +316,12 @@ class StudentAgent(Agent):
                     peer_used=(chosen == "peer")
                 )
 
+                # ✅ Verificar se chegou a 100% ANTES de pedir recurso
+                self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
+                if self.agent.progress >= 1.0:
+                    print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Atingiu 100% de progresso!" + Style.RESET_ALL)
+                    return  # Não pedir mais recursos
+
                 # --- 💡 Pedir recurso complementar ---
                 resource_msg = Message(to="resource@localhost")
                 resource_msg.set_metadata("performative", "resource-request")
@@ -319,11 +331,21 @@ class StudentAgent(Agent):
 
             # --- recurso recebido ---
             elif perf == "resource-recommendation":
+                # ✅ Não processar se já está a parar ou em 100%
+                if self.agent.is_stopping or self.agent.progress >= 1.0:
+                    return
+                    
                 resource = msg.body.split("resource:")[1]
                 print(Fore.LIGHTYELLOW_EX + f"[{self.agent.name}] 📘 Recurso complementar recebido: {resource}" + Style.RESET_ALL)
 
                 # 🔼 Aumentar ligeiramente o progresso
                 old = self.agent.knowledge[self.agent.topic]
                 self.agent.knowledge[self.agent.topic] = min(1.0, old + random.uniform(0.01, 0.05))
+                new = self.agent.knowledge[self.agent.topic]
                 await asyncio.sleep(2)
-                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 📈 progresso após recurso {old:.2f} → {self.agent.knowledge[self.agent.topic]:.2f}" + Style.RESET_ALL)
+                print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 📈 progresso após recurso {old:.2f} → {new:.2f}" + Style.RESET_ALL)
+                
+                # ✅ Verificar novamente após aplicar recurso
+                self.agent.progress = sum(self.agent.knowledge.values()) / len(self.agent.knowledge)
+                if self.agent.progress >= 1.0:
+                    print(Fore.LIGHTGREEN_EX + f"[{self.agent.name}] 🎉 Atingiu 100% de progresso!" + Style.RESET_ALL)

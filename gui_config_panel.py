@@ -77,6 +77,11 @@ class ConfigPanel(QWidget):
         self.btn_start.setEnabled(False)
         self.btn_stop.setEnabled(True)
         
+        # Limpar dados de gráficos anteriores
+        # Assumindo que gui_main passa a referência do metrics_tab
+        if hasattr(self, 'metrics_tab'):
+            self.metrics_tab.clear_metrics()
+        
         # Criar task assíncrona e adicionar callback
         task = asyncio.create_task(
             self.controller.run_simulation(
