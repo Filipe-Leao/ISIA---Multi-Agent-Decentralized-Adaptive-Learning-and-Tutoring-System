@@ -105,6 +105,9 @@ class MainWindow(QMainWindow):
         self.logs_tab = LogsTab()
         self.metrics_tab = MetricsTab()
         
+        # Passar referência do metrics_tab para o config_panel limpar ao iniciar
+        self.config_panel.metrics_tab = self.metrics_tab
+        
         tabs.addTab(self.logs_tab, "📋 Logs")
         tabs.addTab(self.metrics_tab, "📊 Métricas")
         
