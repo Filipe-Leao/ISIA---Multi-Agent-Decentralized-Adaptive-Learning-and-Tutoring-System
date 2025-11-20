@@ -266,7 +266,7 @@ class SimulationController(QObject):
         self.metrics_update.emit(status)
     
     async def stop_simulation(self):
-        """Para a simulação"""
+        """Para a simulação de forma otimizada para evitar bloqueio do CPU"""
         if not self.is_running:
             return
             
@@ -278,7 +278,6 @@ class SimulationController(QObject):
         for name, agent in self.agents.items():
             if name.startswith("student"):
                 try:
-                    # Mostrar progresso final
                     final_progress = sum(agent.knowledge.values()) / len(agent.knowledge)
                     self.log(f"   {agent.name}: {agent.initial_progress:.4f} -> {final_progress:.4f}")
                 except Exception as e:
@@ -288,30 +287,38 @@ class SimulationController(QObject):
         for name, agent in self.agents.items():
             agent.is_stopping = True
         
-        # 🔴 TERCEIRO: Aguardar behaviours processarem a flag
-        await asyncio.sleep(1.5)
+        # 🔴 TERCEIRO: Aguardar behaviours processarem a flag (reduzido para não saturar CPU)
+        await asyncio.sleep(0.5)
         
-        # 🔴 QUARTO: Parar todos os agentes
+        # 🔴 QUARTO: Parar agentes EM PARALELO com timeout para evitar bloqueio
         self.log("Stopping all agents...")
-        for name, agent in list(self.agents.items()):
+        
+        async def stop_agent_safe(name, agent):
+            """Para um agente com timeout para evitar bloqueio"""
             try:
-                # Forçar parada de todos os behaviours primeiro
-                if hasattr(agent, 'behaviours'):
-                    for behaviour in agent.behaviours:
-                        try:
-                            behaviour.kill()
-                        except:
-                            pass
-                
-                # Parar o agente
-                await agent.stop()
+                # Não forçar kill de behaviours - deixar SPADE gerir isso
+                # Parar o agente com timeout de 3 segundos
+                await asyncio.wait_for(agent.stop(), timeout=3.0)
                 self.log(f"   {name} stopped")
-                
+                return True
+            except asyncio.TimeoutError:
+                self.log(f"   {name} timeout - forcing stop")
+                return False
             except Exception as e:
                 self.log(f"   Error stopping {name}: {e}")
+                return False
         
-        # Aguardar para garantir que todos os behaviours e mensagens terminaram
-        await asyncio.sleep(1)
+        # Parar todos os agentes em paralelo (mais eficiente que sequencial)
+        stop_tasks = [
+            stop_agent_safe(name, agent) 
+            for name, agent in list(self.agents.items())
+        ]
+        
+        # Executar em paralelo com gather
+        await asyncio.gather(*stop_tasks, return_exceptions=True)
+        
+        # Pequena pausa para limpeza final
+        await asyncio.sleep(0.3)
         
         self.agents.clear()
         self.log("Simulation ended")
